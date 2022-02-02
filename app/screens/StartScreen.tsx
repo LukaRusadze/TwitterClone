@@ -13,23 +13,17 @@ import { RootStackParamList } from "../../App";
 import { colors } from "../config/colors";
 import AccountCreationButtons from "../components/AccountCreationButtons";
 import Terms from "../components/Terms";
-import * as NavigationBar from "expo-navigation-bar";
 
 interface Props {
   navigation: NativeStackNavigationProp<RootStackParamList, "Start">;
 }
 
 const StartScreen = ({ navigation }: Props) => {
-  if (Platform.OS === "android") {
-    NavigationBar.setBackgroundColorAsync("white");
-    NavigationBar.setButtonStyleAsync("dark");
-  }
-
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShadowVisible: false,
       headerTitle: () => (
-        <Ionicons name="logo-twitter" size={25} color="#1DA1F2" />
+        <Ionicons name="logo-twitter" size={25} color={colors.primary} />
       ),
     });
   });
@@ -48,7 +42,12 @@ const StartScreen = ({ navigation }: Props) => {
           <Terms style={{ marginTop: 25 }} />
           <Text style={styles.logIn}>
             Have an account already?{" "}
-            <Text style={styles.highlighted}>Log in</Text>
+            <Text
+              style={styles.highlighted}
+              onPress={() => navigation.navigate("Login")}
+            >
+              Log in
+            </Text>
           </Text>
         </View>
       </View>

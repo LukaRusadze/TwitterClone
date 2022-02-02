@@ -2557,9 +2557,9 @@ expo-modules-core@0.6.4:
     invariant "^2.2.4"
 
 expo-navigation-bar@~1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/expo-navigation-bar/-/expo-navigation-bar-1.1.1.tgz#cd99a134695fb836e962921790236943b6cd51c3"
-  integrity sha512-k6ybXzhew4TB+R/+iNUL0FLe3Y23JXRueQV4BE3Drke9bDsmlLCW1FekGHAxfdvaHHAnYMy3+Whe3MEvttGnhQ==
+  version "1.1.2"
+  resolved "https://registry.npmjs.org/expo-navigation-bar/-/expo-navigation-bar-1.1.2.tgz"
+  integrity sha512-6TEmFArrCazRKrhQrWho1sBEXiFBP+7MIcAeZ5wEB+QEb7ZkYmC+JKFfZl3oz9VWD7nnhgcLRgFE9XL0n74Fow==
   dependencies:
     "@expo/config-plugins" "^4.0.2"
     "@react-native/normalize-color" "^2.0.0"
@@ -4443,10 +4443,10 @@ range-parser@~1.2.1:
   resolved "https://registry.npmjs.org/range-parser/-/range-parser-1.2.1.tgz"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
-react-devtools-core@^4.6.0:
-  version "4.23.0"
-  resolved "https://registry.npmjs.org/react-devtools-core/-/react-devtools-core-4.23.0.tgz"
-  integrity sha512-KkzneT1LczFtebbTJlvRphIRvzuHLhI9ghfrseVv9ktBs+l2cXy8Svw5U16lzQnwU9okVEcURmGPgH79WWrlaw==
+react-devtools-core@4.14.0, react-devtools-core@^4.6.0:
+  version "4.14.0"
+  resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-4.14.0.tgz#4b9dc50937ed4cf4c04fa293430cac62d829fa8b"
+  integrity sha512-cE7tkSUkGCDxTA79pntDGJCBgzNN/XxA3kgPdXujdfSfEfVhzrItQIEsN0kCN/hJJACDvH2Q8p5+tJb/K4B3qA==
   dependencies:
     shell-quote "^1.6.1"
     ws "^7"
