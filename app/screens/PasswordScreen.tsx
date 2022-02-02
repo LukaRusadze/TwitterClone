@@ -14,9 +14,18 @@ interface Props {
 const PasswordScreen = ({ navigation }: Props) => {
   useLayoutEffect(() => {
     navigation.setOptions({
+      headerBackVisible: false,
       headerShadowVisible: false,
+      headerLeft: () => (
+        <Ionicons
+          name="md-close-outline"
+          size={32}
+          color={colors.primary}
+          onPress={navigation.goBack}
+        />
+      ),
       headerTitle: () => (
-        <Ionicons name="logo-twitter" size={25} color={colors.primary} />
+        <Ionicons name="logo-twitter" size={30} color={colors.primary} />
       ),
     });
   });
