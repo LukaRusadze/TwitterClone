@@ -1,3 +1,4 @@
+import { RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { useState } from "react";
 import { View, StyleSheet, KeyboardAvoidingView } from "react-native";
@@ -6,13 +7,25 @@ import CustomButton from "./CustomButton";
 
 interface Props {
   isNextActive: boolean;
-  navigation: NativeStackNavigationProp<
-    RootStackParamList,
-    "Login" | "Password"
-  >;
+  navigation: NativeStackNavigationProp<RootStackParamList>;
+  route: RouteProp<RootStackParamList>;
+  navigationProps?: object;
 }
 
-const LoginNavigation = ({ isNextActive, navigation }: Props) => {
+const LoginNavigation = ({
+  isNextActive,
+  navigation,
+  navigationProps,
+  route,
+}: Props) => {
+  const handleNextButton = () => {
+    return navigation.navigate("Password", { ...navigationProps });
+  };
+
+  const handleLogin = () => {
+    console.log("Hello");
+  };
+
   return (
     <KeyboardAvoidingView style={styles.container}>
       <CustomButton>Forgot password?</CustomButton>
@@ -20,9 +33,9 @@ const LoginNavigation = ({ isNextActive, navigation }: Props) => {
         style={styles.nextBtn}
         textStyle={styles.nextBtnText}
         enabled={isNextActive}
-        onPress={() => navigation.navigate("Password")}
+        onPress={route.name !== "Password" ? handleNextButton : handleLogin}
       >
-        Next
+        {route.name === "Password" ? "Log in" : "Next"}
       </CustomButton>
     </KeyboardAvoidingView>
   );

@@ -6,12 +6,17 @@ import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
 import LoginGetStarted from "../components/LoginGetStarted";
 import LoginNavigation from "../components/LoginNavigation";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { RouteProp } from "@react-navigation/native";
 
 interface Props {
-  navigation: NativeStackNavigationProp<RootStackParamList, "Login">;
+  navigation: NativeStackNavigationProp<RootStackParamList>;
+  route: RouteProp<RootStackParamList>;
 }
 
-const LoginScreen = ({ navigation }: Props) => {
+const UsernameScreen = ({ navigation, route }: Props) => {
+  const [username, setUsername] = useState("");
+
   useLayoutEffect(() => {
     navigation.setOptions({
       headerBackVisible: false,
@@ -34,8 +39,15 @@ const LoginScreen = ({ navigation }: Props) => {
 
   return (
     <View style={styles.container}>
-      <LoginGetStarted setIsNextActive={setIsNextActive} />
-      <LoginNavigation navigation={navigation} isNextActive={isNextActive} />
+      <LoginGetStarted output={setUsername} setIsNextActive={setIsNextActive} />
+      <SafeAreaView>
+        <LoginNavigation
+          navigation={navigation}
+          route={route}
+          navigationProps={{ username: username }}
+          isNextActive={isNextActive}
+        />
+      </SafeAreaView>
     </View>
   );
 };
@@ -47,4 +59,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginScreen;
+export default UsernameScreen;

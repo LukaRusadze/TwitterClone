@@ -7,7 +7,7 @@ interface Props extends TextInputProps {
   style?: TextStyle;
 }
 
-const InputField = ({ setInputValue, placeholder, style }: Props) => {
+const InputField = ({ setInputValue, placeholder, style, ...props }: Props) => {
   const [underlineColor, setUnderlineColor] = useState("#dbdbdb");
   const [underlineWidth, setUnderlineWidth] = useState(1);
 
@@ -19,6 +19,7 @@ const InputField = ({ setInputValue, placeholder, style }: Props) => {
         borderBottomColor: underlineColor,
         borderBottomWidth: underlineWidth,
       }}
+      {...props}
       autoCorrect={false}
       placeholder={placeholder}
       placeholderTextColor={"#606060"}

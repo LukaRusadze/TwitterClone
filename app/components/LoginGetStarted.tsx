@@ -5,10 +5,12 @@ import InputField from "./InputField";
 
 interface Props {
   setIsNextActive: Function;
+  output: Function;
 }
 
-const LoginPrompt = ({ setIsNextActive }: Props) => {
+const LoginGetStarted = ({ setIsNextActive, output }: Props) => {
   const [inputValue, setInputValue] = useState("");
+  output(inputValue);
 
   useEffect(() => {
     if (inputValue.length > 0) {
@@ -34,7 +36,7 @@ const LoginPrompt = ({ setIsNextActive }: Props) => {
 
 const styles = StyleSheet.create({
   headerText: {
-    fontFamily: "TwitterChirp-Bold",
+    fontFamily: "Roboto-Bold",
     fontSize: 30,
     marginBottom: 25,
   },
@@ -45,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginPrompt;
+export default LoginGetStarted;

@@ -8,32 +8,21 @@ import {
 
 interface CustomButtonProps extends TouchableOpacityProps {
   style?: any;
-  children: any;
   textStyle?: any;
   enabled?: boolean;
 }
 
-const CustomButton = ({
+const CustomButton: React.FC<CustomButtonProps> = ({
   onPress,
   style,
   children,
   textStyle,
   enabled = true,
-}: CustomButtonProps) => {
-  const [activeOpacity, setActiveOpacity] = useState(0.2);
-
-  useEffect(() => {
-    if (enabled) {
-      setActiveOpacity(0.2);
-    } else {
-      setActiveOpacity(1);
-    }
-  }, [enabled]);
-
+}) => {
   return (
     <TouchableOpacity
       onPress={onPress}
-      activeOpacity={activeOpacity}
+      disabled={!enabled}
       style={
         enabled
           ? { ...styles.container, ...style }

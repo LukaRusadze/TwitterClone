@@ -13,4 +13,6 @@ export const fonts = {
   "Roboto-Bold": require("../assets/fonts/Roboto/Roboto-Bold.ttf"),
   "Roboto-Thin": require("../assets/fonts/Roboto/Roboto-Thin.ttf"),
   "Roboto-Light": require("../assets/fonts/Roboto/Roboto-Light.ttf"),
+
+  "Monaco": require("../assets/fonts/Monaco/Monaco.ttf"),
 };
