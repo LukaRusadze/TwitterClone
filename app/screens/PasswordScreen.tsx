@@ -1,6 +1,13 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  ToastAndroid,
+  Platform,
+} from "react-native";
 import { RootStackParamList } from "../../App";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
@@ -8,6 +15,8 @@ import LoginNavigation from "../components/LoginNavigation";
 import InputField from "../components/InputField";
 import { RouteProp } from "@react-navigation/native";
 import PasswordField from "../components/PasswordField";
+import { auth } from "../firebase/firebase-config";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 interface Props {
   navigation: NativeStackNavigationProp<RootStackParamList, "Password">;
@@ -46,6 +55,48 @@ const PasswordScreen = ({ route, navigation }: Props) => {
   const [isNextActive, setIsNextActive] = useState(false);
   const [usernameField, setUsernameField] = useState(username);
   const [passwordField, setPasswordField] = useState("");
+  const [submit, setSubmit] = useState(false);
+
+  useEffect(() => {
+    if (submit) {
+      const email = username + "@twitterclone.com";
+
+      signInWithEmailAndPassword(auth, email, passwordField)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          switch (error.code) {
+            case "auth/wrong-password":
+              {
+                if (Platform.OS === "android") {
+                  ToastAndroid.show("Wrong Password!", ToastAndroid.LONG);
+                } else {
+                  alert("Wrong Password!");
+                }
+              }
+              break;
+            case "auth/quota-exceeded":
+              {
+                if (Platform.OS === "android") {
+                  ToastAndroid.show(
+                    "Too many wrong passwords! Try again later",
+                    ToastAndroid.LONG
+                  );
+                } else {
+                  alert("Wrong Password!");
+                }
+              }
+              break;
+            default: {
+              console.log(error.code);
+            }
+          }
+        });
+      setSubmit(false);
+    }
+  }, [submit]);
 
   return (
     <View style={styles.container}>
@@ -68,6 +119,7 @@ const PasswordScreen = ({ route, navigation }: Props) => {
         isNextActive={isNextActive}
         navigation={navigation}
         route={route}
+        setSubmit={setSubmit}
       />
     </View>
   );

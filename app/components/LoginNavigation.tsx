@@ -10,6 +10,7 @@ interface Props {
   navigation: NativeStackNavigationProp<RootStackParamList>;
   route: RouteProp<RootStackParamList>;
   navigationProps?: object;
+  setSubmit?: Function;
 }
 
 const LoginNavigation = ({
@@ -17,13 +18,14 @@ const LoginNavigation = ({
   navigation,
   navigationProps,
   route,
+  setSubmit,
 }: Props) => {
   const handleNextButton = () => {
     return navigation.navigate("Password", { ...navigationProps });
   };
 
   const handleLogin = () => {
-    console.log("Hello");
+    return setSubmit!(true);
   };
 
   return (

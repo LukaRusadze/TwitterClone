@@ -7,10 +7,9 @@ import { useFonts } from "expo-font";
 import UsernameScreen from "./app/screens/UsernameScreen";
 import StartScreen from "./app/screens/StartScreen";
 import { fonts } from "./app/config/fonts";
-import { Platform } from "react-native";
+import { AppRegistry, Platform, LogBox } from "react-native";
 import * as NavigationBar from "expo-navigation-bar";
 import PasswordScreen from "./app/screens/PasswordScreen";
-import { initializeApp } from "firebase/app";
 
 export interface PasswordRoute {
   username?: string;
@@ -23,6 +22,9 @@ export type RootStackParamList = {
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
+LogBox.ignoreLogs([
+  "AsyncStorage has been extracted from react-native core and will be removed in a future release. It can now be installed and imported from '@react-native-async-storage/async-storage' instead of 'react-native'. See https://github.com/react-native-async-storage/async-storage",
+]);
 
 export default function App() {
   if (Platform.OS === "android") {
@@ -36,17 +38,6 @@ export default function App() {
     return null;
   }
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyDbbsGgOikMOWDhlwmgiMSXugQ9UYcOhxk",
-    authDomain: "twitterclone-b08c5.firebaseapp.com",
-    projectId: "twitterclone-b08c5",
-    storageBucket: "twitterclone-b08c5.appspot.com",
-    messagingSenderId: "758504965661",
-    appId: "1:758504965661:web:a701b8f557c494041ca8f4",
-  };
-
-  const app = initializeApp(firebaseConfig);
-
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={screenOptions}>
@@ -57,6 +48,8 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+AppRegistry.registerComponent("main", () => App);
 
 const screenOptions: NativeStackNavigationOptions = {
   title: "Aligned Center",

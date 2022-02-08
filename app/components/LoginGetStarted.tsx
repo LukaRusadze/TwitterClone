@@ -10,7 +10,10 @@ interface Props {
 
 const LoginGetStarted = ({ setIsNextActive, output }: Props) => {
   const [inputValue, setInputValue] = useState("");
-  output(inputValue);
+
+  useEffect(() => {
+    output(inputValue);
+  }, [inputValue]);
 
   useEffect(() => {
     if (inputValue.length > 0) {
