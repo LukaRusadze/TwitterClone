@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, StyleSheet, View, ViewStyle } from "react-native";
-import { colors } from "../config/colors";
+import { colors } from "../../config/colors";
 
 interface Props {
   style?: ViewStyle;

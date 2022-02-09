@@ -1,27 +1,10 @@
 import { NavigationContainer } from "@react-navigation/native";
-import {
-  createNativeStackNavigator,
-  NativeStackNavigationOptions,
-} from "@react-navigation/native-stack";
 import { useFonts } from "expo-font";
-import UsernameScreen from "./app/screens/UsernameScreen";
-import StartScreen from "./app/screens/StartScreen";
 import { fonts } from "./app/config/fonts";
 import { AppRegistry, Platform, LogBox } from "react-native";
 import * as NavigationBar from "expo-navigation-bar";
-import PasswordScreen from "./app/screens/PasswordScreen";
+import MainStack from "./app/navigation/MainStack";
 
-export interface PasswordRoute {
-  username?: string;
-}
-
-export type RootStackParamList = {
-  Start: undefined;
-  Login: undefined;
-  Password: PasswordRoute;
-};
-
-const Stack = createNativeStackNavigator<RootStackParamList>();
 LogBox.ignoreLogs([
   "AsyncStorage has been extracted from react-native core and will be removed in a future release. It can now be installed and imported from '@react-native-async-storage/async-storage' instead of 'react-native'. See https://github.com/react-native-async-storage/async-storage",
 ]);
@@ -40,22 +23,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={screenOptions}>
-        <Stack.Screen name="Start" component={StartScreen} />
-        <Stack.Screen name="Login" component={UsernameScreen} />
-        <Stack.Screen name="Password" component={PasswordScreen} />
-      </Stack.Navigator>
+      <MainStack />
     </NavigationContainer>
   );
 }
 
 AppRegistry.registerComponent("main", () => App);
-
-const screenOptions: NativeStackNavigationOptions = {
-  title: "Aligned Center",
-  headerTitleAlign: "center",
-  headerShown: true,
-  contentStyle: {
-    backgroundColor: "white",
-  },
-};

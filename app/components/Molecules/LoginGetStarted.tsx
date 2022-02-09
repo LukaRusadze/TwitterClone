@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Text, View, StyleSheet, TextInput } from "react-native";
-import { colors } from "../config/colors";
-import InputField from "./InputField";
+import { colors } from "../../config/colors";
+import InputField from "../Atoms/InputField";
 
 interface Props {
   setIsNextActive: Function;

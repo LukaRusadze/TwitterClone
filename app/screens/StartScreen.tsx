@@ -9,10 +9,10 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../../App";
+import { RootStackParamList } from "../types/navigationTypes";
 import { colors } from "../config/colors";
-import AccountCreationButtons from "../components/AccountCreationButtons";
-import Terms from "../components/Terms";
+import AccountCreationButtons from "../components/Molecules/AccountCreationButtons";
+import Terms from "../components/Atoms/Terms";
 
 interface Props {
   navigation: NativeStackNavigationProp<RootStackParamList, "Start">;

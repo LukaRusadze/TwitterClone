@@ -1,11 +1,11 @@
 import React, { useLayoutEffect, useState } from "react";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { StyleSheet, View } from "react-native";
-import { RootStackParamList } from "../../App";
+import { RootStackParamList } from "../types/navigationTypes";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
-import LoginGetStarted from "../components/LoginGetStarted";
-import LoginNavigation from "../components/LoginNavigation";
+import LoginGetStarted from "../components/Molecules/LoginGetStarted";
+import LoginNavigation from "../components/Organisms/LoginNavigation";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { RouteProp } from "@react-navigation/native";
 

@@ -8,13 +8,13 @@ import {
   ToastAndroid,
   Platform,
 } from "react-native";
-import { RootStackParamList } from "../../App";
+import { RootStackParamList } from "../types/navigationTypes";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
-import LoginNavigation from "../components/LoginNavigation";
-import InputField from "../components/InputField";
+import LoginNavigation from "../components/Organisms/LoginNavigation";
+import InputField from "../components/Atoms/InputField";
 import { RouteProp } from "@react-navigation/native";
-import PasswordField from "../components/PasswordField";
+import PasswordField from "../components/Molecules/PasswordField";
 import { auth } from "../firebase/firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 

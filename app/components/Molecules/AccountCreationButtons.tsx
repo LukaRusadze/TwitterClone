@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
-import { colors } from "../config/colors";
-import CustomButton from "./CustomButton";
+import { colors } from "../../config/colors";
+import CustomButton from "../Atoms/CustomButton";
 import { Ionicons } from "@expo/vector-icons";
 
 interface Props {}

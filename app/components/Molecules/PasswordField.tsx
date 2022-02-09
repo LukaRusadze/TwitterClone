@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { TextInput, StyleSheet, View, Pressable } from "react-native";
-import { colors } from "../config/colors";
-import InputField from "./InputField";
+import { colors } from "../../config/colors";
+import InputField from "../Atoms/InputField";
 import { Ionicons } from "@expo/vector-icons";
-import CustomButton from "./CustomButton";
+import CustomButton from "../Atoms/CustomButton";
 
 interface Props {
   setInputValue: Function;

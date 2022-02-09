@@ -2,8 +2,8 @@ import { RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { useState } from "react";
 import { View, StyleSheet, KeyboardAvoidingView } from "react-native";
-import { RootStackParamList } from "../../App";
-import CustomButton from "./CustomButton";
+import { RootStackParamList } from "../../types/navigationTypes";
+import CustomButton from "../Atoms/CustomButton";
 
 interface Props {
   isNextActive: boolean;
