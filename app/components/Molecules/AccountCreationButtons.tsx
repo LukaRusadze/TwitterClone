@@ -3,10 +3,14 @@ import { View, StyleSheet, Text } from "react-native";
 import { colors } from "../../config/colors";
 import CustomButton from "../Atoms/CustomButton";
 import { Ionicons } from "@expo/vector-icons";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../../types/navigationTypes";
 
-interface Props {}
+interface Props {
+  navigation: NativeStackNavigationProp<RootStackParamList>;
+}
 
-const AccountCreationButtons = (props: Props) => {
+const AccountCreationButtons = ({ navigation }: Props) => {
   return (
     <View>
       <CustomButton style={styles.googleBtn}>
@@ -22,7 +26,10 @@ const AccountCreationButtons = (props: Props) => {
         <View style={styles.separator}></View>
       </View>
 
-      <CustomButton style={styles.createBtn}>
+      <CustomButton
+        style={styles.createBtn}
+        onPress={() => navigation.navigate("Register")}
+      >
         <Text style={styles.createBtnText}>Create account</Text>
       </CustomButton>
     </View>

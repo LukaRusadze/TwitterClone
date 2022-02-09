@@ -15,7 +15,7 @@ import AccountCreationButtons from "../components/Molecules/AccountCreationButto
 import Terms from "../components/Atoms/Terms";
 
 interface Props {
-  navigation: NativeStackNavigationProp<RootStackParamList, "Start">;
+  navigation: NativeStackNavigationProp<RootStackParamList>;
 }
 
 const StartScreen = ({ navigation }: Props) => {
@@ -38,7 +38,7 @@ const StartScreen = ({ navigation }: Props) => {
         </View>
 
         <View>
-          <AccountCreationButtons />
+          <AccountCreationButtons navigation={navigation} />
           <Terms style={{ marginTop: 25 }} />
           <Text style={styles.logIn}>
             Have an account already?{" "}

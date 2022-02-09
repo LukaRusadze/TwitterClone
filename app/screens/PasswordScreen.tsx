@@ -17,6 +17,7 @@ import { RouteProp } from "@react-navigation/native";
 import PasswordField from "../components/Molecules/PasswordField";
 import { auth } from "../firebase/firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { collection } from "firebase/firestore";
 
 interface Props {
   navigation: NativeStackNavigationProp<RootStackParamList, "Password">;
@@ -64,7 +65,7 @@ const PasswordScreen = ({ route, navigation }: Props) => {
       signInWithEmailAndPassword(auth, email, passwordField)
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
+          collection;
         })
         .catch((error) => {
           switch (error.code) {
