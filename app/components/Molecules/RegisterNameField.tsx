@@ -1,13 +1,19 @@
 import { StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
-import InputField from "../Atoms/InputField";
+import InputField, { InputFieldProps } from "../Atoms/InputField";
+import { Formik } from "formik";
 
-interface Props {
+interface Props extends InputFieldProps {
   wrongColor: string;
+  value: string;
 }
 
-const RegisterNameField = ({ wrongColor }: Props) => {
-  const [value, setValue] = useState("");
+const RegisterNameField: React.FC<Props> = ({
+  wrongColor,
+  onChangeText,
+  value,
+  ...props
+}) => {
   const charLimit = 50;
   const remainingAmount = charLimit - value.length;
   const [isWrong, setIsWrong] = useState(false);
@@ -15,11 +21,12 @@ const RegisterNameField = ({ wrongColor }: Props) => {
   return (
     <View>
       <InputField
-        setInputValue={setValue}
+        onChangeText={onChangeText}
         placeholder="Name"
         filter={(value) => value.length > charLimit}
         wrongColor={wrongColor}
         setWrongOutput={setIsWrong}
+        {...props}
       />
       <View style={styles.errorAndChatCounter}>
         <Text style={{ ...styles.errorMessage, color: wrongColor }}>

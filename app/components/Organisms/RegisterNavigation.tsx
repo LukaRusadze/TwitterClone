@@ -1,21 +1,27 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { useState } from "react";
-import { View, StyleSheet, KeyboardAvoidingView } from "react-native";
+import {
+  View,
+  StyleSheet,
+  KeyboardAvoidingView,
+  TouchableOpacityProps,
+} from "react-native";
 import { RootStackParamList } from "../../types/navigationTypes";
 import CustomButton from "../Atoms/CustomButton";
 
-interface Props {
+interface Props extends TouchableOpacityProps {
   isNextActive: boolean;
   navigation: NativeStackNavigationProp<RootStackParamList>;
 }
 
-const RegisterNavigation = ({ isNextActive }: Props) => {
+const RegisterNavigation = ({ isNextActive, onPress }: Props) => {
   return (
     <KeyboardAvoidingView style={styles.container}>
       <CustomButton
         style={styles.nextBtn}
         textStyle={styles.nextBtnText}
         enabled={isNextActive}
+        onPress={onPress}
       >
         Next
       </CustomButton>

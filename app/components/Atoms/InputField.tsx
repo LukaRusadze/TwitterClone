@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { TextInput, StyleSheet, TextInputProps, TextStyle } from "react-native";
 import { colors } from "../../config/colors";
 
-interface Props extends TextInputProps {
-  setInputValue: Function;
+export interface InputFieldProps extends TextInputProps {
   style?: TextStyle;
   wrongColor?: string;
   filter?: (value: string) => boolean;
@@ -11,14 +10,13 @@ interface Props extends TextInputProps {
 }
 
 const InputField = ({
-  setInputValue,
-  placeholder,
+  onChangeText,
   style,
   wrongColor,
   filter,
   setWrongOutput,
   ...props
-}: Props) => {
+}: InputFieldProps) => {
   const [underlineColor, setUnderlineColor] = useState("#dbdbdb");
   const [underlineWidth, setUnderlineWidth] = useState(1);
   const [isFocused, setIsFocused] = useState(false);
@@ -45,12 +43,12 @@ const InputField = ({
         borderBottomColor: underlineColor,
         borderBottomWidth: underlineWidth,
       }}
-      {...props}
       autoCorrect={false}
-      placeholder={placeholder}
       placeholderTextColor={"#606060"}
       onChangeText={(state) => {
-        setInputValue(state);
+        if (onChangeText) {
+          onChangeText(state);
+        }
 
         if (filter != undefined) {
           setIsWrong(filter(state));
@@ -71,6 +69,7 @@ const InputField = ({
         }
         setUnderlineWidth(2);
       }}
+      {...props}
     />
   );
 };
