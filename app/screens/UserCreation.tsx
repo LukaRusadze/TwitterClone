@@ -17,6 +17,7 @@ import {
 } from "formik";
 import * as Yup from "yup";
 import { useNavigation } from "@react-navigation/native";
+import ValidatedInput from "../components/Atoms/ValidatedInput";
 
 const UserCreation = () => {
   const navigation = useNavigation<NavigationStackGenericProp<"Register">>();
@@ -40,12 +41,18 @@ const UserCreation = () => {
   });
 
   const [isNextActive, setIsNextActive] = useState(false);
-  const phoneNumberRegex =
-    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
+  const phoneNumberRegex = /^[+]?([0-9]*[\.\s\-\(\)]|[0-9]+){3,24}$/;
+  const maxNameLength = 50;
 
   const SignupSchema = Yup.object().shape({
-    name: Yup.string().max(30, "Must be 50 characters or fewer").required(),
-    phoneNumber: Yup.string().matches(phoneNumberRegex),
+    name: Yup.string()
+      .max(maxNameLength, "Must be 50 characters or fewer")
+      .required(" "),
+    phoneNumber: Yup.string().matches(
+      phoneNumberRegex,
+      "Please enter a valid phone number."
+    ),
     email: Yup.string().email(),
     dateOfBirth: Yup.date(),
   });
@@ -63,47 +70,52 @@ const UserCreation = () => {
         onSubmit={(values) => console.log(values)}
         validationSchema={SignupSchema}
       >
-        {({ handleChange, handleSubmit, values }) => (
-          <View style={{}}>
-            <FastField name="name">
-              {({ field, form, meta }: FieldProps) => {
-                return (
-                  <InputField
-                    placeholder="Name"
-                    wrongColor={"red"}
-                    onChangeText={handleChange(field.name)}
-                    value={field.value}
-                  />
-                );
-              }}
-            </FastField>
-            <FastField name="phoneNumber">
-              {({ field, form, meta }: FieldProps) => {
-                return (
-                  <InputField
-                    style={styles.inputField}
-                    onChangeText={handleChange(field.name)}
-                    value={field.value}
-                    keyboardType="number-pad"
-                    placeholder="Phone number or email address"
-                  />
-                );
-              }}
-            </FastField>
-            <FastField name="dateOfBirth">
-              {({ field, form, meta }: FieldProps) => {
-                return (
-                  <InputField
-                    style={styles.inputField}
-                    onChangeText={handleChange(field.name)}
-                    value={field.value}
-                    placeholder="Date of birth"
-                  />
-                );
-              }}
-            </FastField>
-          </View>
-        )}
+        {({ handleChange, handleSubmit, values, errors }) => {
+          return (
+            <View style={{}}>
+              <FastField name="name">
+                {({ field, form, meta }: FieldProps) => {
+                  return (
+                    <ValidatedInput
+                      placeholder="Name"
+                      wrongColor={"red"}
+                      onChangeText={handleChange(field.name)}
+                      value={field.value}
+                      errors={errors.name}
+                      required={true}
+                    />
+                  );
+                }}
+              </FastField>
+              <FastField name="phoneNumber">
+                {({ field, form, meta }: FieldProps) => {
+                  return (
+                    <ValidatedInput
+                      style={styles.inputField}
+                      onChangeText={handleChange(field.name)}
+                      value={field.value}
+                      keyboardType="number-pad"
+                      placeholder="Phone number or email address"
+                      errors={errors.phoneNumber}
+                    />
+                  );
+                }}
+              </FastField>
+              <FastField name="dateOfBirth">
+                {({ field, form, meta }: FieldProps) => {
+                  return (
+                    <InputField
+                      style={styles.inputField}
+                      onChangeText={handleChange(field.name)}
+                      value={field.value}
+                      placeholder="Date of birth"
+                    />
+                  );
+                }}
+              </FastField>
+            </View>
+          );
+        }}
       </Formik>
       <RegisterNavigation isNextActive={isNextActive} />
     </View>

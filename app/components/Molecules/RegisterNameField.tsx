@@ -1,36 +1,43 @@
 import { StyleSheet, Text, View } from "react-native";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InputField, { InputFieldProps } from "../Atoms/InputField";
 import { Formik } from "formik";
 
 interface Props extends InputFieldProps {
   wrongColor: string;
   value: string;
+  error?: string;
+  maxLength?: number;
 }
 
 const RegisterNameField: React.FC<Props> = ({
   wrongColor,
   onChangeText,
   value,
+  error,
+  maxLength,
   ...props
 }) => {
-  const charLimit = 50;
+  const charLimit = maxLength === undefined ? 30 : maxLength;
   const remainingAmount = charLimit - value.length;
-  const [isWrong, setIsWrong] = useState(false);
+  const [isWrong, setIsWrong] = useState(error?.length != 0 ? true : false);
+
+  useEffect(() => {
+    if (error !== undefined) {
+      if (error.length != 0) {
+        setIsWrong(true);
+      } else {
+        setIsWrong(false);
+      }
+    }
+  });
 
   return (
     <View>
-      <InputField
-        onChangeText={onChangeText}
-        placeholder="Name"
-        filter={(value) => value.length > charLimit}
-        wrongColor={wrongColor}
-        setWrongOutput={setIsWrong}
-        {...props}
-      />
+      <InputField onChangeText={onChangeText} placeholder="Name" {...props} />
       <View style={styles.errorAndChatCounter}>
         <Text style={{ ...styles.errorMessage, color: wrongColor }}>
-          {isWrong && "Must be 50 characters or fewer"}
+          {isWrong && error}
         </Text>
         <Text
           style={

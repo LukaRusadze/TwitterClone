@@ -30,7 +30,7 @@ const LoginGetStarted = ({ setIsNextActive, output }: Props) => {
       </Text>
 
       <InputField
-        setInputValue={setInputValue}
+        onChangeText={setInputValue}
         placeholder="Phone, email, or username"
       />
     </View>
