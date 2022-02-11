@@ -24,7 +24,8 @@
     "react-native": "0.64.3",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "^3.10.2",
-    "react-native-web": "0.17.1"
+    "react-native-web": "0.17.1",
+    "yup": "^0.32.11"
   },
   "resolutions": {
     "react-devtools-core": "4.14.0"

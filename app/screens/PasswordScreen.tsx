@@ -1,4 +1,3 @@
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import {
   View,
@@ -8,23 +7,21 @@ import {
   ToastAndroid,
   Platform,
 } from "react-native";
-import { RootStackParamList } from "../types/navigationTypes";
+import { NavigationStackGenericProp, RouteGenericProp } from "../types/types";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
 import LoginNavigation from "../components/Organisms/LoginNavigation";
 import InputField from "../components/Atoms/InputField";
-import { RouteProp } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import PasswordField from "../components/Molecules/PasswordField";
 import { auth } from "../firebase/firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { collection } from "firebase/firestore";
 
-interface Props {
-  navigation: NativeStackNavigationProp<RootStackParamList, "Password">;
-  route: RouteProp<RootStackParamList, "Password">;
-}
+const PasswordScreen = () => {
+  const navigation = useNavigation<NavigationStackGenericProp<"Password">>();
+  const route = useRoute<RouteGenericProp<"Password">>();
 
-const PasswordScreen = ({ route, navigation }: Props) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerBackVisible: false,
@@ -65,7 +62,6 @@ const PasswordScreen = ({ route, navigation }: Props) => {
       signInWithEmailAndPassword(auth, email, passwordField)
         .then((userCredential) => {
           const user = userCredential.user;
-          collection;
         })
         .catch((error) => {
           switch (error.code) {
@@ -107,7 +103,7 @@ const PasswordScreen = ({ route, navigation }: Props) => {
         <View style={styles.usernameContainer} pointerEvents="none">
           <InputField
             value={usernameField}
-            setInputValue={() => null}
+            onChangeText={() => null}
             style={styles.input}
             placeholder="Username"
           />
@@ -116,12 +112,7 @@ const PasswordScreen = ({ route, navigation }: Props) => {
         <PasswordField setInputValue={setPasswordField} />
       </View>
 
-      <LoginNavigation
-        isNextActive={isNextActive}
-        navigation={navigation}
-        route={route}
-        setSubmit={setSubmit}
-      />
+      <LoginNavigation isNextActive={isNextActive} setSubmit={setSubmit} />
     </View>
   );
 };

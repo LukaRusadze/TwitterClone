@@ -1,25 +1,28 @@
-import { RouteProp } from "@react-navigation/native";
+import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { useState } from "react";
 import { View, StyleSheet, KeyboardAvoidingView } from "react-native";
-import { RootStackParamList } from "../../types/navigationTypes";
+import {
+  NavigationStackGenericProp,
+  RouteGenericProp,
+} from "../../types/types";
 import CustomButton from "../Atoms/CustomButton";
 
 interface Props {
   isNextActive: boolean;
-  navigation: NativeStackNavigationProp<RootStackParamList>;
-  route: RouteProp<RootStackParamList>;
   navigationProps?: object;
   setSubmit?: Function;
 }
 
 const LoginNavigation = ({
   isNextActive,
-  navigation,
   navigationProps,
-  route,
   setSubmit,
 }: Props) => {
+  const navigation =
+    useNavigation<NavigationStackGenericProp<"Username" | "Password">>();
+  const route = useRoute<RouteGenericProp<"Username" | "Password">>();
+
   const handleNextButton = () => {
     return navigation.navigate("Password", { ...navigationProps });
   };

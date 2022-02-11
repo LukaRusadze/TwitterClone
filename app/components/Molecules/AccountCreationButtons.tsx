@@ -4,13 +4,15 @@ import { colors } from "../../config/colors";
 import CustomButton from "../Atoms/CustomButton";
 import { Ionicons } from "@expo/vector-icons";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../../types/navigationTypes";
+import {
+  NavigationStackGenericProp,
+  RootStackParamList,
+} from "../../types/types";
+import { useNavigation } from "@react-navigation/native";
 
-interface Props {
-  navigation: NativeStackNavigationProp<RootStackParamList>;
-}
+const AccountCreationButtons = () => {
+  const navigation = useNavigation<NavigationStackGenericProp<"Start">>();
 
-const AccountCreationButtons = ({ navigation }: Props) => {
   return (
     <View>
       <CustomButton style={styles.googleBtn}>

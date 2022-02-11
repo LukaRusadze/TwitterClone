@@ -7,7 +7,7 @@ import {
 import StartScreen from "../screens/StartScreen";
 import UsernameScreen from "../screens/UsernameScreen";
 import PasswordScreen from "../screens/PasswordScreen";
-import { RootStackParamList } from "../types/navigationTypes";
+import { RootStackParamList } from "../types/types";
 import UserCreation from "../screens/UserCreation";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -17,7 +17,7 @@ const MainStack = () => {
     <Stack.Navigator screenOptions={screenOptions}>
       <Stack.Screen name="Start" component={StartScreen} />
       <Stack.Screen name="Register" component={UserCreation} />
-      <Stack.Screen name="Login" component={UsernameScreen} />
+      <Stack.Screen name="Username" component={UsernameScreen} />
       <Stack.Screen name="Password" component={PasswordScreen} />
     </Stack.Navigator>
   );

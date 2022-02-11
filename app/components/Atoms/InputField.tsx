@@ -26,11 +26,14 @@ const InputField = ({
     if (isWrong) {
       if (setWrongOutput != undefined) {
         setWrongOutput(true);
+        setUnderlineColor(wrongColor!);
       }
-      setUnderlineColor(wrongColor!);
     } else {
       if (setWrongOutput != undefined) {
         setWrongOutput(false);
+        if (isFocused) {
+          setUnderlineColor(colors.primary);
+        }
       }
     }
   }, [isWrong]);

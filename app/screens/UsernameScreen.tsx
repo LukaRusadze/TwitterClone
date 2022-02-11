@@ -1,20 +1,18 @@
 import React, { useLayoutEffect, useState } from "react";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { StyleSheet, View } from "react-native";
-import { RootStackParamList } from "../types/navigationTypes";
+import { RouteGenericProp } from "../types/types";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
 import LoginGetStarted from "../components/Molecules/LoginGetStarted";
 import LoginNavigation from "../components/Organisms/LoginNavigation";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { RouteProp } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
+import { NavigationStackGenericProp } from "../types/types";
 
-interface Props {
-  navigation: NativeStackNavigationProp<RootStackParamList>;
-  route: RouteProp<RootStackParamList>;
-}
+const UsernameScreen = () => {
+  const navigation = useNavigation<NavigationStackGenericProp<"Username">>();
+  const route = useRoute<RouteGenericProp<"Username">>();
 
-const UsernameScreen = ({ navigation, route }: Props) => {
   const [username, setUsername] = useState("");
 
   useLayoutEffect(() => {
@@ -42,8 +40,6 @@ const UsernameScreen = ({ navigation, route }: Props) => {
       <LoginGetStarted output={setUsername} setIsNextActive={setIsNextActive} />
       <SafeAreaView>
         <LoginNavigation
-          navigation={navigation}
-          route={route}
           navigationProps={{ username: username }}
           isNextActive={isNextActive}
         />

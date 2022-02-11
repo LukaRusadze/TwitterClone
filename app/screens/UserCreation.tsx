@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 import React, { useLayoutEffect, useState } from "react";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../types/navigationTypes";
+import { NavigationStackGenericProp, RootStackParamList } from "../types/types";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
 import RegisterNavigation from "../components/Organisms/RegisterNavigation";
@@ -15,12 +15,12 @@ import {
   FormikFormProps,
   FormikProps,
 } from "formik";
+import * as Yup from "yup";
+import { useNavigation } from "@react-navigation/native";
 
-interface Props {
-  navigation: NativeStackNavigationProp<RootStackParamList>;
-}
+const UserCreation = () => {
+  const navigation = useNavigation<NavigationStackGenericProp<"Register">>();
 
-const UserCreation: React.FC<Props> = ({ navigation }) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerBackVisible: false,
@@ -40,12 +40,18 @@ const UserCreation: React.FC<Props> = ({ navigation }) => {
   });
 
   const [isNextActive, setIsNextActive] = useState(false);
-  // const [name, setName] = useState("");
-  // const [phoneOrEmail, setPhoneOrEmail] = useState("");
-  // const [dateOfBirth, setDateOfBirth] = useState("");
+  const phoneNumberRegex =
+    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
+  const SignupSchema = Yup.object().shape({
+    name: Yup.string().max(30, "Must be 50 characters or fewer").required(),
+    phoneNumber: Yup.string().matches(phoneNumberRegex),
+    email: Yup.string().email(),
+    dateOfBirth: Yup.date(),
+  });
 
   return (
-    <View style={styles.container}>
+    <View style={styles.content}>
       <Text style={styles.headerText}>Create your account</Text>
       <Formik
         initialValues={{
@@ -55,15 +61,15 @@ const UserCreation: React.FC<Props> = ({ navigation }) => {
           dateOfBirth: "",
         }}
         onSubmit={(values) => console.log(values)}
+        validationSchema={SignupSchema}
       >
         {({ handleChange, handleSubmit, values }) => (
-          <>
-            {console.log("RENDER")}
+          <View style={{}}>
             <FastField name="name">
               {({ field, form, meta }: FieldProps) => {
-                console.log(values.name);
                 return (
-                  <RegisterNameField
+                  <InputField
+                    placeholder="Name"
                     wrongColor={"red"}
                     onChangeText={handleChange(field.name)}
                     value={field.value}
@@ -73,7 +79,6 @@ const UserCreation: React.FC<Props> = ({ navigation }) => {
             </FastField>
             <FastField name="phoneNumber">
               {({ field, form, meta }: FieldProps) => {
-                console.log(values.phoneNumber);
                 return (
                   <InputField
                     style={styles.inputField}
@@ -87,7 +92,6 @@ const UserCreation: React.FC<Props> = ({ navigation }) => {
             </FastField>
             <FastField name="dateOfBirth">
               {({ field, form, meta }: FieldProps) => {
-                console.log(field.value);
                 return (
                   <InputField
                     style={styles.inputField}
@@ -98,10 +102,10 @@ const UserCreation: React.FC<Props> = ({ navigation }) => {
                 );
               }}
             </FastField>
-          </>
+          </View>
         )}
       </Formik>
-      <RegisterNavigation isNextActive={isNextActive} navigation={navigation} />
+      <RegisterNavigation isNextActive={isNextActive} />
     </View>
   );
 };
@@ -120,13 +124,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerText: {
-    fontFamily: "Roboto-Bold",
+    fontFamily: "TwitterChirp-Bold",
     fontSize: 30,
-    marginBottom: 25,
+    marginBottom: 39,
   },
-  formContainer: {
-    marginTop: 14,
-  },
+  formContainer: {},
   inputField: {
     marginTop: 26,
   },

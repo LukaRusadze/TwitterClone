@@ -8,17 +8,15 @@ import {
   Platform,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../types/navigationTypes";
+import { NavigationStackGenericProp } from "../types/types";
 import { colors } from "../config/colors";
 import AccountCreationButtons from "../components/Molecules/AccountCreationButtons";
 import Terms from "../components/Atoms/Terms";
+import { useNavigation } from "@react-navigation/native";
 
-interface Props {
-  navigation: NativeStackNavigationProp<RootStackParamList>;
-}
+const StartScreen = () => {
+  const navigation = useNavigation<NavigationStackGenericProp<"Start">>();
 
-const StartScreen = ({ navigation }: Props) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShadowVisible: false,
@@ -38,13 +36,13 @@ const StartScreen = ({ navigation }: Props) => {
         </View>
 
         <View>
-          <AccountCreationButtons navigation={navigation} />
+          <AccountCreationButtons />
           <Terms style={{ marginTop: 25 }} />
           <Text style={styles.logIn}>
             Have an account already?{" "}
             <Text
               style={styles.highlighted}
-              onPress={() => navigation.navigate("Login")}
+              onPress={() => navigation.navigate("Username")}
             >
               Log in
             </Text>
