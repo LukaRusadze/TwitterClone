@@ -18,11 +18,7 @@ const InputField = ({ onChangeText, style, ...props }: InputFieldProps) => {
       }
       autoCorrect={false}
       placeholderTextColor={"#606060"}
-      onChangeText={(state) => {
-        if (onChangeText) {
-          onChangeText(state);
-        }
-      }}
+      onChangeText={onChangeText}
       selectionColor={colors.primary}
       onEndEditing={() => {
         setIsFocused(false);

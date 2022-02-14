@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import {
   TouchableOpacity,
   Text,
@@ -6,7 +6,7 @@ import {
   TouchableOpacityProps,
 } from "react-native";
 
-interface CustomButtonProps extends TouchableOpacityProps {
+export interface CustomButtonProps extends TouchableOpacityProps {
   style?: any;
   textStyle?: any;
   enabled?: boolean;

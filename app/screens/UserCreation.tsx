@@ -1,5 +1,11 @@
-import { StyleSheet, Text, TextInput, View } from "react-native";
-import React, { useLayoutEffect, useState } from "react";
+import {
+  KeyboardAvoidingView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { NavigationStackGenericProp, RootStackParamList } from "../types/types";
 import { Ionicons } from "@expo/vector-icons";
@@ -18,6 +24,8 @@ import {
 import * as Yup from "yup";
 import { useNavigation } from "@react-navigation/native";
 import ValidatedInput from "../components/Atoms/ValidatedInput";
+import CharLimitedInput from "../components/Atoms/CharLimitedInput";
+import EmailNumberInput from "../components/Molecules/EmailNumberInput";
 
 const UserCreation = () => {
   const navigation = useNavigation<NavigationStackGenericProp<"Register">>();
@@ -41,6 +49,7 @@ const UserCreation = () => {
   });
 
   const [isNextActive, setIsNextActive] = useState(false);
+  const [emailToggle, setEmailToggle] = useState(false);
 
   const phoneNumberRegex = /^[+]?([0-9]*[\.\s\-\(\)]|[0-9]+){3,24}$/;
   const maxNameLength = 50;
@@ -54,11 +63,11 @@ const UserCreation = () => {
       "Please enter a valid phone number."
     ),
     email: Yup.string().email(),
-    dateOfBirth: Yup.date(),
+    dateOfBirth: Yup.string(),
   });
 
   return (
-    <View style={styles.content}>
+    <View style={styles.container}>
       <Text style={styles.headerText}>Create your account</Text>
       <Formik
         initialValues={{
@@ -67,57 +76,71 @@ const UserCreation = () => {
           email: "",
           dateOfBirth: "",
         }}
+        validateOnMount={true}
         onSubmit={(values) => console.log(values)}
         validationSchema={SignupSchema}
       >
         {({ handleChange, handleSubmit, values, errors }) => {
+          useEffect(() => {
+            setIsNextActive(Object.keys(errors).length === 0);
+          }, [errors]);
+
           return (
-            <View style={{}}>
-              <FastField name="name">
-                {({ field, form, meta }: FieldProps) => {
-                  return (
-                    <ValidatedInput
-                      placeholder="Name"
-                      wrongColor={"red"}
-                      onChangeText={handleChange(field.name)}
-                      value={field.value}
-                      errors={errors.name}
-                      required={true}
-                    />
-                  );
-                }}
-              </FastField>
-              <FastField name="phoneNumber">
-                {({ field, form, meta }: FieldProps) => {
-                  return (
-                    <ValidatedInput
-                      style={styles.inputField}
-                      onChangeText={handleChange(field.name)}
-                      value={field.value}
-                      keyboardType="number-pad"
-                      placeholder="Phone number or email address"
-                      errors={errors.phoneNumber}
-                    />
-                  );
-                }}
-              </FastField>
-              <FastField name="dateOfBirth">
-                {({ field, form, meta }: FieldProps) => {
-                  return (
-                    <InputField
-                      style={styles.inputField}
-                      onChangeText={handleChange(field.name)}
-                      value={field.value}
-                      placeholder="Date of birth"
-                    />
-                  );
-                }}
-              </FastField>
-            </View>
+            <>
+              <View style={styles.content}>
+                <Field name="name">
+                  {({ field, form, meta }: FieldProps) => {
+                    return (
+                      <CharLimitedInput
+                        style={{ marginBottom: 20 }}
+                        placeholder="Name"
+                        wrongColor={"red"}
+                        onChangeText={handleChange(field.name)}
+                        value={field.value}
+                        errors={errors.name}
+                        required={true}
+                        charLimit={50}
+                      />
+                    );
+                  }}
+                </Field>
+                <Field name="phoneNumber">
+                  {({ field, form, meta }: FieldProps) => {
+                    return (
+                      <EmailNumberInput
+                        isEmailInput={emailToggle}
+                        onChangeText={handleChange(field.name)}
+                        value={values.phoneNumber}
+                        errors={errors.phoneNumber}
+                      />
+                    );
+                  }}
+                </Field>
+                <Field name="dateOfBirth">
+                  {({ field, form, meta }: FieldProps) => {
+                    return (
+                      <InputField
+                        style={styles.inputField}
+                        onChangeText={handleChange(field.name)}
+                        value={field.value}
+                        placeholder="Date of birth"
+                      />
+                    );
+                  }}
+                </Field>
+              </View>
+              <KeyboardAvoidingView>
+                <RegisterNavigation
+                  isEmailInput={emailToggle}
+                  onEmailToggle={() => setEmailToggle((state) => !state)}
+                  onPress={() => handleSubmit()}
+                  isNextActive={isNextActive}
+                />
+              </KeyboardAvoidingView>
+            </>
           );
         }}
       </Formik>
-      <RegisterNavigation isNextActive={isNextActive} />
     </View>
   );
 };
@@ -127,7 +150,6 @@ export default UserCreation;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "space-between",
   },
   content: {
     paddingTop: 13,
@@ -137,8 +159,11 @@ const styles = StyleSheet.create({
   },
   headerText: {
     fontFamily: "TwitterChirp-Bold",
+    paddingTop: 13,
+    paddingLeft: 40,
+    paddingRight: 40,
     fontSize: 30,
-    marginBottom: 39,
+    marginBottom: 30,
   },
   formContainer: {},
   inputField: {

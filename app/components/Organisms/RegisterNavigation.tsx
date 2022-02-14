@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   StyleSheet,
   KeyboardAvoidingView,
   TouchableOpacityProps,
+  GestureResponderEvent,
 } from "react-native";
-import CustomButton from "../Atoms/CustomButton";
+import CustomButton, { CustomButtonProps } from "../Atoms/CustomButton";
 
-interface Props extends TouchableOpacityProps {
+interface Props extends CustomButtonProps {
   isNextActive: boolean;
+  isEmailInput: boolean;
+  onEmailToggle?: ((event: GestureResponderEvent) => void) | undefined;
 }
 
-const RegisterNavigation = ({ isNextActive, onPress }: Props) => {
+const RegisterNavigation = ({
+  isNextActive,
+  onPress,
+  onEmailToggle,
+  isEmailInput,
+}: Props) => {
+  // useEffect(() => {
+  //   console.log(isEmailInput);
+  // });
   return (
     <KeyboardAvoidingView style={styles.container}>
+      <CustomButton onPress={onEmailToggle}>
+        {isEmailInput ? "Use email instead" : "Use phone instead"}
+      </CustomButton>
       <CustomButton
         style={styles.nextBtn}
         textStyle={styles.nextBtnText}
@@ -34,11 +48,12 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     flexDirection: "row",
-    justifyContent: "flex-end",
+    justifyContent: "space-between",
   },
   nextBtn: {
     backgroundColor: "black",
     borderColor: "black",
+    alignSelf: "flex-end",
   },
   nextBtnText: {
     color: "white",
