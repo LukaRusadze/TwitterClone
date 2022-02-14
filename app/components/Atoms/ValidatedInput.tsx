@@ -8,10 +8,10 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { colors } from "../../config/colors";
-import InputField from "../Atoms/InputField";
+import InputField from "./InputField";
 import { FormikErrors } from "formik";
 
-interface Props extends TextInputProps {
+export interface ValidatedInputProps extends TextInputProps {
   style?: TextStyle;
   wrongColor?: string;
   errors?: string;
@@ -25,9 +25,7 @@ const ValidatedInput = ({
   onChangeText,
   required = false,
   ...props
-}: Props) => {
-  const [underlineColor, setUnderlineColor] = useState("#dbdbdb");
-  const [underlineWidth, setUnderlineWidth] = useState(1);
+}: ValidatedInputProps) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isWrong, setIsWrong] = useState(
     errors === undefined ? false : errors.length > (required ? 1 : 0)
@@ -39,33 +37,13 @@ const ValidatedInput = ({
     );
   }, [errors]);
 
-  useEffect(() => {
-    if (isWrong) {
-      setUnderlineColor("red");
-      if (isFocused) {
-        setUnderlineWidth(2);
-      } else {
-        setUnderlineWidth(1);
-      }
-    } else {
-      if (isFocused) {
-        setUnderlineColor(colors.primary);
-        setUnderlineWidth(2);
-      } else {
-        setUnderlineColor("#dbdbdb");
-        setUnderlineWidth(1);
-      }
-    }
-  }, [value, isWrong, isFocused]);
-
   return (
     <View>
       <TextInput
-        style={{
-          ...styles.input,
-          borderBottomColor: underlineColor,
-          borderBottomWidth: underlineWidth,
-        }}
+        style={[
+          isFocused ? [styles.input, styles.selected] : styles.input,
+          isWrong && styles.wrongUnderline,
+        ]}
         selectionColor={colors.primary}
         placeholderTextColor={"#606060"}
         onFocus={() => setIsFocused(true)}
@@ -84,11 +62,20 @@ const styles = StyleSheet.create({
     fontSize: 18,
     borderBottomWidth: 1,
     paddingBottom: 5,
+    borderBottomColor: "#dbdbdb",
+    color: "black",
   },
   error: {
     color: "red",
     paddingTop: 5,
     fontSize: 14.2,
+  },
+  wrongUnderline: {
+    borderBottomColor: "red",
+  },
+  selected: {
+    borderBottomWidth: 2,
+    borderBottomColor: colors.primary,
   },
 });
 

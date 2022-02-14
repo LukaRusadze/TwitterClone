@@ -7,18 +7,15 @@ export interface InputFieldProps extends TextInputProps {
 }
 
 const InputField = ({ onChangeText, style, ...props }: InputFieldProps) => {
-  const [underlineColor, setUnderlineColor] = useState("#dbdbdb");
-  const [underlineWidth, setUnderlineWidth] = useState(1);
   const [isFocused, setIsFocused] = useState(false);
 
   return (
     <TextInput
-      style={{
-        ...styles.input,
-        ...style,
-        borderBottomColor: underlineColor,
-        borderBottomWidth: underlineWidth,
-      }}
+      style={
+        isFocused
+          ? [styles.input, styles.selected, style]
+          : [styles.input, style]
+      }
       autoCorrect={false}
       placeholderTextColor={"#606060"}
       onChangeText={(state) => {
@@ -29,13 +26,9 @@ const InputField = ({ onChangeText, style, ...props }: InputFieldProps) => {
       selectionColor={colors.primary}
       onEndEditing={() => {
         setIsFocused(false);
-        setUnderlineWidth(1);
-        setUnderlineColor("#dbdbdb");
       }}
       onFocus={() => {
         setIsFocused(true);
-        setUnderlineWidth(2);
-        setUnderlineColor(colors.primary);
       }}
       {...props}
     />
@@ -47,6 +40,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     borderBottomWidth: 1,
     paddingBottom: 5,
+    borderBottomColor: "#dbdbdb",
+  },
+  selected: {
+    borderBottomColor: colors.primary,
+    borderBottomWidth: 2,
   },
 });
 
