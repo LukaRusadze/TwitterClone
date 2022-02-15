@@ -1,7 +1,6 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { colors } from "../../config/colors";
-import { FormikErrors } from "formik";
 import { ValidatedInputProps } from "./ValidatedInput";
 
 export interface CharLimitedInputProps extends ValidatedInputProps {

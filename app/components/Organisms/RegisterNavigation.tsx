@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   StyleSheet,
   KeyboardAvoidingView,
-  TouchableOpacityProps,
   GestureResponderEvent,
 } from "react-native";
 import CustomButton, { CustomButtonProps } from "../Atoms/CustomButton";

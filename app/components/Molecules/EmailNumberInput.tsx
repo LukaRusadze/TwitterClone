@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
-import React, { useEffect } from "react";
+import { StyleSheet } from "react-native";
+import React from "react";
 import ValidatedInput, { ValidatedInputProps } from "../Atoms/ValidatedInput";
 
 interface Props extends ValidatedInputProps {
@@ -13,10 +13,6 @@ const EmailNumberInput = ({
   style,
   isEmailInput,
 }: Props) => {
-  useEffect(() => {
-    console.log(isEmailInput);
-  });
-
   return (
     <>
       {isEmailInput ? (

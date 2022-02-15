@@ -1,12 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  ToastAndroid,
-  Platform,
-} from "react-native";
+import { View, Text, StyleSheet, ToastAndroid, Platform } from "react-native";
 import { NavigationStackGenericProp, RouteGenericProp } from "../types/types";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
@@ -16,7 +9,6 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import PasswordField from "../components/Molecules/PasswordField";
 import { auth } from "../firebase/firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { collection } from "firebase/firestore";
 
 const PasswordScreen = () => {
   const navigation = useNavigation<NavigationStackGenericProp<"Password">>();

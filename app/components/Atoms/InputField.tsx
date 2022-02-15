@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { TextInput, StyleSheet, TextInputProps, TextStyle } from "react-native";
 import { colors } from "../../config/colors";
 

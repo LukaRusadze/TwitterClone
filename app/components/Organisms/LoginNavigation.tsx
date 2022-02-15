@@ -1,7 +1,6 @@
-import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import React, { useState } from "react";
-import { View, StyleSheet, KeyboardAvoidingView } from "react-native";
+import { useNavigation, useRoute } from "@react-navigation/native";
+import React from "react";
+import { StyleSheet, KeyboardAvoidingView } from "react-native";
 import {
   NavigationStackGenericProp,
   RouteGenericProp,

@@ -1,29 +1,13 @@
-import {
-  KeyboardAvoidingView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
+import { KeyboardAvoidingView, StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { NavigationStackGenericProp, RootStackParamList } from "../types/types";
+import { NavigationStackGenericProp } from "../types/types";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
 import RegisterNavigation from "../components/Organisms/RegisterNavigation";
 import InputField from "../components/Atoms/InputField";
-import RegisterNameField from "../components/Molecules/RegisterNameField";
-import {
-  FastField,
-  Field,
-  FieldProps,
-  Formik,
-  FormikFormProps,
-  FormikProps,
-} from "formik";
+import { Field, FieldProps, Formik } from "formik";
 import * as Yup from "yup";
 import { useNavigation } from "@react-navigation/native";
-import ValidatedInput from "../components/Atoms/ValidatedInput";
 import CharLimitedInput from "../components/Atoms/CharLimitedInput";
 import EmailNumberInput from "../components/Molecules/EmailNumberInput";
 

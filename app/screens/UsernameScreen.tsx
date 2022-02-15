@@ -1,18 +1,15 @@
 import React, { useLayoutEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { RouteGenericProp } from "../types/types";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
 import LoginGetStarted from "../components/Molecules/LoginGetStarted";
 import LoginNavigation from "../components/Organisms/LoginNavigation";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useNavigation, useRoute } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import { NavigationStackGenericProp } from "../types/types";
 
 const UsernameScreen = () => {
   const navigation = useNavigation<NavigationStackGenericProp<"Username">>();
-  const route = useRoute<RouteGenericProp<"Username">>();
-
   const [username, setUsername] = useState("");
 
   useLayoutEffect(() => {

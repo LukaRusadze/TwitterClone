@@ -1,12 +1,5 @@
 import React, { useLayoutEffect } from "react";
-import {
-  View,
-  Text,
-  SafeAreaView,
-  StyleSheet,
-  StatusBar,
-  Platform,
-} from "react-native";
+import { View, Text, SafeAreaView, StyleSheet, StatusBar } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { NavigationStackGenericProp } from "../types/types";
 import { colors } from "../config/colors";

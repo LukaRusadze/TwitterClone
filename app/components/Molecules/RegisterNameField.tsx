@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import InputField, { InputFieldProps } from "../Atoms/InputField";
-import { Formik } from "formik";
 
 interface Props extends InputFieldProps {
   wrongColor: string;

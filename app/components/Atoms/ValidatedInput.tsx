@@ -8,8 +8,6 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { colors } from "../../config/colors";
-import InputField from "./InputField";
-import { FormikErrors } from "formik";
 
 export interface ValidatedInputProps extends TextInputProps {
   style?: TextStyle;

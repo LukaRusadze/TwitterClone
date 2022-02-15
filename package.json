@@ -9,9 +9,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/datetimepicker": "^5.1.0",
     "@react-navigation/native": "^6.0.7",
     "@react-navigation/native-stack": "^6.3.0",
     "@reduxjs/toolkit": "^1.7.1",
+    "expo": "^44.0.6",
     "expo-font": "~10.0.4",
     "expo-navigation-bar": "~1.1.1",
     "expo-splash-screen": "~0.14.1",

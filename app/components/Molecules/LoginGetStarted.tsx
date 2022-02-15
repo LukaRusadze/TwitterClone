@@ -1,6 +1,5 @@
-import React, { useState, useCallback, useEffect } from "react";
-import { Text, View, StyleSheet, TextInput } from "react-native";
-import { colors } from "../../config/colors";
+import React, { useState, useEffect } from "react";
+import { Text, View, StyleSheet } from "react-native";
 import InputField from "../Atoms/InputField";
 
 interface Props {
