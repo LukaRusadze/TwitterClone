@@ -4,10 +4,20 @@ import { colors } from "../../config/colors";
 
 export interface InputFieldProps extends TextInputProps {
   style?: TextStyle;
+  setIsFocused?: Function;
+  onFocus?: () => void;
+  onEndEditing?: () => void;
 }
 
-const InputField = ({ onChangeText, style, ...props }: InputFieldProps) => {
-  const [isFocused, setIsFocused] = useState(false);
+const InputField = ({
+  onChangeText,
+  style,
+  setIsFocused,
+  onFocus,
+  onEndEditing,
+  ...props
+}: InputFieldProps) => {
+  const [isFocused, setIsFocusedLocal] = useState(false);
 
   return (
     <TextInput
@@ -21,10 +31,22 @@ const InputField = ({ onChangeText, style, ...props }: InputFieldProps) => {
       onChangeText={onChangeText}
       selectionColor={colors.primary}
       onEndEditing={() => {
-        setIsFocused(false);
+        if (setIsFocused) {
+          setIsFocused(false);
+        }
+        setIsFocusedLocal(false);
+        if (onEndEditing) {
+          onEndEditing();
+        }
       }}
       onFocus={() => {
-        setIsFocused(true);
+        if (setIsFocused) {
+          setIsFocused(true);
+        }
+        setIsFocusedLocal(true);
+        if (onFocus) {
+          onFocus();
+        }
       }}
       {...props}
     />

@@ -1,15 +1,9 @@
-import {
-  StyleSheet,
-  Text,
-  TextInput,
-  TextInputProps,
-  TextStyle,
-  View,
-} from "react-native";
+import { StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { colors } from "../../config/colors";
+import { InputFieldProps } from "./InputField";
 
-export interface ValidatedInputProps extends TextInputProps {
+export interface ValidatedInputProps extends InputFieldProps {
   style?: TextStyle;
   wrongColor?: string;
   errors?: string;

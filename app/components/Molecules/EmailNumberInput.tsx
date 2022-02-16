@@ -4,6 +4,7 @@ import ValidatedInput, { ValidatedInputProps } from "../Atoms/ValidatedInput";
 
 interface Props extends ValidatedInputProps {
   isEmailInput: boolean;
+  setIsEmailToggleVisible?: (visibile: boolean) => void;
 }
 
 const EmailNumberInput = ({
@@ -12,6 +13,7 @@ const EmailNumberInput = ({
   errors,
   style,
   isEmailInput,
+  setIsEmailToggleVisible,
 }: Props) => {
   return (
     <>
@@ -23,6 +25,16 @@ const EmailNumberInput = ({
           keyboardType="number-pad"
           placeholder="Phone"
           errors={errors}
+          onFocus={() => {
+            if (setIsEmailToggleVisible) {
+              setIsEmailToggleVisible(true);
+            }
+          }}
+          onEndEditing={() => {
+            if (setIsEmailToggleVisible) {
+              setIsEmailToggleVisible(false);
+            }
+          }}
         />
       ) : (
         <ValidatedInput
@@ -32,6 +44,16 @@ const EmailNumberInput = ({
           keyboardType="email-address"
           placeholder="Email"
           errors={errors}
+          onFocus={() => {
+            if (setIsEmailToggleVisible) {
+              setIsEmailToggleVisible(true);
+            }
+          }}
+          onEndEditing={() => {
+            if (setIsEmailToggleVisible) {
+              setIsEmailToggleVisible(false);
+            }
+          }}
         />
       )}
     </>

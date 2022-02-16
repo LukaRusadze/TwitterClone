@@ -3,6 +3,7 @@ import {
   StyleSheet,
   KeyboardAvoidingView,
   GestureResponderEvent,
+  View,
 } from "react-native";
 import CustomButton, { CustomButtonProps } from "../Atoms/CustomButton";
 
@@ -10,22 +11,34 @@ interface Props extends CustomButtonProps {
   isNextActive: boolean;
   isEmailInput: boolean;
   onEmailToggle?: ((event: GestureResponderEvent) => void) | undefined;
+  isSeparatorVisible?: boolean;
+  isEmailToggleVisible?: boolean;
 }
 
 const RegisterNavigation = ({
   isNextActive,
   onPress,
   onEmailToggle,
+  isEmailToggleVisible = true,
   isEmailInput,
+  isSeparatorVisible = true,
 }: Props) => {
-  // useEffect(() => {
-  //   console.log(isEmailInput);
-  // });
   return (
-    <KeyboardAvoidingView style={styles.container}>
-      <CustomButton onPress={onEmailToggle}>
-        {isEmailInput ? "Use email instead" : "Use phone instead"}
-      </CustomButton>
+    <KeyboardAvoidingView
+      style={
+        isSeparatorVisible
+          ? styles.container
+          : [styles.container, { borderTopWidth: 0 }]
+      }
+    >
+      {isEmailToggleVisible ? (
+        <CustomButton onPress={onEmailToggle}>
+          {isEmailInput ? "Use email instead" : "Use phone instead"}
+        </CustomButton>
+      ) : (
+        <View></View>
+      )}
+
       <CustomButton
         style={styles.nextBtn}
         textStyle={styles.nextBtnText}

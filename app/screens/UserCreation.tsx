@@ -4,12 +4,12 @@ import { NavigationStackGenericProp } from "../types/types";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
 import RegisterNavigation from "../components/Organisms/RegisterNavigation";
-import InputField from "../components/Atoms/InputField";
 import { Field, FieldProps, Formik } from "formik";
 import * as Yup from "yup";
 import { useNavigation } from "@react-navigation/native";
 import CharLimitedInput from "../components/Atoms/CharLimitedInput";
-import EmailNumberInput from "../components/Molecules/EmailNumberInput";
+import DateInput from "../components/Molecules/DateInput";
+import ValidatedInput from "../components/Atoms/ValidatedInput";
 
 const UserCreation = () => {
   const navigation = useNavigation<NavigationStackGenericProp<"Register">>();
@@ -34,6 +34,7 @@ const UserCreation = () => {
 
   const [isNextActive, setIsNextActive] = useState(false);
   const [emailToggle, setEmailToggle] = useState(false);
+  const [isEmailToggleVisible, setIsEmailToggleVisible] = useState(false);
 
   const phoneNumberRegex = /^[+]?([0-9]*[\.\s\-\(\)]|[0-9]+){3,24}$/;
   const maxNameLength = 50;
@@ -41,13 +42,13 @@ const UserCreation = () => {
   const SignupSchema = Yup.object().shape({
     name: Yup.string()
       .max(maxNameLength, "Must be 50 characters or fewer")
-      .required(" "),
+      .required("Hello"),
     phoneNumber: Yup.string().matches(
       phoneNumberRegex,
       "Please enter a valid phone number."
     ),
     email: Yup.string().email(),
-    dateOfBirth: Yup.string(),
+    dateOfBirth: Yup.date(),
   });
 
   return (
@@ -58,69 +59,109 @@ const UserCreation = () => {
           name: "",
           phoneNumber: "",
           email: "",
-          dateOfBirth: "",
+          dateOfBirth: new Date(),
         }}
         validateOnMount={true}
         onSubmit={(values) => console.log(values)}
         validationSchema={SignupSchema}
       >
-        {({ handleChange, handleSubmit, values, errors }) => {
+        {({ handleChange, handleSubmit, values, errors, setFieldValue }) => {
           useEffect(() => {
+            console.log(Object.keys(errors).length === 1);
             setIsNextActive(Object.keys(errors).length === 0);
           }, [errors]);
 
           return (
             <>
-              <View style={styles.content}>
-                <Field name="name">
-                  {({ field, form, meta }: FieldProps) => {
-                    return (
-                      <CharLimitedInput
-                        style={{ marginBottom: 20 }}
-                        placeholder="Name"
-                        wrongColor={"red"}
-                        onChangeText={handleChange(field.name)}
-                        value={field.value}
-                        errors={errors.name}
-                        required={true}
-                        charLimit={50}
-                      />
-                    );
-                  }}
-                </Field>
-                <Field name="phoneNumber">
-                  {({ field, form, meta }: FieldProps) => {
-                    return (
-                      <EmailNumberInput
-                        isEmailInput={emailToggle}
-                        onChangeText={handleChange(field.name)}
-                        value={values.phoneNumber}
-                        errors={errors.phoneNumber}
-                      />
-                    );
-                  }}
-                </Field>
+              <View style={styles.container}>
+                <View style={[styles.content, styles.padding]}>
+                  <Field name="name">
+                    {({ field, form, meta }: FieldProps) => {
+                      return (
+                        <CharLimitedInput
+                          style={{ marginBottom: 25 }}
+                          placeholder="Name"
+                          wrongColor={"red"}
+                          onChangeText={handleChange(field.name)}
+                          value={field.value}
+                          errors={errors.name}
+                          required={true}
+                          charLimit={50}
+                        />
+                      );
+                    }}
+                  </Field>
+                  {emailToggle ? (
+                    <Field name="phoneNumber">
+                      {({ field, form, meta }: FieldProps) => {
+                        return (
+                          <ValidatedInput
+                            onChangeText={handleChange(field.name)}
+                            value={field.value}
+                            keyboardType="number-pad"
+                            placeholder="Phone"
+                            errors={errors.phoneNumber}
+                            onFocus={() => {
+                              if (setIsEmailToggleVisible) {
+                                setIsEmailToggleVisible(true);
+                              }
+                            }}
+                            onEndEditing={() => {
+                              if (setIsEmailToggleVisible) {
+                                setIsEmailToggleVisible(false);
+                              }
+                            }}
+                          />
+                        );
+                      }}
+                    </Field>
+                  ) : (
+                    <Field name="email">
+                      {({ field, form, meta }: FieldProps) => {
+                        return (
+                          <ValidatedInput
+                            onChangeText={handleChange(field.name)}
+                            value={field.value}
+                            keyboardType="email-address"
+                            placeholder="Email"
+                            errors={errors.email}
+                            onFocus={() => {
+                              if (setIsEmailToggleVisible) {
+                                setIsEmailToggleVisible(true);
+                              }
+                            }}
+                            onEndEditing={() => {
+                              if (setIsEmailToggleVisible) {
+                                setIsEmailToggleVisible(false);
+                              }
+                            }}
+                          />
+                        );
+                      }}
+                    </Field>
+                  )}
+                </View>
                 <Field name="dateOfBirth">
                   {({ field, form, meta }: FieldProps) => {
                     return (
-                      <InputField
-                        style={styles.inputField}
-                        onChangeText={handleChange(field.name)}
-                        value={field.value}
-                        placeholder="Date of birth"
-                      />
+                      <DateInput field={field} setFieldValue={setFieldValue}>
+                        <KeyboardAvoidingView>
+                          <RegisterNavigation
+                            isSeparatorVisible={false}
+                            isEmailInput={emailToggle}
+                            isEmailToggleVisible={isEmailToggleVisible}
+                            onEmailToggle={() =>
+                              setEmailToggle((state) => !state)
+                            }
+                            onPress={() => handleSubmit()}
+                            isNextActive={isNextActive}
+                          />
+                        </KeyboardAvoidingView>
+                      </DateInput>
                     );
                   }}
                 </Field>
               </View>
-              <KeyboardAvoidingView>
-                <RegisterNavigation
-                  isEmailInput={emailToggle}
-                  onEmailToggle={() => setEmailToggle((state) => !state)}
-                  onPress={() => handleSubmit()}
-                  isNextActive={isNextActive}
-                />
-              </KeyboardAvoidingView>
             </>
           );
         }}
@@ -136,10 +177,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content: {
-    paddingTop: 13,
     paddingLeft: 40,
     paddingRight: 40,
-    flex: 1,
+    flex: 2.1,
+    justifyContent: "flex-end",
+  },
+  padding: {
+    paddingLeft: 40,
+    paddingRight: 40,
   },
   headerText: {
     fontFamily: "TwitterChirp-Bold",
@@ -150,7 +195,5 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   formContainer: {},
-  inputField: {
-    marginTop: 26,
-  },
+  inputField: {},
 });
