@@ -1,4 +1,11 @@
-import { KeyboardAvoidingView, StyleSheet, Text, View } from "react-native";
+import {
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { NavigationStackGenericProp } from "../types/types";
 import { Ionicons } from "@expo/vector-icons";
@@ -10,6 +17,21 @@ import { useNavigation } from "@react-navigation/native";
 import CharLimitedInput from "../components/Atoms/CharLimitedInput";
 import DateInput from "../components/Molecules/DateInput";
 import ValidatedInput from "../components/Atoms/ValidatedInput";
+
+const phoneNumberRegex = /^[+]?([0-9]*[\.\s\-\(\)]|[0-9]+){3,24}$/;
+const maxNameLength = 50;
+
+const SignupSchema = Yup.object().shape({
+  name: Yup.string()
+    .max(maxNameLength, "Must be 50 characters or fewer")
+    .required(" "),
+  phoneNumber: Yup.string().matches(
+    phoneNumberRegex,
+    "Please enter a valid phone number."
+  ),
+  email: Yup.string().email(" "),
+  dateOfBirth: Yup.date(),
+});
 
 const UserCreation = () => {
   const navigation = useNavigation<NavigationStackGenericProp<"Register">>();
@@ -32,24 +54,8 @@ const UserCreation = () => {
     });
   });
 
-  const [isNextActive, setIsNextActive] = useState(false);
   const [emailToggle, setEmailToggle] = useState(false);
   const [isEmailToggleVisible, setIsEmailToggleVisible] = useState(false);
-
-  const phoneNumberRegex = /^[+]?([0-9]*[\.\s\-\(\)]|[0-9]+){3,24}$/;
-  const maxNameLength = 50;
-
-  const SignupSchema = Yup.object().shape({
-    name: Yup.string()
-      .max(maxNameLength, "Must be 50 characters or fewer")
-      .required("Hello"),
-    phoneNumber: Yup.string().matches(
-      phoneNumberRegex,
-      "Please enter a valid phone number."
-    ),
-    email: Yup.string().email(),
-    dateOfBirth: Yup.date(),
-  });
 
   return (
     <View style={styles.container}>
@@ -61,16 +67,12 @@ const UserCreation = () => {
           email: "",
           dateOfBirth: new Date(),
         }}
-        validateOnMount={true}
-        onSubmit={(values) => console.log(values)}
+        onSubmit={(values) =>
+          navigation.navigate("CustomizeExperience", values)
+        }
         validationSchema={SignupSchema}
       >
         {({ handleChange, handleSubmit, values, errors, setFieldValue }) => {
-          useEffect(() => {
-            console.log(Object.keys(errors).length === 1);
-            setIsNextActive(Object.keys(errors).length === 0);
-          }, [errors]);
-
           return (
             <>
               <View style={styles.container}>
@@ -145,7 +147,9 @@ const UserCreation = () => {
                   {({ field, form, meta }: FieldProps) => {
                     return (
                       <DateInput field={field} setFieldValue={setFieldValue}>
-                        <KeyboardAvoidingView>
+                        <KeyboardAvoidingView
+                          behavior={Platform.OS == "ios" ? "padding" : "height"}
+                        >
                           <RegisterNavigation
                             isSeparatorVisible={false}
                             isEmailInput={emailToggle}
@@ -154,7 +158,7 @@ const UserCreation = () => {
                               setEmailToggle((state) => !state)
                             }
                             onPress={() => handleSubmit()}
-                            isNextActive={isNextActive}
+                            isNextActive={Object.keys(errors).length === 0}
                           />
                         </KeyboardAvoidingView>
                       </DateInput>
@@ -179,7 +183,8 @@ const styles = StyleSheet.create({
   content: {
     paddingLeft: 40,
     paddingRight: 40,
-    flex: 2.1,
+    paddingTop: 90,
+    flex: 1,
     justifyContent: "flex-end",
   },
   padding: {

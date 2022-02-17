@@ -1,13 +1,21 @@
-import { StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  TextInputProps,
+  TextStyle,
+  View,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 import { colors } from "../../config/colors";
-import { InputFieldProps } from "./InputField";
 
-export interface ValidatedInputProps extends InputFieldProps {
+export interface ValidatedInputProps extends TextInputProps {
   style?: TextStyle;
   wrongColor?: string;
   errors?: string;
   required?: boolean;
+  onFocus?: () => void;
+  onEndEditing?: () => void;
 }
 
 const ValidatedInput = ({
@@ -16,6 +24,8 @@ const ValidatedInput = ({
   value,
   onChangeText,
   required = false,
+  onFocus,
+  onEndEditing,
   ...props
 }: ValidatedInputProps) => {
   const [isFocused, setIsFocused] = useState(false);
@@ -38,8 +48,18 @@ const ValidatedInput = ({
         ]}
         selectionColor={colors.primary}
         placeholderTextColor={"#606060"}
-        onFocus={() => setIsFocused(true)}
-        onEndEditing={() => setIsFocused(false)}
+        onFocus={() => {
+          setIsFocused(true);
+          if (onFocus) {
+            onFocus();
+          }
+        }}
+        onEndEditing={() => {
+          setIsFocused(false);
+          if (onEndEditing) {
+            onEndEditing();
+          }
+        }}
         onChangeText={onChangeText}
         value={value}
         {...props}

@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Keyboard } from "react-native";
 import React, { useState } from "react";
 import InputField from "../Atoms/InputField";
 import DatePicker from "react-native-date-picker";

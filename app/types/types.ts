@@ -8,6 +8,12 @@ export type RootStackParamList = {
   Password: {
     username?: string;
   };
+  CustomizeExperience: {
+    name: string;
+    phoneNumber: string;
+    email: string;
+    dateOfBirth: Date;
+  };
 };
 
 export type NavigationStackGenericProp<
