@@ -12,7 +12,7 @@ interface Props {
 
 const DateInput: React.FC<Props> = ({ field, setFieldValue, children }) => {
   const [isFocused, setIsFocused] = useState(false);
-
+  const date = new Date(field.value);
   return (
     <View style={styles.container}>
       <View>
@@ -22,7 +22,7 @@ const DateInput: React.FC<Props> = ({ field, setFieldValue, children }) => {
           setIsFocused={setIsFocused}
           caretHidden={true}
         >
-          {formatDate(field.value)}
+          {formatDate(date)}
         </InputField>
         {isFocused && (
           <Text style={styles.info}>
@@ -39,7 +39,7 @@ const DateInput: React.FC<Props> = ({ field, setFieldValue, children }) => {
           <DatePicker
             style={styles.datePicker}
             androidVariant={"nativeAndroid"}
-            date={field.value}
+            date={date}
             onDateChange={(value) => setFieldValue(field.name, value)}
             mode="date"
           />

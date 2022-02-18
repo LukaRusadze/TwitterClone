@@ -26,7 +26,7 @@ const AccountCreationButtons = () => {
 
       <CustomButton
         style={styles.createBtn}
-        onPress={() => navigation.navigate("Register")}
+        onPress={() => navigation.navigate("UserCreation")}
       >
         <Text style={styles.createBtnText}>Create account</Text>
       </CustomButton>

@@ -29,7 +29,8 @@ const RegisterNameField: React.FC<Props> = ({
         setIsWrong(false);
       }
     }
-  });
+  }),
+    [error];
 
   return (
     <View>

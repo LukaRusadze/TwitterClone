@@ -6,7 +6,7 @@ interface Props extends ViewProps {
   textStyle: TextStyle;
 }
 
-const TermsLonger = ({ style, textStyle }: Props) => {
+const TermsLong = ({ style, textStyle }: Props) => {
   return (
     <View style={style}>
       <Text style={[styles.text, textStyle]}>
@@ -21,7 +21,7 @@ const TermsLonger = ({ style, textStyle }: Props) => {
   );
 };
 
-export default TermsLonger;
+export default TermsLong;
 
 const styles = StyleSheet.create({
   text: {

@@ -17,6 +17,9 @@ import { useNavigation } from "@react-navigation/native";
 import CharLimitedInput from "../components/Atoms/CharLimitedInput";
 import DateInput from "../components/Molecules/DateInput";
 import ValidatedInput from "../components/Atoms/ValidatedInput";
+import useTwitterHeader from "../hooks/useTwitterHeader";
+import { useAppDispatch } from "../hooks/redux";
+import { saveUser } from "../store/features/account/accountSlice";
 
 const phoneNumberRegex = /^[+]?([0-9]*[\.\s\-\(\)]|[0-9]+){3,24}$/;
 const maxNameLength = 50;
@@ -34,25 +37,11 @@ const SignupSchema = Yup.object().shape({
 });
 
 const UserCreation = () => {
-  const navigation = useNavigation<NavigationStackGenericProp<"Register">>();
+  const navigation =
+    useNavigation<NavigationStackGenericProp<"UserCreation">>();
+  const dispatch = useAppDispatch();
 
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerBackVisible: false,
-      headerShadowVisible: false,
-      headerLeft: () => (
-        <Ionicons
-          name="md-arrow-back"
-          size={25}
-          color={colors.primary}
-          onPress={navigation.goBack}
-        />
-      ),
-      headerTitle: () => (
-        <Ionicons name="logo-twitter" size={24} color={colors.primary} />
-      ),
-    });
-  });
+  useTwitterHeader(navigation);
 
   const [emailToggle, setEmailToggle] = useState(false);
   const [isEmailToggleVisible, setIsEmailToggleVisible] = useState(false);
@@ -65,11 +54,12 @@ const UserCreation = () => {
           name: "",
           phoneNumber: "",
           email: "",
-          dateOfBirth: new Date(),
+          dateOfBirth: Date.now(),
         }}
-        onSubmit={(values) =>
-          navigation.navigate("CustomizeExperience", values)
-        }
+        onSubmit={(values) => {
+          dispatch(saveUser(values));
+          navigation.navigate("CustomizeExperience");
+        }}
         validationSchema={SignupSchema}
       >
         {({ handleChange, handleSubmit, values, errors, setFieldValue }) => {

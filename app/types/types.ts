@@ -3,17 +3,13 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 export type RootStackParamList = {
   Start: undefined;
-  Register: undefined;
+  UserCreation: undefined;
   Username: undefined;
   Password: {
     username?: string;
   };
-  CustomizeExperience: {
-    name: string;
-    phoneNumber: string;
-    email: string;
-    dateOfBirth: Date;
-  };
+  CustomizeExperience: undefined;
+  ConfirmSignUp: undefined;
 };
 
 export type NavigationStackGenericProp<

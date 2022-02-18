@@ -1,37 +1,21 @@
 import { StyleSheet, Text, View } from "react-native";
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { NavigationStackGenericProp, RouteGenericProp } from "../types/types";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
-import TermsLonger from "../components/Atoms/TermsLonger";
+import TermsLong from "../components/Atoms/TermsLong";
 import RegisterNavigation from "../components/Organisms/RegisterNavigation";
+import useTwitterHeader from "../hooks/useTwitterHeader";
 
 type Props = {};
 
 const CustomizeExperienceScreen = (props: Props) => {
   const navigation =
     useNavigation<NavigationStackGenericProp<"CustomizeExperience">>();
-  const route = useRoute<RouteGenericProp<"CustomizeExperience">>();
 
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerBackVisible: false,
-      headerShadowVisible: false,
-      headerLeft: () => (
-        <Ionicons
-          name="md-arrow-back"
-          size={25}
-          color={colors.primary}
-          onPress={navigation.goBack}
-        />
-      ),
-      headerTitle: () => (
-        <Ionicons name="logo-twitter" size={24} color={colors.primary} />
-      ),
-    });
-  });
+  useTwitterHeader(navigation);
 
   return (
     <View style={styles.container}>
@@ -60,13 +44,13 @@ const CustomizeExperienceScreen = (props: Props) => {
             bounceFriction={10}
           />
         </View>
-        <TermsLonger textStyle={{ lineHeight: 18 }} style={{ marginTop: 25 }} />
+        <TermsLong textStyle={{ lineHeight: 18 }} style={{ marginTop: 25 }} />
       </View>
       <RegisterNavigation
         isNextActive={true}
         isEmailInput={false}
         isEmailToggleVisible={false}
-        onPress={() => null}
+        onPress={() => navigation.navigate("ConfirmSignUp")}
       />
     </View>
   );
