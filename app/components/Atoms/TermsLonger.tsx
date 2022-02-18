@@ -1,13 +1,15 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TextStyle, View, ViewProps } from "react-native";
 import React from "react";
 import { colors } from "../../config/colors";
 
-type Props = {};
+interface Props extends ViewProps {
+  textStyle: TextStyle;
+}
 
-const TermsLonger = (props: Props) => {
+const TermsLonger = ({ style, textStyle }: Props) => {
   return (
-    <View>
-      <Text style={styles.text}>
+    <View style={style}>
+      <Text style={[styles.text, textStyle]}>
         By signing up, you agree to out{" "}
         <Text style={styles.highlighted}>Terms</Text>, Privacy Policy, and
         <Text style={styles.highlighted}> Cookie Use</Text>. Twitter may use
@@ -24,7 +26,7 @@ export default TermsLonger;
 const styles = StyleSheet.create({
   text: {
     color: "#707070",
-    fontFamily: "Roboto-Regular",
+    fontFamily: "TwitterChirp",
     fontSize: 13,
   },
   highlighted: {

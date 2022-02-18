@@ -34,7 +34,7 @@ const CustomizeExperienceScreen = (props: Props) => {
   });
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.headerText}>Customize your Experience</Text>
         <Text style={styles.trackText}>
@@ -60,9 +60,14 @@ const CustomizeExperienceScreen = (props: Props) => {
             bounceFriction={10}
           />
         </View>
-        <TermsLonger />
+        <TermsLonger textStyle={{ lineHeight: 18 }} style={{ marginTop: 25 }} />
       </View>
-      <RegisterNavigation isNextActive={true} isEmailInput={false} />
+      <RegisterNavigation
+        isNextActive={true}
+        isEmailInput={false}
+        isEmailToggleVisible={false}
+        onPress={() => null}
+      />
     </View>
   );
 };
@@ -70,12 +75,16 @@ const CustomizeExperienceScreen = (props: Props) => {
 export default CustomizeExperienceScreen;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "space-between",
+  },
   headerText: {
     fontFamily: "TwitterChirp-Bold",
     fontSize: 30,
+    marginTop: 32,
   },
   content: {
-    flex: 1,
     paddingLeft: 40,
     paddingRight: 40,
     justifyContent: "space-between",
@@ -83,10 +92,12 @@ const styles = StyleSheet.create({
   trackText: {
     fontFamily: "TwitterChirp-Bold",
     fontSize: 23,
+    marginTop: 42,
   },
   checkboxContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
+    marginTop: 22,
   },
   soulSeller: {
     fontFamily: "TwitterChirp",
