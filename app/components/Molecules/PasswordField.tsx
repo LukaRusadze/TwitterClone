@@ -8,7 +8,7 @@ interface Props {
   style?: any;
 }
 
-const PasswordField = ({ setInputValue, style, ...props }: Props) => {
+const PasswordField = ({ setInputValue }: Props) => {
   const [underlineColor, setUnderlineColor] = useState("#dbdbdb");
   const [underlineWidth, setUnderlineWidth] = useState(1);
   const [passwordHidden, setPasswordHidden] = useState(true);
@@ -51,7 +51,7 @@ const PasswordField = ({ setInputValue, style, ...props }: Props) => {
               : styles.passwordVisibilityOn
           }
           name="eye-outline"
-        ></Ionicons>
+        />
       </Pressable>
     </View>
   );

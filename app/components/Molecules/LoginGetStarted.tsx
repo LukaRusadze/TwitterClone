@@ -12,7 +12,7 @@ const LoginGetStarted = ({ setIsNextActive, output }: Props) => {
 
   useEffect(() => {
     output(inputValue);
-  }, [inputValue]);
+  }, [inputValue, output]);
 
   useEffect(() => {
     if (inputValue.length > 0) {
@@ -20,7 +20,7 @@ const LoginGetStarted = ({ setIsNextActive, output }: Props) => {
     } else {
       setIsNextActive(false);
     }
-  }, [inputValue]);
+  }, [inputValue, setIsNextActive]);
 
   return (
     <View style={styles.container}>

@@ -1,3 +1,4 @@
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { fonts } from "./app/config/fonts";

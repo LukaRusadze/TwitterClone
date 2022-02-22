@@ -19,18 +19,17 @@ const RegisterNameField: React.FC<Props> = ({
 }) => {
   const charLimit = maxLength === undefined ? 30 : maxLength;
   const remainingAmount = charLimit - value.length;
-  const [isWrong, setIsWrong] = useState(error?.length != 0 ? true : false);
+  const [isWrong, setIsWrong] = useState(error?.length !== 0 ? true : false);
 
   useEffect(() => {
     if (error !== undefined) {
-      if (error.length != 0) {
+      if (error.length !== 0) {
         setIsWrong(true);
       } else {
         setIsWrong(false);
       }
     }
-  }),
-    [error];
+  }, [error]);
 
   return (
     <View>

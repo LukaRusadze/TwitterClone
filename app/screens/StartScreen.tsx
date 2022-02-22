@@ -30,7 +30,7 @@ const StartScreen = () => {
 
         <View>
           <AccountCreationButtons />
-          <Terms style={{ marginTop: 25 }} />
+          <Terms style={styles.terms} />
           <Text style={styles.logIn}>
             Have an account already?{" "}
             <Text
@@ -78,6 +78,9 @@ const styles = StyleSheet.create({
     color: "#606060",
     fontFamily: "Roboto-Regular",
     fontSize: 15,
+  },
+  terms: {
+    marginTop: 25,
   },
 });
 

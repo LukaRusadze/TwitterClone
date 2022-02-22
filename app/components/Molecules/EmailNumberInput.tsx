@@ -1,4 +1,3 @@
-import { StyleSheet } from "react-native";
 import React from "react";
 import ValidatedInput, { ValidatedInputProps } from "../Atoms/ValidatedInput";
 
@@ -61,5 +60,3 @@ const EmailNumberInput = ({
 };
 
 export default EmailNumberInput;
-
-const styles = StyleSheet.create({});

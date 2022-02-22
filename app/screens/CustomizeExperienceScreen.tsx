@@ -1,8 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
-import React, { useEffect, useLayoutEffect } from "react";
-import { useNavigation, useRoute } from "@react-navigation/native";
-import { NavigationStackGenericProp, RouteGenericProp } from "../types/types";
-import { Ionicons } from "@expo/vector-icons";
+import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import { NavigationStackGenericProp } from "../types/types";
 import { colors } from "../config/colors";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import TermsLong from "../components/Atoms/TermsLong";
@@ -11,7 +10,7 @@ import useTwitterHeader from "../hooks/useTwitterHeader";
 
 type Props = {};
 
-const CustomizeExperienceScreen = (props: Props) => {
+const CustomizeExperienceScreen = ({}: Props) => {
   const navigation =
     useNavigation<NavigationStackGenericProp<"CustomizeExperience">>();
 
@@ -32,19 +31,15 @@ const CustomizeExperienceScreen = (props: Props) => {
           </Text>
 
           <BouncyCheckbox
-            iconStyle={{
-              borderRadius: 0,
-              borderColor: "black",
-              borderWidth: 2,
-            }}
-            style={{ marginLeft: 17 }}
+            iconStyle={styles.checkboxIcon}
+            style={styles.checkbox}
             fillColor={colors.primary}
             size={20}
             bounceEffect={1}
             bounceFriction={10}
           />
         </View>
-        <TermsLong textStyle={{ lineHeight: 18 }} style={{ marginTop: 25 }} />
+        <TermsLong textStyle={styles.termsText} style={styles.terms} />
       </View>
       <RegisterNavigation
         isNextActive={true}
@@ -88,5 +83,19 @@ const styles = StyleSheet.create({
     fontSize: 15,
     width: "85%",
     color: "#505050",
+  },
+  checkbox: {
+    marginLeft: 17,
+  },
+  checkboxIcon: {
+    borderRadius: 0,
+    borderColor: "black",
+    borderWidth: 2,
+  },
+  termsText: {
+    lineHeight: 18,
+  },
+  terms: {
+    marginTop: 25,
   },
 });

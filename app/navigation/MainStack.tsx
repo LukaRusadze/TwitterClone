@@ -1,4 +1,3 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import {
   createNativeStackNavigator,
@@ -40,5 +39,3 @@ const screenOptions: NativeStackNavigationOptions = {
 };
 
 export default MainStack;
-
-const styles = StyleSheet.create({});

@@ -26,7 +26,7 @@ const CharLimitedInput = ({
     setIsWrong(
       errors === undefined ? false : errors.length > (required ? 1 : 0)
     );
-  }, [errors]);
+  }, [errors, required]);
 
   return (
     <View style={style}>
@@ -39,11 +39,11 @@ const CharLimitedInput = ({
         placeholderTextColor={"#606060"}
         onFocus={() => setIsFocused(true)}
         onEndEditing={() => setIsFocused(false)}
-        onChangeText={(value) => {
-          setTempInputValue(value);
+        onChangeText={(text) => {
+          setTempInputValue(text);
 
           if (onChangeText) {
-            onChangeText(value);
+            onChangeText(text);
           }
         }}
         value={value}

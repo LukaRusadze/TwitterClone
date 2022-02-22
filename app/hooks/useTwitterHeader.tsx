@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import { colors } from "../config/colors";
 import { Ionicons } from "@expo/vector-icons";
-import { NavigationStackGenericProp, RootStackParamList } from "../types/types";
+import { NavigationStackGenericProp } from "../types/types";
 
 const useTwitterHeader = (
   navigation: NavigationStackGenericProp<

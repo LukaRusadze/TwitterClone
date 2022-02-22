@@ -1,5 +1,12 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { View, Text, StyleSheet, ToastAndroid, Platform } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ToastAndroid,
+  Platform,
+  Alert,
+} from "react-native";
 import { NavigationStackGenericProp, RouteGenericProp } from "../types/types";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
@@ -32,20 +39,19 @@ const PasswordScreen = () => {
     });
   });
 
+  const { username } = route.params;
+
+  const [isNextActive, setIsNextActive] = useState(false);
+  const [passwordField, setPasswordField] = useState("");
+  const [submit, setSubmit] = useState(false);
+
   useEffect(() => {
     if (passwordField) {
       setIsNextActive(true);
     } else {
       setIsNextActive(false);
     }
-  });
-
-  const { username } = route.params;
-
-  const [isNextActive, setIsNextActive] = useState(false);
-  const [usernameField, setUsernameField] = useState(username);
-  const [passwordField, setPasswordField] = useState("");
-  const [submit, setSubmit] = useState(false);
+  }, [passwordField]);
 
   useEffect(() => {
     if (submit) {
@@ -54,29 +60,28 @@ const PasswordScreen = () => {
       signInWithEmailAndPassword(auth, email, passwordField)
         .then((userCredential) => {
           const user = userCredential.user;
+          console.log(user);
         })
         .catch((error) => {
           switch (error.code) {
             case "auth/wrong-password":
-              {
-                if (Platform.OS === "android") {
-                  ToastAndroid.show("Wrong Password!", ToastAndroid.LONG);
-                } else {
-                  alert("Wrong Password!");
-                }
+              if (Platform.OS === "android") {
+                ToastAndroid.show("Wrong Password!", ToastAndroid.LONG);
+              } else {
+                Alert.alert("Wrong Password!");
               }
+
               break;
             case "auth/quota-exceeded":
-              {
-                if (Platform.OS === "android") {
-                  ToastAndroid.show(
-                    "Too many wrong passwords! Try again later",
-                    ToastAndroid.LONG
-                  );
-                } else {
-                  alert("Wrong Password!");
-                }
+              if (Platform.OS === "android") {
+                ToastAndroid.show(
+                  "Too many wrong passwords! Try again later",
+                  ToastAndroid.LONG
+                );
+              } else {
+                Alert.alert("Wrong Password!");
               }
+
               break;
             default: {
               console.log(error.code);
@@ -85,7 +90,7 @@ const PasswordScreen = () => {
         });
       setSubmit(false);
     }
-  }, [submit]);
+  }, [passwordField, submit, username]);
 
   return (
     <View style={styles.container}>
@@ -94,7 +99,7 @@ const PasswordScreen = () => {
 
         <View style={styles.usernameContainer} pointerEvents="none">
           <InputField
-            value={usernameField}
+            value={username}
             onChangeText={() => null}
             style={styles.input}
             placeholder="Username"
