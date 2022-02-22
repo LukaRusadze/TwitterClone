@@ -30,7 +30,7 @@ const SignupSchema = Yup.object().shape({
     "Please enter a valid phone number."
   ),
   email: Yup.string().email(" "),
-  dateOfBirth: Yup.date(),
+  dateOfBirth: Yup.number(),
 });
 
 const UserCreation = () => {

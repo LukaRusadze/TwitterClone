@@ -40,7 +40,7 @@ const DateInput: React.FC<Props> = ({ field, setFieldValue, children }) => {
             style={styles.datePicker}
             androidVariant={"nativeAndroid"}
             date={date}
-            onDateChange={(value) => setFieldValue(field.name, value)}
+            onDateChange={(value) => setFieldValue(field.name, value.getTime())}
             mode="date"
           />
         )}
