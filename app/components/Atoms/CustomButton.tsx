@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     backgroundColor: "white",
     alignItems: "center",
+    justifyContent: "center",
     alignSelf: "flex-start",
     borderColor: "#bababa",
     paddingLeft: 15,
