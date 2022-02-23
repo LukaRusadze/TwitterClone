@@ -1,5 +1,5 @@
 import { StyleSheet, View, Text } from "react-native";
-import React from "react";
+import React, { useCallback } from "react";
 import InputField from "../components/Atoms/InputField";
 import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useNavigation } from "@react-navigation/native";
@@ -17,6 +17,10 @@ const ConfirmSignUpScreen = ({}: Props) => {
     useNavigation<NavigationStackGenericProp<"ConfirmSignUp">>();
   const accountData = useAppSelector((state) => state.account);
 
+  const handleSignUp = useCallback(() => {
+    navigation.navigate("EmailVerification");
+  }, [navigation]);
+
   useTwitterHeader(navigation);
 
   return (
@@ -32,7 +36,11 @@ const ConfirmSignUpScreen = ({}: Props) => {
       </View>
       <View>
         <TermsLonger style={styles.terms} textStyle={styles.termsText} />
-        <CustomButton style={styles.button} textStyle={styles.buttonText}>
+        <CustomButton
+          style={styles.button}
+          textStyle={styles.buttonText}
+          onPress={handleSignUp}
+        >
           Sign up
         </CustomButton>
       </View>

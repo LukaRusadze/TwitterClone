@@ -10,6 +10,7 @@ import { RootStackParamList } from "../types/types";
 import UserCreation from "../screens/UserCreation";
 import CustomizeExperienceScreen from "../screens/CustomizeExperienceScreen";
 import ConfirmSignUpScreen from "../screens/ConfirmSignUpScreen";
+import EmailVerificationScreen from "../screens/EmailVerificationScreen";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -25,6 +26,10 @@ const MainStack = () => {
         component={CustomizeExperienceScreen}
       />
       <Stack.Screen name="ConfirmSignUp" component={ConfirmSignUpScreen} />
+      <Stack.Screen
+        name="EmailVerification"
+        component={EmailVerificationScreen}
+      />
     </Stack.Navigator>
   );
 };

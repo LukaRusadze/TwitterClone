@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   selected: {
     borderBottomColor: colors.primary,
-    borderBottomWidth: 2,
+    borderBottomWidth: 1.8,
   },
 });
 

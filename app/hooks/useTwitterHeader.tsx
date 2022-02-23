@@ -5,7 +5,10 @@ import { NavigationStackGenericProp } from "../types/types";
 
 const useTwitterHeader = (
   navigation: NavigationStackGenericProp<
-    "CustomizeExperience" | "UserCreation" | "ConfirmSignUp"
+    | "CustomizeExperience"
+    | "UserCreation"
+    | "ConfirmSignUp"
+    | "EmailVerification"
   >
 ) => {
   useLayoutEffect(() => {

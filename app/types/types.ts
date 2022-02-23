@@ -10,6 +10,7 @@ export type RootStackParamList = {
   };
   CustomizeExperience: undefined;
   ConfirmSignUp: undefined;
+  EmailVerification: undefined;
 };
 
 export type NavigationStackGenericProp<
