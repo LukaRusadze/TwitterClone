@@ -4,7 +4,7 @@ import InputField from "../components/Atoms/InputField";
 import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationStackGenericProp } from "../types/types";
-import TermsLonger from "../components/Atoms/TermLonger";
+import TermsLonger from "../components/Atoms/TermsLonger";
 import CustomButton from "../components/Atoms/CustomButton";
 import { useAppSelector } from "../hooks/redux";
 import { formatDate } from "../utils/StringFormat";
