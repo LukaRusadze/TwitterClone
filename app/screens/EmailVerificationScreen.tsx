@@ -7,6 +7,7 @@ import { useAppSelector } from "../hooks/redux";
 import InputField from "../components/Atoms/InputField";
 import RegisterNavigation from "../components/Organisms/RegisterNavigation";
 import { colors } from "../config/colors";
+import { verifyEmail } from "../utils/EmailVerification/EmailVerification";
 
 interface Props {}
 
@@ -26,7 +27,10 @@ const EmailVerificationScreen = ({}: Props) => {
     }
   }, [verificationCode]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    verifyEmail();
+    console.log("reeee");
+  }, []);
 
   const accountData = useAppSelector((state) => state.account);
 
