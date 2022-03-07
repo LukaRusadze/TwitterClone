@@ -6,7 +6,7 @@ import LoginGetStarted from "../components/Molecules/LoginGetStarted";
 import LoginNavigation from "../components/Organisms/LoginNavigation";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
-import { NavigationStackGenericProp } from "../types/types";
+import { NavigationStackGenericProp } from "../types/stackNavigation";
 
 const UsernameScreen = () => {
   const navigation = useNavigation<NavigationStackGenericProp<"Username">>();

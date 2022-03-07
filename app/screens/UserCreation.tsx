@@ -6,7 +6,7 @@ import {
   View,
 } from "react-native";
 import React, { useState } from "react";
-import { NavigationStackGenericProp } from "../types/types";
+import { NavigationStackGenericProp } from "../types/stackNavigation";
 import RegisterNavigation from "../components/Organisms/RegisterNavigation";
 import { Field, FieldProps, Formik } from "formik";
 import * as Yup from "yup";

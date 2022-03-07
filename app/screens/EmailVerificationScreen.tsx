@@ -1,13 +1,13 @@
 import { KeyboardAvoidingView, StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { NavigationStackGenericProp } from "../types/types";
+import { NavigationStackGenericProp } from "../types/stackNavigation";
 import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useAppSelector } from "../hooks/redux";
 import InputField from "../components/Atoms/InputField";
 import RegisterNavigation from "../components/Organisms/RegisterNavigation";
 import { colors } from "../config/colors";
-import { verifyEmail } from "../utils/EmailVerification/EmailVerification";
+import { verifyEmail } from "../utils/EmailVerification/emailVerification";
 
 interface Props {}
 

@@ -4,7 +4,7 @@ import { StyleSheet, KeyboardAvoidingView } from "react-native";
 import {
   NavigationStackGenericProp,
   RouteGenericProp,
-} from "../../types/types";
+} from "../../types/stackNavigation";
 import CustomButton from "../Atoms/CustomButton";
 
 interface Props {

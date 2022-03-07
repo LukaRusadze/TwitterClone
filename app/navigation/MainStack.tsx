@@ -6,7 +6,7 @@ import {
 import StartScreen from "../screens/StartScreen";
 import UsernameScreen from "../screens/UsernameScreen";
 import PasswordScreen from "../screens/PasswordScreen";
-import { RootStackParamList } from "../types/types";
+import { RootStackParamList } from "../types/stackNavigation";
 import UserCreation from "../screens/UserCreation";
 import CustomizeExperienceScreen from "../screens/CustomizeExperienceScreen";
 import ConfirmSignUpScreen from "../screens/ConfirmSignUpScreen";

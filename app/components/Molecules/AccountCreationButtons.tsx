@@ -3,7 +3,7 @@ import { View, StyleSheet, Text } from "react-native";
 import { colors } from "../../config/colors";
 import CustomButton from "../Atoms/CustomButton";
 import { Ionicons } from "@expo/vector-icons";
-import { NavigationStackGenericProp } from "../../types/types";
+import { NavigationStackGenericProp } from "../../types/stackNavigation";
 import { useNavigation } from "@react-navigation/native";
 
 const AccountCreationButtons = () => {

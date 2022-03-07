@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import { View, Text, SafeAreaView, StyleSheet, StatusBar } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { NavigationStackGenericProp } from "../types/types";
+import { NavigationStackGenericProp } from "../types/stackNavigation";
 import { colors } from "../config/colors";
 import AccountCreationButtons from "../components/Molecules/AccountCreationButtons";
 import Terms from "../components/Atoms/Terms";

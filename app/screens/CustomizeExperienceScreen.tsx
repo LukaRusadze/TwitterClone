@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { NavigationStackGenericProp } from "../types/types";
+import { NavigationStackGenericProp } from "../types/stackNavigation";
 import { colors } from "../config/colors";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import TermsLong from "../components/Atoms/TermsLong";

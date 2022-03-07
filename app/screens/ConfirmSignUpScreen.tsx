@@ -3,7 +3,7 @@ import React, { useCallback } from "react";
 import InputField from "../components/Atoms/InputField";
 import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useNavigation } from "@react-navigation/native";
-import { NavigationStackGenericProp } from "../types/types";
+import { NavigationStackGenericProp } from "../types/stackNavigation";
 import TermsLonger from "../components/Atoms/TermsLonger";
 import CustomButton from "../components/Atoms/CustomButton";
 import { useAppSelector } from "../hooks/redux";
