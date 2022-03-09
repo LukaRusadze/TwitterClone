@@ -3,23 +3,22 @@ import { TextInput, StyleSheet, View, Pressable } from "react-native";
 import { colors } from "../../config/colors";
 import { Ionicons } from "@expo/vector-icons";
 
-interface Props {
+export interface PasswordFieldProps {
   setInputValue: Function;
   style?: any;
 }
 
-const PasswordField = ({ setInputValue }: Props) => {
-  const [underlineColor, setUnderlineColor] = useState("#dbdbdb");
-  const [underlineWidth, setUnderlineWidth] = useState(1);
+const PasswordField = ({ setInputValue, style }: PasswordFieldProps) => {
+  const [isFocused, setIsFocusedLocal] = useState(false);
   const [passwordHidden, setPasswordHidden] = useState(true);
 
   return (
     <View
-      style={{
-        ...styles.container,
-        borderBottomColor: underlineColor,
-        borderBottomWidth: underlineWidth,
-      }}
+      style={
+        isFocused
+          ? [styles.container, styles.selected, style]
+          : [styles.container, style]
+      }
     >
       <TextInput
         style={styles.input}
@@ -30,12 +29,10 @@ const PasswordField = ({ setInputValue }: Props) => {
         onChangeText={(state) => setInputValue(state)}
         selectionColor={colors.primary}
         onEndEditing={() => {
-          setUnderlineColor("#dbdbdb");
-          setUnderlineWidth(1);
+          setIsFocusedLocal(false);
         }}
         onFocus={() => {
-          setUnderlineColor(colors.primary);
-          setUnderlineWidth(2.5);
+          setIsFocusedLocal(true);
         }}
         secureTextEntry={passwordHidden}
       />
@@ -61,6 +58,8 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems: "center",
+    borderBottomColor: "#dbdbdb",
+    borderBottomWidth: 1,
   },
   input: {
     fontSize: 18,
@@ -76,6 +75,10 @@ const styles = StyleSheet.create({
   passwordVisibilityOn: {
     fontSize: 25,
     color: colors.primary,
+  },
+  selected: {
+    borderBottomColor: colors.primary,
+    borderBottomWidth: 1.8,
   },
 });
 

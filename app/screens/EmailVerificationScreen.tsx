@@ -1,4 +1,12 @@
-import { KeyboardAvoidingView, StyleSheet, Text, View } from "react-native";
+import {
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+  StyleSheet,
+  Text,
+  ToastAndroid,
+  View,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
@@ -35,9 +43,12 @@ const EmailVerificationScreen = ({}: Props) => {
 
   function handleSubmit() {
     if (emailCode === parseInt(verificationCode, 10)) {
-      console.log("RIGHT");
+      navigation.navigate("RegistrationPassword");
     } else {
-      console.log("WRONG");
+      console.log(emailCode, verificationCode);
+      Platform.OS === "android"
+        ? ToastAndroid.show("Wrong Code", ToastAndroid.LONG)
+        : Alert.alert("Wrong Code");
     }
   }
 
@@ -53,6 +64,7 @@ const EmailVerificationScreen = ({}: Props) => {
           onChangeText={setVerificationCode}
           value={verificationCode}
           keyboardType="numeric"
+          placeholder="Verification Code"
         />
         <Text style={styles.resend} onPress={() => verifyEmail}>
           Didn't receive email?

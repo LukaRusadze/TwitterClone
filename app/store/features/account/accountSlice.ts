@@ -5,6 +5,7 @@ interface AccountState {
   phoneNumber: string;
   email: string;
   dateOfBirth?: number;
+  password?: string;
 }
 
 const initialState: AccountState = {
@@ -12,6 +13,7 @@ const initialState: AccountState = {
   phoneNumber: "",
   email: "",
   dateOfBirth: undefined,
+  password: "",
 };
 
 const accountSlice = createSlice({
@@ -21,9 +23,12 @@ const accountSlice = createSlice({
     saveUser: (state, action: PayloadAction<AccountState>) => {
       return action.payload;
     },
+    savePassword: (state, action: PayloadAction<string>) => {
+      state.password = action.payload;
+    },
   },
 });
 
-export const { saveUser } = accountSlice.actions;
+export const { saveUser, savePassword } = accountSlice.actions;
 
 export default accountSlice.reducer;

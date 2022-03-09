@@ -9,22 +9,26 @@ const useTwitterHeader = (
     | "UserCreation"
     | "ConfirmSignUp"
     | "EmailVerification"
-  >
+    | "RegistrationPassword"
+  >,
+  backButton = true,
+  iconSize = 24
 ) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerBackVisible: false,
       headerShadowVisible: false,
-      headerLeft: () => (
-        <Ionicons
-          name="md-arrow-back"
-          size={25}
-          color={colors.primary}
-          onPress={navigation.goBack}
-        />
-      ),
+      headerLeft: () =>
+        backButton ? (
+          <Ionicons
+            name="md-arrow-back"
+            size={25}
+            color={colors.primary}
+            onPress={navigation.goBack}
+          />
+        ) : null,
       headerTitle: () => (
-        <Ionicons name="logo-twitter" size={24} color={colors.primary} />
+        <Ionicons name="logo-twitter" size={iconSize} color={colors.primary} />
       ),
     });
   });
