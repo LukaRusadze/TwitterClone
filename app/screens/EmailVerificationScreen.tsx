@@ -14,6 +14,8 @@ interface Props {}
 const EmailVerificationScreen = ({}: Props) => {
   const [isNextActive, setIsNextActive] = useState(false);
   const [verificationCode, setVerificationCode] = useState("");
+  const [emailCode, setEmailCode] = useState(0);
+  const accountData = useAppSelector((state) => state.account);
 
   const navigation =
     useNavigation<NavigationStackGenericProp<"EmailVerification">>();
@@ -28,11 +30,16 @@ const EmailVerificationScreen = ({}: Props) => {
   }, [verificationCode]);
 
   useEffect(() => {
-    verifyEmail();
-    console.log("reeee");
+    verifyEmail(setEmailCode);
   }, []);
 
-  const accountData = useAppSelector((state) => state.account);
+  function handleSubmit() {
+    if (emailCode === parseInt(verificationCode, 10)) {
+      console.log("RIGHT");
+    } else {
+      console.log("WRONG");
+    }
+  }
 
   return (
     <View style={styles.container}>
@@ -47,10 +54,13 @@ const EmailVerificationScreen = ({}: Props) => {
           value={verificationCode}
           keyboardType="numeric"
         />
-        <Text style={styles.resend}>Didn't receive email?</Text>
+        <Text style={styles.resend} onPress={() => verifyEmail}>
+          Didn't receive email?
+        </Text>
       </View>
       <KeyboardAvoidingView>
         <RegisterNavigation
+          onPress={() => handleSubmit()}
           isNextActive={isNextActive}
           isEmailInput={false}
           isEmailToggleVisible={false}

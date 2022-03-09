@@ -1,7 +1,8 @@
 import { AxiosRequestConfig } from "axios";
 import { EmailRequestConfig } from "../../types/axios";
+import Config from "react-native-config";
 
-const API_KEY = process.env.SENDGRID_API_KEY;
+const API_KEY = Config.SENDGRID_API_KEY;
 
 export function RequestConfig({
   from,

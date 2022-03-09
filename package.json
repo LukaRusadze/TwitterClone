@@ -13,6 +13,7 @@
     "@react-navigation/native": "^6.0.7",
     "@react-navigation/native-stack": "^6.3.0",
     "@reduxjs/toolkit": "^1.7.2",
+    "add": "^2.0.6",
     "axios": "^0.26.0",
     "expo": "^44.0.6",
     "expo-font": "~10.0.4",
@@ -24,10 +25,12 @@
     "react": "17.0.2",
     "react-native": "0.67.2",
     "react-native-bouncy-checkbox": "^2.1.10",
+    "react-native-config": "^1.4.5",
     "react-native-date-picker": "^4.1.5",
     "react-native-safe-area-context": "^3.4.1",
     "react-native-screens": "^3.12.0",
     "react-redux": "^7.2.6",
+    "yarn": "^1.22.17",
     "yup": "^0.32.11"
   },
   "devDependencies": {
