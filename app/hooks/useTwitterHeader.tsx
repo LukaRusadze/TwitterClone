@@ -10,6 +10,7 @@ const useTwitterHeader = (
     | "ConfirmSignUp"
     | "EmailVerification"
     | "RegistrationPassword"
+    | "ProfilePicture"
   >,
   backButton = true,
   iconSize = 24

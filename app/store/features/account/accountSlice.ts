@@ -21,7 +21,7 @@ const accountSlice = createSlice({
   initialState,
   reducers: {
     saveUser: (state, action: PayloadAction<AccountState>) => {
-      return action.payload;
+      return { ...state, ...action.payload };
     },
     savePassword: (state, action: PayloadAction<string>) => {
       state.password = action.payload;

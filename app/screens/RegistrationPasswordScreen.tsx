@@ -1,5 +1,5 @@
 import { KeyboardAvoidingView, StyleSheet, Text, View } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
@@ -32,6 +32,7 @@ const RegistrationPasswordScreen = ({}: Props) => {
         }}
         onSubmit={(values) => {
           savePassword(values.password);
+          navigation.navigate("ProfilePicture");
         }}
         validationSchema={PasswordSchema}
       >

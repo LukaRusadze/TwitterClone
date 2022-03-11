@@ -12,6 +12,7 @@ import CustomizeExperienceScreen from "../screens/CustomizeExperienceScreen";
 import ConfirmSignUpScreen from "../screens/ConfirmSignUpScreen";
 import EmailVerificationScreen from "../screens/EmailVerificationScreen";
 import RegistrationPasswordScreen from "../screens/RegistrationPasswordScreen";
+import ProfilePictureScreen from "../screens/ProfilePictureScreen";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -35,6 +36,7 @@ const MainStack = () => {
         name="RegistrationPassword"
         component={RegistrationPasswordScreen}
       />
+      <Stack.Screen name="ProfilePicture" component={ProfilePictureScreen} />
     </Stack.Navigator>
   );
 };
