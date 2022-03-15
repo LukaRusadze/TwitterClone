@@ -29,12 +29,12 @@ const ValidatedInput = ({
 }: ValidatedInputProps) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isWrong, setIsWrong] = useState(
-    errors === undefined ? false : errors.length > (required ? 1 : 0)
+    errors === undefined ? false : errors.length > (required ? 1 : 0),
   );
 
   useEffect(() => {
     setIsWrong(
-      errors === undefined ? false : errors.length > (required ? 1 : 0)
+      errors === undefined ? false : errors.length > (required ? 1 : 0),
     );
   }, [errors, required]);
 

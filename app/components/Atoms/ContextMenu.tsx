@@ -1,6 +1,5 @@
 import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import * as NavigationBar from "expo-navigation-bar";
 
 interface Props {
   items: { title: string; onPress: () => void }[];
@@ -9,9 +8,6 @@ interface Props {
 }
 
 const ContextMenu = ({ items, visible, setVisibility }: Props) => {
-  NavigationBar.setBackgroundColorAsync("white");
-  NavigationBar.setButtonStyleAsync("dark");
-
   return (
     <Modal
       animationType="fade"

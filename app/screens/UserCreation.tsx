@@ -27,7 +27,7 @@ const SignupSchema = Yup.object().shape({
     .required(" "),
   phoneNumber: Yup.string().matches(
     phoneNumberRegex,
-    "Please enter a valid phone number."
+    "Please enter a valid phone number.",
   ),
   email: Yup.string().email(" "),
   dateOfBirth: Yup.number(),

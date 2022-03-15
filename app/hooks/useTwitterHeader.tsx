@@ -13,7 +13,7 @@ const useTwitterHeader = (
     | "ProfilePicture"
   >,
   backButton = true,
-  iconSize = 24
+  iconSize = 24,
 ) => {
   useLayoutEffect(() => {
     navigation.setOptions({

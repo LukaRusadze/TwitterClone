@@ -21,6 +21,6 @@ export function verifyEmail(setEmailCode: Function) {
   axios(RequestConfig(emailConfig)).catch((error) =>
     Platform.OS === "android"
       ? ToastAndroid.show("Failed to send email: " + error, ToastAndroid.LONG)
-      : Alert.alert("Failed to send email: " + error)
+      : Alert.alert("Failed to send email: " + error),
   );
 }

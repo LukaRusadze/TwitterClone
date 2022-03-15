@@ -1,9 +1,18 @@
 {
   "root": true,
-  "extends": ["@react-native-community"],
-
-  "rules": {
-    "quotes": ["warn", "double"],
-    "@typescript-eslint/no-unused-vars": ["warn"]
-  }
+  "extends": "@react-native-community",
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js"],
+      "rules": {
+        "@typescript-eslint/no-shadow": ["error"],
+        "no-shadow": "off",
+        "no-undef": "off",
+        "quotes": [2, "double"],
+        "no-extra-parens": "off"
+      }
+    }
+  ]
 }

@@ -20,7 +20,7 @@ const RegistrationPasswordScreen = ({}: Props) => {
   const PasswordSchema = Yup.object().shape({
     password: Yup.string().min(
       8,
-      "Your password needs to be at least 8 characters. Please enter a longer one."
+      "Your password needs to be at least 8 characters. Please enter a longer one.",
     ),
   });
 

@@ -79,7 +79,7 @@ const PasswordScreen = () => {
               if (Platform.OS === "android") {
                 ToastAndroid.show(
                   "Too many wrong passwords! Try again later",
-                  ToastAndroid.LONG
+                  ToastAndroid.LONG,
                 );
               } else {
                 Alert.alert("Wrong Password!");

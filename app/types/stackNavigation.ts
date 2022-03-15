@@ -16,7 +16,7 @@ export type RootStackParamList = {
 };
 
 export type NavigationStackGenericProp<
-  T extends keyof RootStackParamList & string
+  T extends keyof RootStackParamList & string,
 > = NativeStackNavigationProp<RootStackParamList, T>;
 
 export type RouteGenericProp<T extends keyof RootStackParamList & string> =
