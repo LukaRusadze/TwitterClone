@@ -10,7 +10,6 @@ export function RequestConfig({
   subject,
   value,
 }: EmailRequestConfig): AxiosRequestConfig {
-  console.log(API_KEY);
   return {
     method: "POST",
     url: "https://api.sendgrid.com/v3/mail/send",

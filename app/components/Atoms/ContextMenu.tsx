@@ -26,6 +26,7 @@ const ContextMenu = ({ items, visible, setVisibility }: Props) => {
         <View style={styles.menu}>
           {items.map((item) => (
             <Pressable
+              key={items.indexOf(item)}
               style={styles.button}
               onPress={item.onPress}
               android_ripple={{ color: "default" }}

@@ -8,12 +8,14 @@ import { Field, FieldProps, Formik } from "formik";
 import * as Yup from "yup";
 import ValidatedPasswordField from "../components/Molecules/ValidatedPasswordField";
 import { savePassword } from "../store/features/account/accountSlice";
+import { useAppDispatch } from "../hooks/redux";
 
 interface Props {}
 
 const RegistrationPasswordScreen = ({}: Props) => {
   const navigation =
     useNavigation<NavigationStackGenericProp<"RegistrationPassword">>();
+  const dispatch = useAppDispatch();
 
   useTwitterHeader(navigation, false, 30);
 
@@ -31,7 +33,7 @@ const RegistrationPasswordScreen = ({}: Props) => {
           password: "",
         }}
         onSubmit={(values) => {
-          savePassword(values.password);
+          dispatch(savePassword(values.password));
           navigation.navigate("ProfilePicture");
         }}
         validationSchema={PasswordSchema}

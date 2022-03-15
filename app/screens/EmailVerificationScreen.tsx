@@ -45,7 +45,6 @@ const EmailVerificationScreen = ({}: Props) => {
     if (emailCode === parseInt(verificationCode, 10)) {
       navigation.navigate("RegistrationPassword");
     } else {
-      console.log(emailCode, verificationCode);
       Platform.OS === "android"
         ? ToastAndroid.show("Wrong Code", ToastAndroid.LONG)
         : Alert.alert("Wrong Code");
