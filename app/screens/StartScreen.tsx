@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     fontFamily: "TwitterChirp-Bold",
     fontSize: 30,
     marginBottom: 30,
+    color: "black",
   },
   headerTextContainer: {
     flex: 1,

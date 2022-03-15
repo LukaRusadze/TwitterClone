@@ -1,15 +1,38 @@
 import React from "react";
 import {
-  TouchableOpacity,
   Text,
   StyleSheet,
-  TouchableOpacityProps,
+  Pressable,
+  View,
+  Platform,
+  StyleProp,
+  PressableProps,
+  ViewStyle,
+  PressableStateCallbackType,
+  TextStyle,
 } from "react-native";
 
-export interface CustomButtonProps extends TouchableOpacityProps {
-  style?: any;
+export interface CustomButtonProps extends PressableProps {
+  style?: StyleProp<ViewStyle> | StyleProp<TextStyle>;
   textStyle?: any;
   enabled?: boolean;
+}
+
+function getPressableStyle(
+  state: PressableStateCallbackType,
+  enabled: boolean,
+  style: StyleProp<ViewStyle>,
+): StyleProp<ViewStyle> {
+  const outputStyle = [styles.container, style];
+  if (enabled) {
+    if (Platform.OS === "ios" && state.pressed) {
+      outputStyle.push(styles.pressed);
+    }
+  } else {
+    outputStyle.push(styles.disabledContainer);
+  }
+
+  return outputStyle;
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
@@ -20,33 +43,39 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   enabled = true,
 }) => {
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      disabled={!enabled}
-      style={
-        enabled
-          ? { ...styles.container, ...style }
-          : { ...styles.container, ...style, ...styles.disabledContainer }
-      }
-    >
-      {typeof children === "string" ? (
-        <Text
-          style={
-            enabled
-              ? { ...styles.textStyle, ...textStyle }
-              : { ...styles.textStyle, ...textStyle, ...styles.disabledText }
-          }
-        >
-          {children}
-        </Text>
-      ) : (
-        children
-      )}
-    </TouchableOpacity>
+    <View style={styles.buttonContainer}>
+      <Pressable
+        android_ripple={{ color: "default" }}
+        onPress={onPress}
+        disabled={!enabled}
+        style={(state) => getPressableStyle(state, enabled, style)}
+      >
+        {typeof children === "string" ? (
+          <Text
+            style={[
+              styles.textStyle,
+              textStyle,
+              !enabled && styles.disabledText,
+            ]}
+          >
+            {children}
+          </Text>
+        ) : (
+          children
+        )}
+      </Pressable>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  buttonContainer: {
+    borderRadius: 30,
+    overflow: "hidden",
+  },
+  pressed: {
+    opacity: 0.5,
+  },
   container: {
     borderRadius: 30,
     borderWidth: 1,
