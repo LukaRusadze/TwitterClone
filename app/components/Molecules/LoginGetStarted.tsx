@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto-Bold",
     fontSize: 30,
     marginBottom: 25,
+    color: "black",
   },
   container: {
     paddingLeft: 17,

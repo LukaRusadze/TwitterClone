@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
@@ -17,7 +17,7 @@ const CustomizeExperienceScreen = ({}: Props) => {
   useTwitterHeader(navigation);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.headerText}>Customize your Experience</Text>
         <Text style={styles.trackText}>
@@ -47,7 +47,7 @@ const CustomizeExperienceScreen = ({}: Props) => {
         isEmailToggleVisible={false}
         onPress={() => navigation.navigate("ConfirmSignUp")}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
     fontFamily: "TwitterChirp-Bold",
     fontSize: 30,
     marginTop: 32,
+    color: "black",
   },
   content: {
     paddingLeft: 40,

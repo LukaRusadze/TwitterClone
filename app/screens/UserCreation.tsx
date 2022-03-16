@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Text,
   View,
+  SafeAreaView,
 } from "react-native";
 import React, { useState } from "react";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
@@ -44,7 +45,7 @@ const UserCreation = () => {
   const [isEmailToggleVisible, setIsEmailToggleVisible] = useState(false);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.headerText}>Create your account</Text>
       <Formik
         initialValues={{
@@ -159,7 +160,7 @@ const UserCreation = () => {
           );
         }}
       </Formik>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -187,6 +188,7 @@ const styles = StyleSheet.create({
     paddingRight: 40,
     fontSize: 30,
     marginBottom: 30,
+    color: "black",
   },
   formContainer: {},
   inputField: {},

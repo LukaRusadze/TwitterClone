@@ -1,10 +1,9 @@
 import React, { useLayoutEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/colors";
 import LoginGetStarted from "../components/Molecules/LoginGetStarted";
 import LoginNavigation from "../components/Organisms/LoginNavigation";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
 
@@ -33,7 +32,7 @@ const UsernameScreen = () => {
   const [isNextActive, setIsNextActive] = useState(false);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <LoginGetStarted output={setUsername} setIsNextActive={setIsNextActive} />
       <SafeAreaView>
         <LoginNavigation
@@ -41,7 +40,7 @@ const UsernameScreen = () => {
           isNextActive={isNextActive}
         />
       </SafeAreaView>
-    </View>
+    </SafeAreaView>
   );
 };
 

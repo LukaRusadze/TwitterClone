@@ -6,6 +6,7 @@ import {
   ToastAndroid,
   Platform,
   Alert,
+  SafeAreaView,
 } from "react-native";
 import {
   NavigationStackGenericProp,
@@ -96,7 +97,7 @@ const PasswordScreen = () => {
   }, [passwordField, submit, username]);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.headerText}>Enter your password</Text>
 
@@ -113,7 +114,7 @@ const PasswordScreen = () => {
       </View>
 
       <LoginNavigation isNextActive={isNextActive} setSubmit={setSubmit} />
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -129,6 +130,7 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto-Bold",
     fontSize: 30,
     marginTop: 15,
+    color: "black",
   },
   content: {
     paddingLeft: 20,

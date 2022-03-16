@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, SafeAreaView } from "react-native";
 import React, { useCallback } from "react";
 import InputField from "../components/Atoms/InputField";
 import useTwitterHeader from "../hooks/useTwitterHeader";
@@ -24,7 +24,7 @@ const ConfirmSignUpScreen = ({}: Props) => {
   useTwitterHeader(navigation);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.headerText}>Create your account</Text>
       <View pointerEvents="none">
         <InputField style={styles.input} value={accountData.name} />
@@ -44,7 +44,7 @@ const ConfirmSignUpScreen = ({}: Props) => {
           Sign up
         </CustomButton>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginTop: 12,
     marginBottom: 25,
+    color: "black",
   },
   input: {
     marginBottom: 30,

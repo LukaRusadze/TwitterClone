@@ -1,4 +1,10 @@
-import { KeyboardAvoidingView, StyleSheet, Text, View } from "react-native";
+import {
+  KeyboardAvoidingView,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import React from "react";
 import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useNavigation } from "@react-navigation/native";
@@ -27,7 +33,7 @@ const RegistrationPasswordScreen = ({}: Props) => {
   });
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Formik
         initialValues={{
           password: "",
@@ -70,7 +76,7 @@ const RegistrationPasswordScreen = ({}: Props) => {
           </Field>
         )}
       </Formik>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -89,6 +95,7 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto-Bold",
     fontSize: 30,
     marginTop: 12,
+    color: "black",
   },
   prompt: {
     fontFamily: "Roboto-Regular",

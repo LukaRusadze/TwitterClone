@@ -6,6 +6,7 @@ import {
   Text,
   ToastAndroid,
   View,
+  SafeAreaView,
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -52,7 +53,7 @@ const EmailVerificationScreen = ({}: Props) => {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.headerText}>We sent you a code</Text>
         <Text style={styles.enterPrompt}>
@@ -77,7 +78,7 @@ const EmailVerificationScreen = ({}: Props) => {
           isEmailToggleVisible={false}
         />
       </KeyboardAvoidingView>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -92,6 +93,7 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto-Bold",
     fontSize: 30,
     marginTop: 15,
+    color: "black",
   },
   resend: {
     color: colors.primary,

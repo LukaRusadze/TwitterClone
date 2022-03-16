@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, Image, Pressable } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Pressable,
+  SafeAreaView,
+} from "react-native";
 import React, { useState } from "react";
 import { useAppSelector } from "../hooks/redux";
 import useTwitterHeader from "../hooks/useTwitterHeader";
@@ -20,7 +27,7 @@ const ProfilePictureScreen = ({}: Props) => {
   useTwitterHeader(navigation, false, 30);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.headerText}>Pick a profile picture</Text>
         <Text style={styles.prompt}>
@@ -43,7 +50,7 @@ const ProfilePictureScreen = ({}: Props) => {
       </View>
 
       <RegisterNavigation isNextActive={false} isEmailInput={false} />
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -62,6 +69,7 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto-Bold",
     fontSize: 30,
     marginTop: 12,
+    color: "black",
   },
   prompt: {
     fontFamily: "Roboto-Regular",

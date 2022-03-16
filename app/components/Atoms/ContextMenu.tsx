@@ -1,45 +1,78 @@
-import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
-import React from "react";
+import {
+  ActionSheetIOS,
+  Modal,
+  Platform,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+import React, { useEffect } from "react";
 
 interface Props {
   items: { title: string; onPress: () => void }[];
   visible: boolean;
-  setVisibility: (value: boolean) => void;
+  setVisibility: (state: boolean) => void;
 }
 
 const ContextMenu = ({ items, visible, setVisibility }: Props) => {
-  return (
-    <Modal
-      animationType="fade"
-      transparent={true}
-      visible={visible}
-      statusBarTranslucent={true}
-      onRequestClose={() => setVisibility(false)}
-    >
-      <View style={styles.content}>
-        <View style={styles.background}>
-          <Pressable
-            style={styles.backgroundPressable}
-            onPressOut={() => setVisibility(false)}
-          />
-        </View>
-        <View style={styles.menu}>
-          {items.map((item) => (
+  useEffect(() => {
+    if (Platform.OS === "ios") {
+      const options = items.map((item) => item.title);
+      options.push("Cancel");
+
+      if (visible) {
+        ActionSheetIOS.showActionSheetWithOptions(
+          {
+            options: options,
+            cancelButtonIndex: options.length - 1,
+          },
+          (buttonIndex) => {
+            if (buttonIndex !== options.length - 1) {
+              items[buttonIndex].onPress();
+            }
+            setVisibility(false);
+          },
+        );
+      }
+    }
+  }, [items, visible, setVisibility]);
+
+  if (Platform.OS === "android") {
+    return (
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={visible}
+        statusBarTranslucent={true}
+        onRequestClose={() => setVisibility(false)}
+      >
+        <View style={styles.content}>
+          <View style={styles.background}>
             <Pressable
-              key={items.indexOf(item)}
-              style={styles.button}
-              onPress={item.onPress}
-              android_ripple={{ color: "default" }}
-            >
-              <View>
-                <Text style={styles.text}>{item.title}</Text>
-              </View>
-            </Pressable>
-          ))}
+              style={styles.backgroundPressable}
+              onPressOut={() => setVisibility(false)}
+            />
+          </View>
+          <View style={styles.menu}>
+            {items.map((item) => (
+              <Pressable
+                key={items.indexOf(item)}
+                style={styles.button}
+                onPress={item.onPress}
+                android_ripple={{ color: "default" }}
+              >
+                <View>
+                  <Text style={styles.text}>{item.title}</Text>
+                </View>
+              </Pressable>
+            ))}
+          </View>
         </View>
-      </View>
-    </Modal>
-  );
+      </Modal>
+    );
+  }
+  return <></>;
 };
 
 export default ContextMenu;
