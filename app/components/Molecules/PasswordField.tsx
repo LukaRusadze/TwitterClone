@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 5,
     paddingBottom: 5,
+    paddingLeft: 0,
   },
   pressable: {},
   passwordVisibilityOff: {

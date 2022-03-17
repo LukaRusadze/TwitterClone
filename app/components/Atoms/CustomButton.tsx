@@ -35,13 +35,13 @@ function getPressableStyle(
   return outputStyle;
 }
 
-const CustomButton: React.FC<CustomButtonProps> = ({
+const CustomButton = ({
   onPress,
   style,
   children,
   textStyle,
   enabled = true,
-}) => {
+}: CustomButtonProps) => {
   return (
     <View style={styles.buttonContainer}>
       <Pressable

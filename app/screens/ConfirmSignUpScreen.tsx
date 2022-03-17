@@ -24,25 +24,27 @@ const ConfirmSignUpScreen = ({}: Props) => {
   useTwitterHeader(navigation);
 
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.headerText}>Create your account</Text>
-      <View pointerEvents="none">
-        <InputField style={styles.input} value={accountData.name} />
-        <InputField style={styles.input} value={accountData.email} />
-        <InputField
-          style={styles.input}
-          value={formatDate(new Date(accountData.dateOfBirth!))}
-        />
-      </View>
-      <View>
-        <TermsLonger style={styles.terms} textStyle={styles.termsText} />
-        <CustomButton
-          style={styles.button}
-          textStyle={styles.buttonText}
-          onPress={handleSignUp}
-        >
-          Sign up
-        </CustomButton>
+    <SafeAreaView>
+      <View style={styles.container}>
+        <Text style={styles.headerText}>Create your account</Text>
+        <View pointerEvents="none">
+          <InputField style={styles.input} value={accountData.name} />
+          <InputField style={styles.input} value={accountData.email} />
+          <InputField
+            style={styles.input}
+            value={formatDate(new Date(accountData.dateOfBirth!))}
+          />
+        </View>
+        <View>
+          <TermsLonger style={styles.terms} textStyle={styles.termsText} />
+          <CustomButton
+            style={styles.button}
+            textStyle={styles.buttonText}
+            onPress={handleSignUp}
+          >
+            Sign up
+          </CustomButton>
+        </View>
       </View>
     </SafeAreaView>
   );

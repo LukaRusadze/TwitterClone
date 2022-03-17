@@ -26,6 +26,11 @@ const ProfilePictureScreen = ({}: Props) => {
 
   useTwitterHeader(navigation, false, 30);
 
+  function handleCamera() {
+    setIsMenuVisible(false);
+    navigation.navigate("Camera");
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
@@ -35,7 +40,7 @@ const ProfilePictureScreen = ({}: Props) => {
         </Text>
         <ContextMenu
           items={[
-            { title: "Take photo", onPress: () => null },
+            { title: "Take photo", onPress: () => handleCamera() },
             { title: "Choose existing photo", onPress: () => null },
           ]}
           setVisibility={setIsMenuVisible}
@@ -81,5 +86,8 @@ const styles = StyleSheet.create({
     width: 168,
     marginTop: 47,
     alignSelf: "center",
+  },
+  cameraView: {
+    flex: 1,
   },
 });

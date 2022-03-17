@@ -13,6 +13,8 @@ import ConfirmSignUpScreen from "../screens/ConfirmSignUpScreen";
 import EmailVerificationScreen from "../screens/EmailVerificationScreen";
 import RegistrationPasswordScreen from "../screens/RegistrationPasswordScreen";
 import ProfilePictureScreen from "../screens/ProfilePictureScreen";
+import CameraScreen from "../screens/CameraScreen";
+import CameraPhotoViewScreen from "../screens/CameraPhotoViewScreen";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -37,6 +39,20 @@ const MainStack = () => {
         component={RegistrationPasswordScreen}
       />
       <Stack.Screen name="ProfilePicture" component={ProfilePictureScreen} />
+      <Stack.Screen
+        name="Camera"
+        component={CameraScreen}
+        options={{ headerShown: false, statusBarHidden: true }}
+      />
+      <Stack.Screen
+        name="CameraPhotoView"
+        component={CameraPhotoViewScreen}
+        options={{
+          headerShown: false,
+          statusBarHidden: true,
+          animation: "none",
+        }}
+      />
     </Stack.Navigator>
   );
 };
@@ -48,6 +64,7 @@ const screenOptions: NativeStackNavigationOptions = {
   contentStyle: {
     backgroundColor: "white",
   },
+  statusBarStyle: "dark",
 };
 
 export default MainStack;

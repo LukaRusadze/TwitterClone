@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
     borderBottomColor: "#dbdbdb",
     color: "black",
+    paddingLeft: 0,
   },
   error: {
     color: "red",

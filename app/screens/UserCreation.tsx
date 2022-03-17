@@ -113,6 +113,8 @@ const UserCreation = () => {
                             onChangeText={handleChange(field.name)}
                             value={field.value}
                             keyboardType="email-address"
+                            autoComplete="off"
+                            autoCapitalize="none"
                             placeholder="Email"
                             errors={errors.email}
                             onFocus={() => {

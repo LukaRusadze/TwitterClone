@@ -11,7 +11,8 @@
         "no-shadow": "off",
         "no-undef": "off",
         "quotes": [2, "double"],
-        "no-extra-parens": "off"
+        "no-extra-parens": "off",
+        "@typescript-eslint/no-unused-vars": "warn"
       }
     }
   ]

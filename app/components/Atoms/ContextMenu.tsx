@@ -103,6 +103,7 @@ const styles = StyleSheet.create({
     borderRadius: 3,
   },
   text: {
+    color: "black",
     fontFamily: "TwitterChirp",
     paddingTop: 15.2,
     paddingBottom: 15.2,

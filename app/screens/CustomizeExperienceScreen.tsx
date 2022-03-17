@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
     fontFamily: "TwitterChirp-Bold",
     fontSize: 23,
     marginTop: 42,
+    color: "black",
   },
   checkboxContainer: {
     flexDirection: "row",

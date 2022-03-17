@@ -4151,15 +4151,6 @@ expo-modules-core@0.6.5:
     compare-versions "^3.4.0"
     invariant "^2.2.4"
 
-expo-navigation-bar@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/expo-navigation-bar/-/expo-navigation-bar-1.1.2.tgz#1caddf41b3fd7652796db933ffe59a1ab0ed658c"
-  integrity sha512-6TEmFArrCazRKrhQrWho1sBEXiFBP+7MIcAeZ5wEB+QEb7ZkYmC+JKFfZl3oz9VWD7nnhgcLRgFE9XL0n74Fow==
-  dependencies:
-    "@expo/config-plugins" "^4.0.2"
-    "@react-native/normalize-color" "^2.0.0"
-    debug "^4.3.2"
-
 "expo@>=44.0.0-0 <45.0.0":
   version "44.0.6"
   resolved "https://registry.yarnpkg.com/expo/-/expo-44.0.6.tgz#5454f08abb07166e55eb55b5fc4d45b5ad416ff4"
@@ -7187,6 +7178,11 @@ react-native-date-picker@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-native-date-picker/-/react-native-date-picker-4.2.0.tgz#c47521112f15b9d68333602373d112fc84257d97"
   integrity sha512-IfbK7Eh5By8rdjiu/pvqLF8NkFX9pVsY7Vn6+MkLSiFcLIGFd7NaENRJKl75/xNZuY5CkIiRVksS9abEl/II8g==
+
+react-native-navigation-bar-color@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-navigation-bar-color/-/react-native-navigation-bar-color-2.0.1.tgz#ee2be25cc37105f7da355717b0a9a32c9c059ae6"
+  integrity sha512-1kE/oxWt+HYjRxdZdvke9tJ365xaee5n3+euOQA1En8zQuSbOxiE4SYEGM7TeaWnmLJ0l37mRnPHaB2H4mGh0A==
 
 react-native-safe-area-context@^4.1.3:
   version "4.2.1"

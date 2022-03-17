@@ -1,5 +1,6 @@
 import { RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { PhotoFile } from "react-native-vision-camera";
 
 export type RootStackParamList = {
   Start: undefined;
@@ -13,6 +14,8 @@ export type RootStackParamList = {
   EmailVerification: undefined;
   RegistrationPassword: undefined;
   ProfilePicture: undefined;
+  Camera: undefined;
+  CameraPhotoView: PhotoFile;
 };
 
 export type NavigationStackGenericProp<

@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     paddingBottom: 5,
     borderBottomColor: "#dbdbdb",
+    paddingLeft: 0,
   },
   selected: {
     borderBottomColor: colors.primary,
