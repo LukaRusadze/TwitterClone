@@ -49,7 +49,6 @@ const MainStack = () => {
         component={CameraPhotoViewScreen}
         options={{
           headerShown: false,
-          statusBarHidden: true,
           animation: "none",
         }}
       />
@@ -64,7 +63,6 @@ const screenOptions: NativeStackNavigationOptions = {
   contentStyle: {
     backgroundColor: "white",
   },
-  statusBarStyle: "dark",
 };
 
 export default MainStack;
