@@ -81,6 +81,6 @@ const styles = StyleSheet.create({
     marginRight: 40,
     color: "#808080",
     fontSize: 14.5,
-    fontFamily: "TwitterChirp",
+    fontFamily: "Chirp-Regular",
   },
 });

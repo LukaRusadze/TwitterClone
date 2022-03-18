@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import { colors } from "../config/colors";
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
 
 const useTwitterHeader = (

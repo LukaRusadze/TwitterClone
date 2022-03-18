@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useState } from "react";
 import { StyleSheet, SafeAreaView } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { colors } from "../config/colors";
 import LoginGetStarted from "../components/Molecules/LoginGetStarted";
 import LoginNavigation from "../components/Organisms/LoginNavigation";

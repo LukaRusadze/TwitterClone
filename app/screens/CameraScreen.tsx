@@ -7,7 +7,7 @@ import {
   useCameraDevices,
 } from "react-native-vision-camera";
 import CustomButton from "../components/Atoms/CustomButton";
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
 import changeNavigationBarColor from "react-native-navigation-bar-color";
 

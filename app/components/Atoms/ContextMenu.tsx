@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "black",
-    fontFamily: "TwitterChirp",
+    fontFamily: "Chirp-Regular",
     paddingTop: 15.2,
     paddingBottom: 15.2,
     paddingLeft: 25,

@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   headerText: {
-    fontFamily: "TwitterChirp-Bold",
+    fontFamily: "Chirp-Bold",
     fontSize: 30,
     marginTop: 32,
     color: "black",
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   trackText: {
-    fontFamily: "TwitterChirp-Bold",
+    fontFamily: "Chirp-Bold",
     fontSize: 23,
     marginTop: 42,
     color: "black",
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     marginTop: 22,
   },
   soulSeller: {
-    fontFamily: "TwitterChirp",
+    fontFamily: "Chirp-Regular",
     fontSize: 15,
     width: "85%",
     color: "#505050",

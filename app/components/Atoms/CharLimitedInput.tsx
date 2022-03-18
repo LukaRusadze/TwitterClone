@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     color: "#505050",
     paddingTop: 5,
     fontSize: 15,
-    fontFamily: "TwitterChirp",
+    fontFamily: "Chirp-Regular",
   },
   wrongUnderline: {
     borderBottomColor: "red",

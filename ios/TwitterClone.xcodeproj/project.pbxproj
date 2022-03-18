@@ -8,14 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* TwitterCloneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TwitterCloneTests.m */; };
-		03892AD79A58CC7A6924ECDA /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD8CF9087A3B430D00B389 /* ExpoModulesProvider.swift */; };
-		0B8C66E9120D2F8A8E57D113 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D164F8EAFB950F9F0CCA81C8 /* ExpoModulesProvider.swift */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		6172F2D35A4C3AA820D92908 /* libPods-TwitterClone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-TwitterClone.a */; };
 		7EF68E3733C33B6898317E18 /* libPods-TwitterClone-TwitterCloneTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-TwitterClone-TwitterCloneTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		DEFDAD40B2D2415CA1F05284 /* HelveticaNeue-BlackCond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45FC2AF9CAEF4A659AFC4890 /* HelveticaNeue-BlackCond.ttf */; };
+		6C2C217136CB43B389C368F0 /* HelveticaNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B87B237E7CD4F6CBF099D1C /* HelveticaNeue-Bold.ttf */; };
+		3326DF23D53A4A8881D09718 /* HelveticaNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DF5A496CC074A29B5F8C670 /* HelveticaNeue-Light.ttf */; };
+		09E3B8B3696C421C8659C7C8 /* HelveticaNeue-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0739C6F44C54F4CA9EC6DBF /* HelveticaNeue-Medium.ttf */; };
+		2A9D4B5AA2B5440EAA5DA57E /* HelveticaNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D72F712C2D4C4AC4B0C7E286 /* HelveticaNeue-Thin.ttf */; };
+		8BA89982EB4A4C98B8E464D5 /* HelveticaNeue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB502061CB344C7E965776B5 /* HelveticaNeue.ttf */; };
+		CE85CD6251C74D0B885623D9 /* HelveticaNeueBd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38F97FC69A1D4F3ABEF79867 /* HelveticaNeueBd.ttf */; };
+		F42B09E6FD6E4FF7A2CD0CEF /* HelveticaNeueHv.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74673EAF26B94BF380E2DD41 /* HelveticaNeueHv.ttf */; };
+		7690823627484FE69DF61E53 /* HelveticaNeueIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2683DD86617D4D86AA610C94 /* HelveticaNeueIt.ttf */; };
+		944ED6E3825B441BBEA1169F /* HelveticaNeueLt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8D2C7340DA44D48A39415C /* HelveticaNeueLt.ttf */; };
+		E18E18FB0DE14CA5BBB1AE61 /* HelveticaNeueMed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E678D8780CB74E65B6EB6420 /* HelveticaNeueMed.ttf */; };
+		D4636F1854724A1BBD7FF4F9 /* Monaco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5231E0369D349BF9B0D1F61 /* Monaco.ttf */; };
+		BDA71A7C975647A192CC04C1 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86420C652F9745B380F9F088 /* Roboto-Black.ttf */; };
+		26BD9545AA9342AA923A806A /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 618939BF97754FDBA44AFABC /* Roboto-BlackItalic.ttf */; };
+		C1D5724331D14278843E7BAB /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F751DE5FB39A439A934563B0 /* Roboto-Bold.ttf */; };
+		DC5F65A9575E4DB4BEB38494 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45AEA5855D02437FA8A25CCA /* Roboto-BoldItalic.ttf */; };
+		66DAFF1D3B4D4FC8B02443B6 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13E5F447E9B4F3DBFBFD5F5 /* Roboto-Italic.ttf */; };
+		1DF3112B92314B1982A7E747 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9180A335EB894DAD95C9AA79 /* Roboto-Light.ttf */; };
+		343887D32C334BADBD018EDA /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D8E65D772EB450B8CBF4AAD /* Roboto-LightItalic.ttf */; };
+		027FA35D4D204668A2435231 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE117D1104BA4FBDB2E60D2B /* Roboto-Medium.ttf */; };
+		5F49C652D22E4CA1B538D94D /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0460FDF04084B218898D227 /* Roboto-MediumItalic.ttf */; };
+		54C015522CEC4ABBA3EB8016 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5542A4AF20864E43A40C174A /* Roboto-Regular.ttf */; };
+		E8064E0FCD034828A6F5E7B6 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03C7109F22384362A6CFB8F2 /* Roboto-Thin.ttf */; };
+		7659787E91694F12A15C44BF /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 885651F005B64A15A812FBCA /* Roboto-ThinItalic.ttf */; };
+		B71F9F6BCA104B429DEC3FAA /* Chirp-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51A18B1FBF7B4A45BA356013 /* Chirp-Bold.otf */; };
+		FEA5969CA3EE4CF78DEF4402 /* Chirp-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47575FC0BBCA46EC9D28C7E2 /* Chirp-Heavy.otf */; };
+		1927DFF1BAFC40E9B5BADD0E /* Chirp-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E812650E30A41B58D47E73E /* Chirp-Light.otf */; };
+		3F1FF26FF048478FA5FEE79E /* Chirp-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD1163DFEBD14557A94FAD35 /* Chirp-Medium.otf */; };
+		00E0D7A456444DFDBDA9679D /* Chirp-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBEFEA7F6847400B9273F8F3 /* Chirp-Regular.otf */; };
+		392DEA5460434ACC90FD9AE1 /* Chirp-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB130AC93B954A349D60A595 /* Chirp-Thin.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +69,41 @@
 		1D0AE47A65C8663E3B452821 /* Pods-TwitterClone-TwitterCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone-TwitterCloneTests.release.xcconfig"; path = "Target Support Files/Pods-TwitterClone-TwitterCloneTests/Pods-TwitterClone-TwitterCloneTests.release.xcconfig"; sourceTree = "<group>"; };
 		6423831EA8574132BED9D8CC /* libPods-TwitterClone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TwitterClone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C97AB639B58BBB4B15BBE30 /* Pods-TwitterClone-TwitterCloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone-TwitterCloneTests.debug.xcconfig"; path = "Target Support Files/Pods-TwitterClone-TwitterCloneTests/Pods-TwitterClone-TwitterCloneTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6CCD8CF9087A3B430D00B389 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-TwitterClone/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TwitterClone/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABFE59519B596E51CEFDCCC0 /* libPods-TwitterClone-TwitterCloneTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TwitterClone-TwitterCloneTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A881CF5CF3F2B244570E2A /* Pods-TwitterClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.debug.xcconfig"; path = "Target Support Files/Pods-TwitterClone/Pods-TwitterClone.debug.xcconfig"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-TwitterClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.release.xcconfig"; path = "Target Support Files/Pods-TwitterClone/Pods-TwitterClone.release.xcconfig"; sourceTree = "<group>"; };
-		D164F8EAFB950F9F0CCA81C8 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-TwitterClone-TwitterCloneTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		45FC2AF9CAEF4A659AFC4890 /* HelveticaNeue-BlackCond.ttf */ = {isa = PBXFileReference; name = "HelveticaNeue-BlackCond.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-BlackCond.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4B87B237E7CD4F6CBF099D1C /* HelveticaNeue-Bold.ttf */ = {isa = PBXFileReference; name = "HelveticaNeue-Bold.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8DF5A496CC074A29B5F8C670 /* HelveticaNeue-Light.ttf */ = {isa = PBXFileReference; name = "HelveticaNeue-Light.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B0739C6F44C54F4CA9EC6DBF /* HelveticaNeue-Medium.ttf */ = {isa = PBXFileReference; name = "HelveticaNeue-Medium.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D72F712C2D4C4AC4B0C7E286 /* HelveticaNeue-Thin.ttf */ = {isa = PBXFileReference; name = "HelveticaNeue-Thin.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BB502061CB344C7E965776B5 /* HelveticaNeue.ttf */ = {isa = PBXFileReference; name = "HelveticaNeue.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		38F97FC69A1D4F3ABEF79867 /* HelveticaNeueBd.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueBd.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeueBd.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		74673EAF26B94BF380E2DD41 /* HelveticaNeueHv.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueHv.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeueHv.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2683DD86617D4D86AA610C94 /* HelveticaNeueIt.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueIt.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeueIt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7C8D2C7340DA44D48A39415C /* HelveticaNeueLt.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueLt.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeueLt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E678D8780CB74E65B6EB6420 /* HelveticaNeueMed.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueMed.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeueMed.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F5231E0369D349BF9B0D1F61 /* Monaco.ttf */ = {isa = PBXFileReference; name = "Monaco.ttf"; path = "../app/assets/fonts/Monaco/Monaco.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		86420C652F9745B380F9F088 /* Roboto-Black.ttf */ = {isa = PBXFileReference; name = "Roboto-Black.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		618939BF97754FDBA44AFABC /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-BlackItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F751DE5FB39A439A934563B0 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; name = "Roboto-Bold.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		45AEA5855D02437FA8A25CCA /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-BoldItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C13E5F447E9B4F3DBFBFD5F5 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; name = "Roboto-Italic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9180A335EB894DAD95C9AA79 /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4D8E65D772EB450B8CBF4AAD /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-LightItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FE117D1104BA4FBDB2E60D2B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; name = "Roboto-Medium.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F0460FDF04084B218898D227 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-MediumItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5542A4AF20864E43A40C174A /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		03C7109F22384362A6CFB8F2 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; name = "Roboto-Thin.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		885651F005B64A15A812FBCA /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-ThinItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		51A18B1FBF7B4A45BA356013 /* Chirp-Bold.otf */ = {isa = PBXFileReference; name = "Chirp-Bold.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		47575FC0BBCA46EC9D28C7E2 /* Chirp-Heavy.otf */ = {isa = PBXFileReference; name = "Chirp-Heavy.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Heavy.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E812650E30A41B58D47E73E /* Chirp-Light.otf */ = {isa = PBXFileReference; name = "Chirp-Light.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AD1163DFEBD14557A94FAD35 /* Chirp-Medium.otf */ = {isa = PBXFileReference; name = "Chirp-Medium.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FBEFEA7F6847400B9273F8F3 /* Chirp-Regular.otf */ = {isa = PBXFileReference; name = "Chirp-Regular.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EB130AC93B954A349D60A595 /* Chirp-Thin.otf */ = {isa = PBXFileReference; name = "Chirp-Thin.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,14 +156,6 @@
 			name = TwitterClone;
 			sourceTree = "<group>";
 		};
-		1FA4F39D2B186095C94AE2D0 /* TwitterCloneTests */ = {
-			isa = PBXGroup;
-			children = (
-				D164F8EAFB950F9F0CCA81C8 /* ExpoModulesProvider.swift */,
-			);
-			name = TwitterCloneTests;
-			sourceTree = "<group>";
-		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +182,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E233CBF5F47BEE60B243DCF8 /* Pods */,
-				F2378146CB1810FE6BB6E964 /* ExpoModulesProviders */,
+				439594F0A1C84656919EF8E1 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -150,14 +198,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9431326E99408752DB771971 /* TwitterClone */ = {
-			isa = PBXGroup;
-			children = (
-				6CCD8CF9087A3B430D00B389 /* ExpoModulesProvider.swift */,
-			);
-			name = TwitterClone;
-			sourceTree = "<group>";
-		};
 		E233CBF5F47BEE60B243DCF8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,14 +210,43 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F2378146CB1810FE6BB6E964 /* ExpoModulesProviders */ = {
-			isa = PBXGroup;
+		439594F0A1C84656919EF8E1 /* Resources */ = {
+			isa = "PBXGroup";
 			children = (
-				9431326E99408752DB771971 /* TwitterClone */,
-				1FA4F39D2B186095C94AE2D0 /* TwitterCloneTests */,
+				45FC2AF9CAEF4A659AFC4890 /* HelveticaNeue-BlackCond.ttf */,
+				4B87B237E7CD4F6CBF099D1C /* HelveticaNeue-Bold.ttf */,
+				8DF5A496CC074A29B5F8C670 /* HelveticaNeue-Light.ttf */,
+				B0739C6F44C54F4CA9EC6DBF /* HelveticaNeue-Medium.ttf */,
+				D72F712C2D4C4AC4B0C7E286 /* HelveticaNeue-Thin.ttf */,
+				BB502061CB344C7E965776B5 /* HelveticaNeue.ttf */,
+				38F97FC69A1D4F3ABEF79867 /* HelveticaNeueBd.ttf */,
+				74673EAF26B94BF380E2DD41 /* HelveticaNeueHv.ttf */,
+				2683DD86617D4D86AA610C94 /* HelveticaNeueIt.ttf */,
+				7C8D2C7340DA44D48A39415C /* HelveticaNeueLt.ttf */,
+				E678D8780CB74E65B6EB6420 /* HelveticaNeueMed.ttf */,
+				F5231E0369D349BF9B0D1F61 /* Monaco.ttf */,
+				86420C652F9745B380F9F088 /* Roboto-Black.ttf */,
+				618939BF97754FDBA44AFABC /* Roboto-BlackItalic.ttf */,
+				F751DE5FB39A439A934563B0 /* Roboto-Bold.ttf */,
+				45AEA5855D02437FA8A25CCA /* Roboto-BoldItalic.ttf */,
+				C13E5F447E9B4F3DBFBFD5F5 /* Roboto-Italic.ttf */,
+				9180A335EB894DAD95C9AA79 /* Roboto-Light.ttf */,
+				4D8E65D772EB450B8CBF4AAD /* Roboto-LightItalic.ttf */,
+				FE117D1104BA4FBDB2E60D2B /* Roboto-Medium.ttf */,
+				F0460FDF04084B218898D227 /* Roboto-MediumItalic.ttf */,
+				5542A4AF20864E43A40C174A /* Roboto-Regular.ttf */,
+				03C7109F22384362A6CFB8F2 /* Roboto-Thin.ttf */,
+				885651F005B64A15A812FBCA /* Roboto-ThinItalic.ttf */,
+				51A18B1FBF7B4A45BA356013 /* Chirp-Bold.otf */,
+				47575FC0BBCA46EC9D28C7E2 /* Chirp-Heavy.otf */,
+				5E812650E30A41B58D47E73E /* Chirp-Light.otf */,
+				AD1163DFEBD14557A94FAD35 /* Chirp-Medium.otf */,
+				FBEFEA7F6847400B9273F8F3 /* Chirp-Regular.otf */,
+				EB130AC93B954A349D60A595 /* Chirp-Thin.otf */,
 			);
-			name = ExpoModulesProviders;
+			name = Resources;
 			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -275,6 +344,36 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				DEFDAD40B2D2415CA1F05284 /* HelveticaNeue-BlackCond.ttf in Resources */,
+				6C2C217136CB43B389C368F0 /* HelveticaNeue-Bold.ttf in Resources */,
+				3326DF23D53A4A8881D09718 /* HelveticaNeue-Light.ttf in Resources */,
+				09E3B8B3696C421C8659C7C8 /* HelveticaNeue-Medium.ttf in Resources */,
+				2A9D4B5AA2B5440EAA5DA57E /* HelveticaNeue-Thin.ttf in Resources */,
+				8BA89982EB4A4C98B8E464D5 /* HelveticaNeue.ttf in Resources */,
+				CE85CD6251C74D0B885623D9 /* HelveticaNeueBd.ttf in Resources */,
+				F42B09E6FD6E4FF7A2CD0CEF /* HelveticaNeueHv.ttf in Resources */,
+				7690823627484FE69DF61E53 /* HelveticaNeueIt.ttf in Resources */,
+				944ED6E3825B441BBEA1169F /* HelveticaNeueLt.ttf in Resources */,
+				E18E18FB0DE14CA5BBB1AE61 /* HelveticaNeueMed.ttf in Resources */,
+				D4636F1854724A1BBD7FF4F9 /* Monaco.ttf in Resources */,
+				BDA71A7C975647A192CC04C1 /* Roboto-Black.ttf in Resources */,
+				26BD9545AA9342AA923A806A /* Roboto-BlackItalic.ttf in Resources */,
+				C1D5724331D14278843E7BAB /* Roboto-Bold.ttf in Resources */,
+				DC5F65A9575E4DB4BEB38494 /* Roboto-BoldItalic.ttf in Resources */,
+				66DAFF1D3B4D4FC8B02443B6 /* Roboto-Italic.ttf in Resources */,
+				1DF3112B92314B1982A7E747 /* Roboto-Light.ttf in Resources */,
+				343887D32C334BADBD018EDA /* Roboto-LightItalic.ttf in Resources */,
+				027FA35D4D204668A2435231 /* Roboto-Medium.ttf in Resources */,
+				5F49C652D22E4CA1B538D94D /* Roboto-MediumItalic.ttf in Resources */,
+				54C015522CEC4ABBA3EB8016 /* Roboto-Regular.ttf in Resources */,
+				E8064E0FCD034828A6F5E7B6 /* Roboto-Thin.ttf in Resources */,
+				7659787E91694F12A15C44BF /* Roboto-ThinItalic.ttf in Resources */,
+				B71F9F6BCA104B429DEC3FAA /* Chirp-Bold.otf in Resources */,
+				FEA5969CA3EE4CF78DEF4402 /* Chirp-Heavy.otf in Resources */,
+				1927DFF1BAFC40E9B5BADD0E /* Chirp-Light.otf in Resources */,
+				3F1FF26FF048478FA5FEE79E /* Chirp-Medium.otf in Resources */,
+				00E0D7A456444DFDBDA9679D /* Chirp-Regular.otf in Resources */,
+				392DEA5460434ACC90FD9AE1 /* Chirp-Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +533,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* TwitterCloneTests.m in Sources */,
-				0B8C66E9120D2F8A8E57D113 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +542,6 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				03892AD79A58CC7A6924ECDA /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,7 +566,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = TwitterCloneTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,7 +590,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = TwitterCloneTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -609,7 +706,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -667,7 +764,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",

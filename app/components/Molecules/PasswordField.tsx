@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TextInput, StyleSheet, View, Pressable } from "react-native";
 import { colors } from "../../config/colors";
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export interface PasswordFieldProps {
   setInputValue: Function;
