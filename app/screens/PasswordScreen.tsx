@@ -12,7 +12,7 @@ import {
   NavigationStackGenericProp,
   RouteGenericProp,
 } from "../types/stackNavigation";
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { colors } from "../config/colors";
 import LoginNavigation from "../components/Organisms/LoginNavigation";
 import InputField from "../components/Atoms/InputField";

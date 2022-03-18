@@ -30,7 +30,7 @@ export default TermsLonger;
 const styles = StyleSheet.create({
   text: {
     color: "#707070",
-    fontFamily: "TwitterChirp",
+    fontFamily: "Chirp-Regular",
     fontSize: 14.9,
   },
   highlighted: {

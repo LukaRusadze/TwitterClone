@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import { View, Text, SafeAreaView, StyleSheet, StatusBar } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
 import { colors } from "../config/colors";
 import AccountCreationButtons from "../components/Molecules/AccountCreationButtons";
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     paddingTop: StatusBar.currentHeight,
   },
   headerText: {
-    fontFamily: "TwitterChirp-Bold",
+    fontFamily: "Chirp-Bold",
     fontSize: 30,
     marginBottom: 30,
     color: "black",

@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     paddingRight: 40,
   },
   headerText: {
-    fontFamily: "TwitterChirp-Bold",
+    fontFamily: "Chirp-Bold",
     paddingTop: 13,
     paddingLeft: 40,
     paddingRight: 40,

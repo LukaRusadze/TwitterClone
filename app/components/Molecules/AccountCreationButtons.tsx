@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import { colors } from "../../config/colors";
 import CustomButton from "../Atoms/CustomButton";
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { NavigationStackGenericProp } from "../../types/stackNavigation";
 import { useNavigation } from "@react-navigation/native";
 

@@ -9,13 +9,47 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* TwitterCloneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TwitterCloneTests.m */; };
 		03892AD79A58CC7A6924ECDA /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD8CF9087A3B430D00B389 /* ExpoModulesProvider.swift */; };
+		08CB46CFA015448DAF7C411B /* Monaco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B065B2D2DC9485BAF74EB88 /* Monaco.ttf */; };
 		0B8C66E9120D2F8A8E57D113 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D164F8EAFB950F9F0CCA81C8 /* ExpoModulesProvider.swift */; };
+		139F2FAFF9B34CC69228BA66 /* HelveticaNeueIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CAFE95EE034E86A702A597 /* HelveticaNeueIt.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		15EC5DCBB1F94EA2AD4ABA5C /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8F7963EA49C48CF977A659A /* Roboto-Bold.ttf */; };
+		2E946311CA434B72A9DE0C2C /* HelveticaNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4E3C477B82944A7B090B5F6 /* HelveticaNeue-Bold.ttf */; };
+		2F2D55B1192545B680E48A68 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 713DEF0A83344BC58DFE6390 /* Roboto-ThinItalic.ttf */; };
+		36CF246D85CF4AE3B8AD1187 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F920B26A6B43E0AD66F37A /* Roboto-BoldItalic.ttf */; };
+		37400882988444BCB7267A89 /* Chirp-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6F98C32E2F34D8C8F67CF57 /* Chirp-Light.otf */; };
+		37A798392F0843488A2F9EB5 /* HelveticaNeue-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 497CD19738534833805A4FC1 /* HelveticaNeue-Medium.ttf */; };
+		4793F943D6144514AC61E8B8 /* HelveticaNeueLt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A387D2D39C5F45A2B9843A8C /* HelveticaNeueLt.ttf */; };
+		4E4E9CEA809A4E1C9D0A97F1 /* Chirp-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 60BBF98CB765479F90E6C9B6 /* Chirp-Heavy.otf */; };
+		4E7206AD65F844BDA07ECB31 /* TwitterChirp-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2F63C00B6AE4BA9A51F33AE /* TwitterChirp-Bold.ttf */; };
+		50AD2F9929A44B6783B27787 /* HelveticaNeue-BlackCond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 585732BAD96D473CA513E414 /* HelveticaNeue-BlackCond.ttf */; };
+		50BABF09827D4746A88E864D /* Chirp-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A85CE25781F84AD3934161ED /* Chirp-Medium.otf */; };
+		519A175157FE4DD599A83DB3 /* Chirp-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C24664C399D40F19B9EE52E /* Chirp-Thin.otf */; };
+		5EDBE7FDA7F74DF6BE2BA1D9 /* TwitterChirp-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4B77BF13ACA49C59E837349 /* TwitterChirp-Heavy.ttf */; };
 		6172F2D35A4C3AA820D92908 /* libPods-TwitterClone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-TwitterClone.a */; };
+		64423116FE024D02A627EAAB /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9DBDD1C2B2642F096F28874 /* Roboto-Thin.ttf */; };
+		668C88AA01E44DDFA6EB588F /* Chirp-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E34E9246AA2C4B068C42AF8B /* Chirp-Bold.otf */; };
 		7EF68E3733C33B6898317E18 /* libPods-TwitterClone-TwitterCloneTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-TwitterClone-TwitterCloneTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		86CF526CD65F45829FE82028 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F76565464C4453EA24D1D4B /* Roboto-Black.ttf */; };
+		88A44E2075E14D97905F73FB /* HelveticaNeueBd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22A276B50365486395DB145D /* HelveticaNeueBd.ttf */; };
+		97063068D38B405C97B990FC /* HelveticaNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 986278518DD44AE88B4DD61C /* HelveticaNeue-Light.ttf */; };
+		A3202B213B4B46148068742E /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F49DB9D819F54FDB9FF09514 /* Roboto-BlackItalic.ttf */; };
+		A9DEB8F8CFFE4C50AF3AE25E /* TwitterChirp-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD6B12916454BBCAE65F2CF /* TwitterChirp-Medium.ttf */; };
+		AD8AAA67D50F483BB551BF93 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4C5DC22D8A14E62953ACEB0 /* Roboto-Medium.ttf */; };
+		B341C5F07E1F4364B394C954 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E5E9A607F7F4403A6F1FDD1 /* Roboto-Italic.ttf */; };
+		BB8793FE8772467594486D5F /* TwitterChirp-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93C9264E6E1141D8A5272368 /* TwitterChirp-Regular.ttf */; };
+		BC1F6DEB5A4A49289BCE184A /* Chirp-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 53D22395889247978B3DD78E /* Chirp-Regular.otf */; };
+		C27A86E2F84B42E6A4E383C9 /* HelveticaNeueMed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 020A605939AE464EB6E9AF08 /* HelveticaNeueMed.ttf */; };
+		C6CCA8561D0942C7ACCD3E36 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14AA6AF733364A4BB5AA9D21 /* Roboto-Regular.ttf */; };
+		D0AEA81B87D345CC8FA551F9 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE546F560C634E2FA5595582 /* Roboto-MediumItalic.ttf */; };
+		D4C7522020584E0D87A4F57E /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51B2352EEE584D36874141FC /* Roboto-Light.ttf */; };
+		DF3739AA7FE1430487DA50FE /* HelveticaNeue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26B63AB0908E4DD38425124B /* HelveticaNeue.ttf */; };
+		E292170A01EB4716B3C09FC7 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6714EF303D0043559C30EFE7 /* Roboto-LightItalic.ttf */; };
+		E9607C3A31124E2AB69E4BE5 /* HelveticaNeueHv.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECC5003FFC554301901D852B /* HelveticaNeueHv.ttf */; };
+		F53C0ADBEFF447249A1D4C49 /* HelveticaNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B77D860241214EDF9460F71A /* HelveticaNeue-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,22 +66,56 @@
 		00E356EE1AD99517003FC87E /* TwitterCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* TwitterCloneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwitterCloneTests.m; sourceTree = "<group>"; };
+		020A605939AE464EB6E9AF08 /* HelveticaNeueMed.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueMed.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeueMed.ttf; sourceTree = "<group>"; };
+		12F920B26A6B43E0AD66F37A /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BoldItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TwitterClone/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TwitterClone/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TwitterClone/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TwitterClone/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TwitterClone/main.m; sourceTree = "<group>"; };
+		14AA6AF733364A4BB5AA9D21 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		1D0AE47A65C8663E3B452821 /* Pods-TwitterClone-TwitterCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone-TwitterCloneTests.release.xcconfig"; path = "Target Support Files/Pods-TwitterClone-TwitterCloneTests/Pods-TwitterClone-TwitterCloneTests.release.xcconfig"; sourceTree = "<group>"; };
+		22A276B50365486395DB145D /* HelveticaNeueBd.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueBd.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeueBd.ttf; sourceTree = "<group>"; };
+		26B63AB0908E4DD38425124B /* HelveticaNeue.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeue.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeue.ttf; sourceTree = "<group>"; };
+		2B065B2D2DC9485BAF74EB88 /* Monaco.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Monaco.ttf; path = ../app/assets/fonts/Monaco/Monaco.ttf; sourceTree = "<group>"; };
+		497CD19738534833805A4FC1 /* HelveticaNeue-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue-Medium.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Medium.ttf"; sourceTree = "<group>"; };
+		51B2352EEE584D36874141FC /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		53D22395889247978B3DD78E /* Chirp-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Regular.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Regular.otf"; sourceTree = "<group>"; };
+		585732BAD96D473CA513E414 /* HelveticaNeue-BlackCond.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue-BlackCond.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-BlackCond.ttf"; sourceTree = "<group>"; };
+		60BBF98CB765479F90E6C9B6 /* Chirp-Heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Heavy.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Heavy.otf"; sourceTree = "<group>"; };
 		6423831EA8574132BED9D8CC /* libPods-TwitterClone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TwitterClone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6714EF303D0043559C30EFE7 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-LightItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		6C97AB639B58BBB4B15BBE30 /* Pods-TwitterClone-TwitterCloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone-TwitterCloneTests.debug.xcconfig"; path = "Target Support Files/Pods-TwitterClone-TwitterCloneTests/Pods-TwitterClone-TwitterCloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CCD8CF9087A3B430D00B389 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-TwitterClone/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		6CD6B12916454BBCAE65F2CF /* TwitterChirp-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "TwitterChirp-Medium.ttf"; path = "../app/assets/fonts/TwitterChirp/TwitterChirp-Medium.ttf"; sourceTree = "<group>"; };
+		6E5E9A607F7F4403A6F1FDD1 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		6F76565464C4453EA24D1D4B /* Roboto-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Black.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		713DEF0A83344BC58DFE6390 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-ThinItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TwitterClone/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84CAFE95EE034E86A702A597 /* HelveticaNeueIt.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueIt.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeueIt.ttf; sourceTree = "<group>"; };
+		8C24664C399D40F19B9EE52E /* Chirp-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Thin.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Thin.otf"; sourceTree = "<group>"; };
+		93C9264E6E1141D8A5272368 /* TwitterChirp-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "TwitterChirp-Regular.ttf"; path = "../app/assets/fonts/TwitterChirp/TwitterChirp-Regular.ttf"; sourceTree = "<group>"; };
+		986278518DD44AE88B4DD61C /* HelveticaNeue-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue-Light.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Light.ttf"; sourceTree = "<group>"; };
+		A387D2D39C5F45A2B9843A8C /* HelveticaNeueLt.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLt.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeueLt.ttf; sourceTree = "<group>"; };
+		A4B77BF13ACA49C59E837349 /* TwitterChirp-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "TwitterChirp-Heavy.ttf"; path = "../app/assets/fonts/TwitterChirp/TwitterChirp-Heavy.ttf"; sourceTree = "<group>"; };
+		A6F98C32E2F34D8C8F67CF57 /* Chirp-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Light.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Light.otf"; sourceTree = "<group>"; };
+		A85CE25781F84AD3934161ED /* Chirp-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Medium.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Medium.otf"; sourceTree = "<group>"; };
 		ABFE59519B596E51CEFDCCC0 /* libPods-TwitterClone-TwitterCloneTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TwitterClone-TwitterCloneTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4C5DC22D8A14E62953ACEB0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		B77D860241214EDF9460F71A /* HelveticaNeue-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue-Thin.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Thin.ttf"; sourceTree = "<group>"; };
 		C0A881CF5CF3F2B244570E2A /* Pods-TwitterClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.debug.xcconfig"; path = "Target Support Files/Pods-TwitterClone/Pods-TwitterClone.debug.xcconfig"; sourceTree = "<group>"; };
+		C2F63C00B6AE4BA9A51F33AE /* TwitterChirp-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "TwitterChirp-Bold.ttf"; path = "../app/assets/fonts/TwitterChirp/TwitterChirp-Bold.ttf"; sourceTree = "<group>"; };
+		C9DBDD1C2B2642F096F28874 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-TwitterClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.release.xcconfig"; path = "Target Support Files/Pods-TwitterClone/Pods-TwitterClone.release.xcconfig"; sourceTree = "<group>"; };
 		D164F8EAFB950F9F0CCA81C8 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-TwitterClone-TwitterCloneTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		D8F7963EA49C48CF977A659A /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		E34E9246AA2C4B068C42AF8B /* Chirp-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Bold.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Bold.otf"; sourceTree = "<group>"; };
+		ECC5003FFC554301901D852B /* HelveticaNeueHv.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueHv.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeueHv.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EE546F560C634E2FA5595582 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-MediumItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		F49DB9D819F54FDB9FF09514 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BlackItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		F4E3C477B82944A7B090B5F6 /* HelveticaNeue-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue-Bold.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +203,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E233CBF5F47BEE60B243DCF8 /* Pods */,
 				F2378146CB1810FE6BB6E964 /* ExpoModulesProviders */,
+				8FCBD1B210B543A88672E988 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -148,6 +217,48 @@
 				00E356EE1AD99517003FC87E /* TwitterCloneTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8FCBD1B210B543A88672E988 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				585732BAD96D473CA513E414 /* HelveticaNeue-BlackCond.ttf */,
+				F4E3C477B82944A7B090B5F6 /* HelveticaNeue-Bold.ttf */,
+				986278518DD44AE88B4DD61C /* HelveticaNeue-Light.ttf */,
+				497CD19738534833805A4FC1 /* HelveticaNeue-Medium.ttf */,
+				B77D860241214EDF9460F71A /* HelveticaNeue-Thin.ttf */,
+				26B63AB0908E4DD38425124B /* HelveticaNeue.ttf */,
+				22A276B50365486395DB145D /* HelveticaNeueBd.ttf */,
+				ECC5003FFC554301901D852B /* HelveticaNeueHv.ttf */,
+				84CAFE95EE034E86A702A597 /* HelveticaNeueIt.ttf */,
+				A387D2D39C5F45A2B9843A8C /* HelveticaNeueLt.ttf */,
+				020A605939AE464EB6E9AF08 /* HelveticaNeueMed.ttf */,
+				2B065B2D2DC9485BAF74EB88 /* Monaco.ttf */,
+				6F76565464C4453EA24D1D4B /* Roboto-Black.ttf */,
+				F49DB9D819F54FDB9FF09514 /* Roboto-BlackItalic.ttf */,
+				D8F7963EA49C48CF977A659A /* Roboto-Bold.ttf */,
+				12F920B26A6B43E0AD66F37A /* Roboto-BoldItalic.ttf */,
+				6E5E9A607F7F4403A6F1FDD1 /* Roboto-Italic.ttf */,
+				51B2352EEE584D36874141FC /* Roboto-Light.ttf */,
+				6714EF303D0043559C30EFE7 /* Roboto-LightItalic.ttf */,
+				B4C5DC22D8A14E62953ACEB0 /* Roboto-Medium.ttf */,
+				EE546F560C634E2FA5595582 /* Roboto-MediumItalic.ttf */,
+				14AA6AF733364A4BB5AA9D21 /* Roboto-Regular.ttf */,
+				C9DBDD1C2B2642F096F28874 /* Roboto-Thin.ttf */,
+				713DEF0A83344BC58DFE6390 /* Roboto-ThinItalic.ttf */,
+				C2F63C00B6AE4BA9A51F33AE /* TwitterChirp-Bold.ttf */,
+				A4B77BF13ACA49C59E837349 /* TwitterChirp-Heavy.ttf */,
+				6CD6B12916454BBCAE65F2CF /* TwitterChirp-Medium.ttf */,
+				93C9264E6E1141D8A5272368 /* TwitterChirp-Regular.ttf */,
+				E34E9246AA2C4B068C42AF8B /* Chirp-Bold.otf */,
+				60BBF98CB765479F90E6C9B6 /* Chirp-Heavy.otf */,
+				A6F98C32E2F34D8C8F67CF57 /* Chirp-Light.otf */,
+				A85CE25781F84AD3934161ED /* Chirp-Medium.otf */,
+				53D22395889247978B3DD78E /* Chirp-Regular.otf */,
+				8C24664C399D40F19B9EE52E /* Chirp-Thin.otf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		9431326E99408752DB771971 /* TwitterClone */ = {
@@ -275,6 +386,40 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				50AD2F9929A44B6783B27787 /* HelveticaNeue-BlackCond.ttf in Resources */,
+				2E946311CA434B72A9DE0C2C /* HelveticaNeue-Bold.ttf in Resources */,
+				97063068D38B405C97B990FC /* HelveticaNeue-Light.ttf in Resources */,
+				37A798392F0843488A2F9EB5 /* HelveticaNeue-Medium.ttf in Resources */,
+				F53C0ADBEFF447249A1D4C49 /* HelveticaNeue-Thin.ttf in Resources */,
+				DF3739AA7FE1430487DA50FE /* HelveticaNeue.ttf in Resources */,
+				88A44E2075E14D97905F73FB /* HelveticaNeueBd.ttf in Resources */,
+				E9607C3A31124E2AB69E4BE5 /* HelveticaNeueHv.ttf in Resources */,
+				139F2FAFF9B34CC69228BA66 /* HelveticaNeueIt.ttf in Resources */,
+				4793F943D6144514AC61E8B8 /* HelveticaNeueLt.ttf in Resources */,
+				C27A86E2F84B42E6A4E383C9 /* HelveticaNeueMed.ttf in Resources */,
+				08CB46CFA015448DAF7C411B /* Monaco.ttf in Resources */,
+				86CF526CD65F45829FE82028 /* Roboto-Black.ttf in Resources */,
+				A3202B213B4B46148068742E /* Roboto-BlackItalic.ttf in Resources */,
+				15EC5DCBB1F94EA2AD4ABA5C /* Roboto-Bold.ttf in Resources */,
+				36CF246D85CF4AE3B8AD1187 /* Roboto-BoldItalic.ttf in Resources */,
+				B341C5F07E1F4364B394C954 /* Roboto-Italic.ttf in Resources */,
+				D4C7522020584E0D87A4F57E /* Roboto-Light.ttf in Resources */,
+				E292170A01EB4716B3C09FC7 /* Roboto-LightItalic.ttf in Resources */,
+				AD8AAA67D50F483BB551BF93 /* Roboto-Medium.ttf in Resources */,
+				D0AEA81B87D345CC8FA551F9 /* Roboto-MediumItalic.ttf in Resources */,
+				C6CCA8561D0942C7ACCD3E36 /* Roboto-Regular.ttf in Resources */,
+				64423116FE024D02A627EAAB /* Roboto-Thin.ttf in Resources */,
+				2F2D55B1192545B680E48A68 /* Roboto-ThinItalic.ttf in Resources */,
+				4E7206AD65F844BDA07ECB31 /* TwitterChirp-Bold.ttf in Resources */,
+				5EDBE7FDA7F74DF6BE2BA1D9 /* TwitterChirp-Heavy.ttf in Resources */,
+				A9DEB8F8CFFE4C50AF3AE25E /* TwitterChirp-Medium.ttf in Resources */,
+				BB8793FE8772467594486D5F /* TwitterChirp-Regular.ttf in Resources */,
+				668C88AA01E44DDFA6EB588F /* Chirp-Bold.otf in Resources */,
+				4E4E9CEA809A4E1C9D0A97F1 /* Chirp-Heavy.otf in Resources */,
+				37400882988444BCB7267A89 /* Chirp-Light.otf in Resources */,
+				50BABF09827D4746A88E864D /* Chirp-Medium.otf in Resources */,
+				BC1F6DEB5A4A49289BCE184A /* Chirp-Regular.otf in Resources */,
+				519A175157FE4DD599A83DB3 /* Chirp-Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

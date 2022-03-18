@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { useFonts } from "expo-font";
-import { fonts } from "./app/config/fonts";
 import { LogBox, StatusBar } from "react-native";
 import MainStack from "./app/navigation/MainStack";
 import { Provider } from "react-redux";
@@ -17,12 +15,6 @@ export default function App() {
   useEffect(() => {
     changeNavigationBarColor("white", true, false);
   }, []);
-
-  const [loaded] = useFonts(fonts);
-
-  if (!loaded) {
-    return null;
-  }
 
   return (
     <>
