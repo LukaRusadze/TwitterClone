@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { PhotoFile } from "react-native-vision-camera";
+import { ImageOrVideo } from "react-native-image-crop-picker";
 
 interface AccountState {
   name: string;
@@ -7,7 +7,7 @@ interface AccountState {
   email: string;
   dateOfBirth?: number;
   password?: string;
-  profilePicture?: PhotoFile;
+  profilePicture?: ImageOrVideo;
 }
 
 const initialState: AccountState = {
@@ -29,8 +29,8 @@ const accountSlice = createSlice({
     savePassword: (state, action: PayloadAction<string>) => {
       state.password = action.payload;
     },
-    saveProfilePicture: (state, action: PayloadAction<PhotoFile>) => {
-      state.profilePicture = action.payload;
+    saveProfilePicture: (state, action: PayloadAction<ImageOrVideo>) => {
+      return { ...state, profilePicture: action.payload };
     },
   },
 });

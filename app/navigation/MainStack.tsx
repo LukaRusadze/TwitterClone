@@ -49,6 +49,7 @@ const MainStack = () => {
         component={CameraPhotoViewScreen}
         options={{
           headerShown: false,
+          statusBarHidden: true,
           animation: "none",
         }}
       />

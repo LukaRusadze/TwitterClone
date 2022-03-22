@@ -12,7 +12,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
 import useTwitterHeader from "../hooks/useTwitterHeader";
-import { useAppSelector } from "../hooks/redux";
+import { useAppSelector } from "../types/redux";
 import InputField from "../components/Atoms/InputField";
 import RegisterNavigation from "../components/Organisms/RegisterNavigation";
 import { colors } from "../config/colors";

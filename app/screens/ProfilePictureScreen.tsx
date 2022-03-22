@@ -7,28 +7,36 @@ import {
   SafeAreaView,
 } from "react-native";
 import React, { useState } from "react";
-import { useAppSelector } from "../hooks/redux";
+import { useAppDispatch } from "../types/redux";
 import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
 import RegisterNavigation from "../components/Organisms/RegisterNavigation";
 import ContextMenu from "../components/Atoms/ContextMenu";
+import { ImagePicker } from "../utils/ImageManipulator";
+import { saveProfilePicture } from "../store/features/account/accountSlice";
 
 interface Props {}
 
 const ProfilePictureScreen = ({}: Props) => {
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
 
-  const accountData = useAppSelector((state) => state.account);
+  const dispatch = useAppDispatch();
   const navigation =
     useNavigation<NavigationStackGenericProp<"ProfilePicture">>();
-  console.log(accountData);
 
   useTwitterHeader(navigation, false, 30);
 
   function handleCamera() {
     setIsMenuVisible(false);
     navigation.navigate("Camera");
+  }
+
+  function handleImagePicker() {
+    setIsMenuVisible(false);
+    ImagePicker().then((image) => {
+      dispatch(saveProfilePicture(image));
+    });
   }
 
   return (
@@ -41,7 +49,10 @@ const ProfilePictureScreen = ({}: Props) => {
         <ContextMenu
           items={[
             { title: "Take photo", onPress: () => handleCamera() },
-            { title: "Choose existing photo", onPress: () => null },
+            {
+              title: "Choose existing photo",
+              onPress: () => handleImagePicker(),
+            },
           ]}
           setVisibility={setIsMenuVisible}
           visible={isMenuVisible}

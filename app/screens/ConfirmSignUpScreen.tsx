@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
 import TermsLonger from "../components/Atoms/TermsLonger";
 import CustomButton from "../components/Atoms/CustomButton";
-import { useAppSelector } from "../hooks/redux";
+import { useAppSelector } from "../types/redux";
 import { formatDate } from "../utils/StringFormat";
 import { colors } from "../config/colors";
 

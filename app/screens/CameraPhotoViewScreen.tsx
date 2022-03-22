@@ -9,27 +9,40 @@ import {
   RouteGenericProp,
 } from "../types/stackNavigation";
 import changeNavigationBarColor from "react-native-navigation-bar-color";
+import { ImageCropper } from "../utils/ImageManipulator";
+import { useAppDispatch } from "../types/redux";
+import { saveProfilePicture } from "../store/features/account/accountSlice";
 
 interface Props {}
 
 const CameraPhotoViewScreen = ({}: Props) => {
   const navigation =
     useNavigation<NavigationStackGenericProp<"CameraPhotoView">>();
+
   const route = useRoute<RouteGenericProp<"CameraPhotoView">>();
   const photo = route.params;
+
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     Platform.OS === "android" && changeNavigationBarColor("black", false, true);
 
     return () => {
       Platform.OS === "android" &&
-        changeNavigationBarColor("white", true, true);
+        changeNavigationBarColor("black", true, true);
     };
   }, []);
 
   function onClose() {
     navigation.goBack();
   }
+
+  function onContinue() {
+    ImageCropper("file://" + photo.path).then((image) => {
+      dispatch(saveProfilePicture(image));
+    });
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.content}>
@@ -56,6 +69,7 @@ const CameraPhotoViewScreen = ({}: Props) => {
         <CustomButton
           style={styles.usePhotoButton}
           textStyle={styles.usePhotoButtonText}
+          onPress={onContinue}
         >
           Use photo
         </CustomButton>
