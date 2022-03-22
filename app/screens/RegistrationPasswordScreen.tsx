@@ -14,7 +14,7 @@ import { Field, FieldProps, Formik } from "formik";
 import * as Yup from "yup";
 import ValidatedPasswordField from "../components/Molecules/ValidatedPasswordField";
 import { savePassword } from "../store/features/account/accountSlice";
-import { useAppDispatch } from "../hooks/redux";
+import { useAppDispatch } from "../types/redux";
 
 interface Props {}
 

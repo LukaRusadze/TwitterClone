@@ -16,7 +16,7 @@ import CharLimitedInput from "../components/Atoms/CharLimitedInput";
 import DateInput from "../components/Molecules/DateInput";
 import ValidatedInput from "../components/Atoms/ValidatedInput";
 import useTwitterHeader from "../hooks/useTwitterHeader";
-import { useAppDispatch } from "../hooks/redux";
+import { useAppDispatch } from "../types/redux";
 import { saveUser } from "../store/features/account/accountSlice";
 
 const phoneNumberRegex = /^[+]?([0-9]*[.\s\-()]|[0-9]+){3,24}$/;
