@@ -15,6 +15,7 @@ import * as Yup from "yup";
 import ValidatedPasswordField from "../components/Molecules/ValidatedPasswordField";
 import { savePassword } from "../store/features/account/accountSlice";
 import { useAppDispatch } from "../types/redux";
+import { RegisterUser } from "../utils/firebase/authorization";
 
 interface Props {}
 
@@ -38,8 +39,9 @@ const RegistrationPasswordScreen = ({}: Props) => {
         initialValues={{
           password: "",
         }}
-        onSubmit={(values) => {
+        onSubmit={async (values) => {
           dispatch(savePassword(values.password));
+          await RegisterUser();
           navigation.navigate("ProfilePicture");
         }}
         validationSchema={PasswordSchema}

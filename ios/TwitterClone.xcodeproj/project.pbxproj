@@ -7,43 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00E0D7A456444DFDBDA9679D /* Chirp-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBEFEA7F6847400B9273F8F3 /* Chirp-Regular.otf */; };
 		00E356F31AD99517003FC87E /* TwitterCloneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TwitterCloneTests.m */; };
+		027FA35D4D204668A2435231 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE117D1104BA4FBDB2E60D2B /* Roboto-Medium.ttf */; };
+		09E3B8B3696C421C8659C7C8 /* HelveticaNeue-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0739C6F44C54F4CA9EC6DBF /* HelveticaNeue-Medium.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1927DFF1BAFC40E9B5BADD0E /* Chirp-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E812650E30A41B58D47E73E /* Chirp-Light.otf */; };
+		1DF3112B92314B1982A7E747 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9180A335EB894DAD95C9AA79 /* Roboto-Light.ttf */; };
+		26BD9545AA9342AA923A806A /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 618939BF97754FDBA44AFABC /* Roboto-BlackItalic.ttf */; };
+		2A9D4B5AA2B5440EAA5DA57E /* HelveticaNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D72F712C2D4C4AC4B0C7E286 /* HelveticaNeue-Thin.ttf */; };
+		3326DF23D53A4A8881D09718 /* HelveticaNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DF5A496CC074A29B5F8C670 /* HelveticaNeue-Light.ttf */; };
+		343887D32C334BADBD018EDA /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D8E65D772EB450B8CBF4AAD /* Roboto-LightItalic.ttf */; };
+		392DEA5460434ACC90FD9AE1 /* Chirp-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB130AC93B954A349D60A595 /* Chirp-Thin.otf */; };
+		3F1FF26FF048478FA5FEE79E /* Chirp-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD1163DFEBD14557A94FAD35 /* Chirp-Medium.otf */; };
+		54C015522CEC4ABBA3EB8016 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5542A4AF20864E43A40C174A /* Roboto-Regular.ttf */; };
+		5F49C652D22E4CA1B538D94D /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0460FDF04084B218898D227 /* Roboto-MediumItalic.ttf */; };
 		6172F2D35A4C3AA820D92908 /* libPods-TwitterClone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-TwitterClone.a */; };
+		66DAFF1D3B4D4FC8B02443B6 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13E5F447E9B4F3DBFBFD5F5 /* Roboto-Italic.ttf */; };
+		6C2C217136CB43B389C368F0 /* HelveticaNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B87B237E7CD4F6CBF099D1C /* HelveticaNeue-Bold.ttf */; };
+		7659787E91694F12A15C44BF /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 885651F005B64A15A812FBCA /* Roboto-ThinItalic.ttf */; };
+		7690823627484FE69DF61E53 /* HelveticaNeueIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2683DD86617D4D86AA610C94 /* HelveticaNeueIt.ttf */; };
 		7EF68E3733C33B6898317E18 /* libPods-TwitterClone-TwitterCloneTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-TwitterClone-TwitterCloneTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		DEFDAD40B2D2415CA1F05284 /* HelveticaNeue-BlackCond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45FC2AF9CAEF4A659AFC4890 /* HelveticaNeue-BlackCond.ttf */; };
-		6C2C217136CB43B389C368F0 /* HelveticaNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B87B237E7CD4F6CBF099D1C /* HelveticaNeue-Bold.ttf */; };
-		3326DF23D53A4A8881D09718 /* HelveticaNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DF5A496CC074A29B5F8C670 /* HelveticaNeue-Light.ttf */; };
-		09E3B8B3696C421C8659C7C8 /* HelveticaNeue-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0739C6F44C54F4CA9EC6DBF /* HelveticaNeue-Medium.ttf */; };
-		2A9D4B5AA2B5440EAA5DA57E /* HelveticaNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D72F712C2D4C4AC4B0C7E286 /* HelveticaNeue-Thin.ttf */; };
 		8BA89982EB4A4C98B8E464D5 /* HelveticaNeue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB502061CB344C7E965776B5 /* HelveticaNeue.ttf */; };
-		CE85CD6251C74D0B885623D9 /* HelveticaNeueBd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38F97FC69A1D4F3ABEF79867 /* HelveticaNeueBd.ttf */; };
-		F42B09E6FD6E4FF7A2CD0CEF /* HelveticaNeueHv.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74673EAF26B94BF380E2DD41 /* HelveticaNeueHv.ttf */; };
-		7690823627484FE69DF61E53 /* HelveticaNeueIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2683DD86617D4D86AA610C94 /* HelveticaNeueIt.ttf */; };
 		944ED6E3825B441BBEA1169F /* HelveticaNeueLt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8D2C7340DA44D48A39415C /* HelveticaNeueLt.ttf */; };
-		E18E18FB0DE14CA5BBB1AE61 /* HelveticaNeueMed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E678D8780CB74E65B6EB6420 /* HelveticaNeueMed.ttf */; };
-		D4636F1854724A1BBD7FF4F9 /* Monaco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5231E0369D349BF9B0D1F61 /* Monaco.ttf */; };
-		BDA71A7C975647A192CC04C1 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86420C652F9745B380F9F088 /* Roboto-Black.ttf */; };
-		26BD9545AA9342AA923A806A /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 618939BF97754FDBA44AFABC /* Roboto-BlackItalic.ttf */; };
-		C1D5724331D14278843E7BAB /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F751DE5FB39A439A934563B0 /* Roboto-Bold.ttf */; };
-		DC5F65A9575E4DB4BEB38494 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45AEA5855D02437FA8A25CCA /* Roboto-BoldItalic.ttf */; };
-		66DAFF1D3B4D4FC8B02443B6 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13E5F447E9B4F3DBFBFD5F5 /* Roboto-Italic.ttf */; };
-		1DF3112B92314B1982A7E747 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9180A335EB894DAD95C9AA79 /* Roboto-Light.ttf */; };
-		343887D32C334BADBD018EDA /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D8E65D772EB450B8CBF4AAD /* Roboto-LightItalic.ttf */; };
-		027FA35D4D204668A2435231 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE117D1104BA4FBDB2E60D2B /* Roboto-Medium.ttf */; };
-		5F49C652D22E4CA1B538D94D /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0460FDF04084B218898D227 /* Roboto-MediumItalic.ttf */; };
-		54C015522CEC4ABBA3EB8016 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5542A4AF20864E43A40C174A /* Roboto-Regular.ttf */; };
-		E8064E0FCD034828A6F5E7B6 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03C7109F22384362A6CFB8F2 /* Roboto-Thin.ttf */; };
-		7659787E91694F12A15C44BF /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 885651F005B64A15A812FBCA /* Roboto-ThinItalic.ttf */; };
 		B71F9F6BCA104B429DEC3FAA /* Chirp-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51A18B1FBF7B4A45BA356013 /* Chirp-Bold.otf */; };
+		BDA71A7C975647A192CC04C1 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86420C652F9745B380F9F088 /* Roboto-Black.ttf */; };
+		C1D5724331D14278843E7BAB /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F751DE5FB39A439A934563B0 /* Roboto-Bold.ttf */; };
+		CE85CD6251C74D0B885623D9 /* HelveticaNeueBd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38F97FC69A1D4F3ABEF79867 /* HelveticaNeueBd.ttf */; };
+		D4636F1854724A1BBD7FF4F9 /* Monaco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5231E0369D349BF9B0D1F61 /* Monaco.ttf */; };
+		DC5F65A9575E4DB4BEB38494 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45AEA5855D02437FA8A25CCA /* Roboto-BoldItalic.ttf */; };
+		DEFDAD40B2D2415CA1F05284 /* HelveticaNeue-BlackCond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45FC2AF9CAEF4A659AFC4890 /* HelveticaNeue-BlackCond.ttf */; };
+		E18E18FB0DE14CA5BBB1AE61 /* HelveticaNeueMed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E678D8780CB74E65B6EB6420 /* HelveticaNeueMed.ttf */; };
+		E8064E0FCD034828A6F5E7B6 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03C7109F22384362A6CFB8F2 /* Roboto-Thin.ttf */; };
+		F42B09E6FD6E4FF7A2CD0CEF /* HelveticaNeueHv.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74673EAF26B94BF380E2DD41 /* HelveticaNeueHv.ttf */; };
 		FEA5969CA3EE4CF78DEF4402 /* Chirp-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47575FC0BBCA46EC9D28C7E2 /* Chirp-Heavy.otf */; };
-		1927DFF1BAFC40E9B5BADD0E /* Chirp-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E812650E30A41B58D47E73E /* Chirp-Light.otf */; };
-		3F1FF26FF048478FA5FEE79E /* Chirp-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD1163DFEBD14557A94FAD35 /* Chirp-Medium.otf */; };
-		00E0D7A456444DFDBDA9679D /* Chirp-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBEFEA7F6847400B9273F8F3 /* Chirp-Regular.otf */; };
-		392DEA5460434ACC90FD9AE1 /* Chirp-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB130AC93B954A349D60A595 /* Chirp-Thin.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +60,7 @@
 		00E356EE1AD99517003FC87E /* TwitterCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* TwitterCloneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwitterCloneTests.m; sourceTree = "<group>"; };
+		03C7109F22384362A6CFB8F2 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TwitterClone/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TwitterClone/AppDelegate.m; sourceTree = "<group>"; };
@@ -67,43 +68,42 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TwitterClone/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TwitterClone/main.m; sourceTree = "<group>"; };
 		1D0AE47A65C8663E3B452821 /* Pods-TwitterClone-TwitterCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone-TwitterCloneTests.release.xcconfig"; path = "Target Support Files/Pods-TwitterClone-TwitterCloneTests/Pods-TwitterClone-TwitterCloneTests.release.xcconfig"; sourceTree = "<group>"; };
+		2683DD86617D4D86AA610C94 /* HelveticaNeueIt.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueIt.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeueIt.ttf; sourceTree = "<group>"; };
+		38F97FC69A1D4F3ABEF79867 /* HelveticaNeueBd.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueBd.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeueBd.ttf; sourceTree = "<group>"; };
+		45AEA5855D02437FA8A25CCA /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BoldItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		45FC2AF9CAEF4A659AFC4890 /* HelveticaNeue-BlackCond.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue-BlackCond.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-BlackCond.ttf"; sourceTree = "<group>"; };
+		47575FC0BBCA46EC9D28C7E2 /* Chirp-Heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Heavy.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Heavy.otf"; sourceTree = "<group>"; };
+		4B87B237E7CD4F6CBF099D1C /* HelveticaNeue-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue-Bold.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Bold.ttf"; sourceTree = "<group>"; };
+		4D8E65D772EB450B8CBF4AAD /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-LightItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		51A18B1FBF7B4A45BA356013 /* Chirp-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Bold.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Bold.otf"; sourceTree = "<group>"; };
+		5542A4AF20864E43A40C174A /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		5E812650E30A41B58D47E73E /* Chirp-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Light.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Light.otf"; sourceTree = "<group>"; };
+		618939BF97754FDBA44AFABC /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BlackItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		6423831EA8574132BED9D8CC /* libPods-TwitterClone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TwitterClone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C97AB639B58BBB4B15BBE30 /* Pods-TwitterClone-TwitterCloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone-TwitterCloneTests.debug.xcconfig"; path = "Target Support Files/Pods-TwitterClone-TwitterCloneTests/Pods-TwitterClone-TwitterCloneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74673EAF26B94BF380E2DD41 /* HelveticaNeueHv.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueHv.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeueHv.ttf; sourceTree = "<group>"; };
+		7C8D2C7340DA44D48A39415C /* HelveticaNeueLt.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLt.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeueLt.ttf; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TwitterClone/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86420C652F9745B380F9F088 /* Roboto-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Black.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		885651F005B64A15A812FBCA /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-ThinItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		8DF5A496CC074A29B5F8C670 /* HelveticaNeue-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue-Light.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Light.ttf"; sourceTree = "<group>"; };
+		9180A335EB894DAD95C9AA79 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		ABFE59519B596E51CEFDCCC0 /* libPods-TwitterClone-TwitterCloneTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TwitterClone-TwitterCloneTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD1163DFEBD14557A94FAD35 /* Chirp-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Medium.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Medium.otf"; sourceTree = "<group>"; };
+		B0739C6F44C54F4CA9EC6DBF /* HelveticaNeue-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue-Medium.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Medium.ttf"; sourceTree = "<group>"; };
+		BB502061CB344C7E965776B5 /* HelveticaNeue.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeue.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeue.ttf; sourceTree = "<group>"; };
 		C0A881CF5CF3F2B244570E2A /* Pods-TwitterClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.debug.xcconfig"; path = "Target Support Files/Pods-TwitterClone/Pods-TwitterClone.debug.xcconfig"; sourceTree = "<group>"; };
+		C13E5F447E9B4F3DBFBFD5F5 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-TwitterClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.release.xcconfig"; path = "Target Support Files/Pods-TwitterClone/Pods-TwitterClone.release.xcconfig"; sourceTree = "<group>"; };
+		D72F712C2D4C4AC4B0C7E286 /* HelveticaNeue-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue-Thin.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Thin.ttf"; sourceTree = "<group>"; };
+		E678D8780CB74E65B6EB6420 /* HelveticaNeueMed.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueMed.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeueMed.ttf; sourceTree = "<group>"; };
+		EB130AC93B954A349D60A595 /* Chirp-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Thin.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Thin.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		45FC2AF9CAEF4A659AFC4890 /* HelveticaNeue-BlackCond.ttf */ = {isa = PBXFileReference; name = "HelveticaNeue-BlackCond.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-BlackCond.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4B87B237E7CD4F6CBF099D1C /* HelveticaNeue-Bold.ttf */ = {isa = PBXFileReference; name = "HelveticaNeue-Bold.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8DF5A496CC074A29B5F8C670 /* HelveticaNeue-Light.ttf */ = {isa = PBXFileReference; name = "HelveticaNeue-Light.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B0739C6F44C54F4CA9EC6DBF /* HelveticaNeue-Medium.ttf */ = {isa = PBXFileReference; name = "HelveticaNeue-Medium.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D72F712C2D4C4AC4B0C7E286 /* HelveticaNeue-Thin.ttf */ = {isa = PBXFileReference; name = "HelveticaNeue-Thin.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		BB502061CB344C7E965776B5 /* HelveticaNeue.ttf */ = {isa = PBXFileReference; name = "HelveticaNeue.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		38F97FC69A1D4F3ABEF79867 /* HelveticaNeueBd.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueBd.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeueBd.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		74673EAF26B94BF380E2DD41 /* HelveticaNeueHv.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueHv.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeueHv.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2683DD86617D4D86AA610C94 /* HelveticaNeueIt.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueIt.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeueIt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7C8D2C7340DA44D48A39415C /* HelveticaNeueLt.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueLt.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeueLt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E678D8780CB74E65B6EB6420 /* HelveticaNeueMed.ttf */ = {isa = PBXFileReference; name = "HelveticaNeueMed.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeueMed.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F5231E0369D349BF9B0D1F61 /* Monaco.ttf */ = {isa = PBXFileReference; name = "Monaco.ttf"; path = "../app/assets/fonts/Monaco/Monaco.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		86420C652F9745B380F9F088 /* Roboto-Black.ttf */ = {isa = PBXFileReference; name = "Roboto-Black.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		618939BF97754FDBA44AFABC /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-BlackItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F751DE5FB39A439A934563B0 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; name = "Roboto-Bold.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		45AEA5855D02437FA8A25CCA /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-BoldItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C13E5F447E9B4F3DBFBFD5F5 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; name = "Roboto-Italic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9180A335EB894DAD95C9AA79 /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4D8E65D772EB450B8CBF4AAD /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-LightItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FE117D1104BA4FBDB2E60D2B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; name = "Roboto-Medium.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F0460FDF04084B218898D227 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-MediumItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5542A4AF20864E43A40C174A /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		03C7109F22384362A6CFB8F2 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; name = "Roboto-Thin.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		885651F005B64A15A812FBCA /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-ThinItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		51A18B1FBF7B4A45BA356013 /* Chirp-Bold.otf */ = {isa = PBXFileReference; name = "Chirp-Bold.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		47575FC0BBCA46EC9D28C7E2 /* Chirp-Heavy.otf */ = {isa = PBXFileReference; name = "Chirp-Heavy.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Heavy.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5E812650E30A41B58D47E73E /* Chirp-Light.otf */ = {isa = PBXFileReference; name = "Chirp-Light.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AD1163DFEBD14557A94FAD35 /* Chirp-Medium.otf */ = {isa = PBXFileReference; name = "Chirp-Medium.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FBEFEA7F6847400B9273F8F3 /* Chirp-Regular.otf */ = {isa = PBXFileReference; name = "Chirp-Regular.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		EB130AC93B954A349D60A595 /* Chirp-Thin.otf */ = {isa = PBXFileReference; name = "Chirp-Thin.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F0460FDF04084B218898D227 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-MediumItalic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		F5231E0369D349BF9B0D1F61 /* Monaco.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Monaco.ttf; path = ../app/assets/fonts/Monaco/Monaco.ttf; sourceTree = "<group>"; };
+		F751DE5FB39A439A934563B0 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		FBEFEA7F6847400B9273F8F3 /* Chirp-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Regular.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Regular.otf"; sourceTree = "<group>"; };
+		FE117D1104BA4FBDB2E60D2B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +166,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		439594F0A1C84656919EF8E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				45FC2AF9CAEF4A659AFC4890 /* HelveticaNeue-BlackCond.ttf */,
+				4B87B237E7CD4F6CBF099D1C /* HelveticaNeue-Bold.ttf */,
+				8DF5A496CC074A29B5F8C670 /* HelveticaNeue-Light.ttf */,
+				B0739C6F44C54F4CA9EC6DBF /* HelveticaNeue-Medium.ttf */,
+				D72F712C2D4C4AC4B0C7E286 /* HelveticaNeue-Thin.ttf */,
+				BB502061CB344C7E965776B5 /* HelveticaNeue.ttf */,
+				38F97FC69A1D4F3ABEF79867 /* HelveticaNeueBd.ttf */,
+				74673EAF26B94BF380E2DD41 /* HelveticaNeueHv.ttf */,
+				2683DD86617D4D86AA610C94 /* HelveticaNeueIt.ttf */,
+				7C8D2C7340DA44D48A39415C /* HelveticaNeueLt.ttf */,
+				E678D8780CB74E65B6EB6420 /* HelveticaNeueMed.ttf */,
+				F5231E0369D349BF9B0D1F61 /* Monaco.ttf */,
+				86420C652F9745B380F9F088 /* Roboto-Black.ttf */,
+				618939BF97754FDBA44AFABC /* Roboto-BlackItalic.ttf */,
+				F751DE5FB39A439A934563B0 /* Roboto-Bold.ttf */,
+				45AEA5855D02437FA8A25CCA /* Roboto-BoldItalic.ttf */,
+				C13E5F447E9B4F3DBFBFD5F5 /* Roboto-Italic.ttf */,
+				9180A335EB894DAD95C9AA79 /* Roboto-Light.ttf */,
+				4D8E65D772EB450B8CBF4AAD /* Roboto-LightItalic.ttf */,
+				FE117D1104BA4FBDB2E60D2B /* Roboto-Medium.ttf */,
+				F0460FDF04084B218898D227 /* Roboto-MediumItalic.ttf */,
+				5542A4AF20864E43A40C174A /* Roboto-Regular.ttf */,
+				03C7109F22384362A6CFB8F2 /* Roboto-Thin.ttf */,
+				885651F005B64A15A812FBCA /* Roboto-ThinItalic.ttf */,
+				51A18B1FBF7B4A45BA356013 /* Chirp-Bold.otf */,
+				47575FC0BBCA46EC9D28C7E2 /* Chirp-Heavy.otf */,
+				5E812650E30A41B58D47E73E /* Chirp-Light.otf */,
+				AD1163DFEBD14557A94FAD35 /* Chirp-Medium.otf */,
+				FBEFEA7F6847400B9273F8F3 /* Chirp-Regular.otf */,
+				EB130AC93B954A349D60A595 /* Chirp-Thin.otf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,44 +248,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		439594F0A1C84656919EF8E1 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				45FC2AF9CAEF4A659AFC4890 /* HelveticaNeue-BlackCond.ttf */,
-				4B87B237E7CD4F6CBF099D1C /* HelveticaNeue-Bold.ttf */,
-				8DF5A496CC074A29B5F8C670 /* HelveticaNeue-Light.ttf */,
-				B0739C6F44C54F4CA9EC6DBF /* HelveticaNeue-Medium.ttf */,
-				D72F712C2D4C4AC4B0C7E286 /* HelveticaNeue-Thin.ttf */,
-				BB502061CB344C7E965776B5 /* HelveticaNeue.ttf */,
-				38F97FC69A1D4F3ABEF79867 /* HelveticaNeueBd.ttf */,
-				74673EAF26B94BF380E2DD41 /* HelveticaNeueHv.ttf */,
-				2683DD86617D4D86AA610C94 /* HelveticaNeueIt.ttf */,
-				7C8D2C7340DA44D48A39415C /* HelveticaNeueLt.ttf */,
-				E678D8780CB74E65B6EB6420 /* HelveticaNeueMed.ttf */,
-				F5231E0369D349BF9B0D1F61 /* Monaco.ttf */,
-				86420C652F9745B380F9F088 /* Roboto-Black.ttf */,
-				618939BF97754FDBA44AFABC /* Roboto-BlackItalic.ttf */,
-				F751DE5FB39A439A934563B0 /* Roboto-Bold.ttf */,
-				45AEA5855D02437FA8A25CCA /* Roboto-BoldItalic.ttf */,
-				C13E5F447E9B4F3DBFBFD5F5 /* Roboto-Italic.ttf */,
-				9180A335EB894DAD95C9AA79 /* Roboto-Light.ttf */,
-				4D8E65D772EB450B8CBF4AAD /* Roboto-LightItalic.ttf */,
-				FE117D1104BA4FBDB2E60D2B /* Roboto-Medium.ttf */,
-				F0460FDF04084B218898D227 /* Roboto-MediumItalic.ttf */,
-				5542A4AF20864E43A40C174A /* Roboto-Regular.ttf */,
-				03C7109F22384362A6CFB8F2 /* Roboto-Thin.ttf */,
-				885651F005B64A15A812FBCA /* Roboto-ThinItalic.ttf */,
-				51A18B1FBF7B4A45BA356013 /* Chirp-Bold.otf */,
-				47575FC0BBCA46EC9D28C7E2 /* Chirp-Heavy.otf */,
-				5E812650E30A41B58D47E73E /* Chirp-Light.otf */,
-				AD1163DFEBD14557A94FAD35 /* Chirp-Medium.otf */,
-				FBEFEA7F6847400B9273F8F3 /* Chirp-Regular.otf */,
-				EB130AC93B954A349D60A595 /* Chirp-Thin.otf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +284,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				C8AC78B0264D0F9F6F6D630E /* [CP] Embed Pods Frameworks */,
 				ADC9DDC32298B72B3CF5DC8E /* [CP] Copy Pods Resources */,
+				62A21A79FBF3D4A22E22389C /* [CP-User] [RNFB] Core Configuration */,
 			);
 			buildRules = (
 			);
@@ -449,6 +450,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwitterClone-TwitterCloneTests/Pods-TwitterClone-TwitterCloneTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		62A21A79FBF3D4A22E22389C /* [CP-User] [RNFB] Core Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "[CP-User] [RNFB] Core Configuration";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n#\n# Copyright (c) 2016-present Invertase Limited & Contributors\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this library except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#   http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\nset -e\n\n_MAX_LOOKUPS=2;\n_SEARCH_RESULT=''\n_RN_ROOT_EXISTS=''\n_CURRENT_LOOKUPS=1\n_JSON_ROOT=\"'react-native'\"\n_JSON_FILE_NAME='firebase.json'\n_JSON_OUTPUT_BASE64='e30=' # { }\n_CURRENT_SEARCH_DIR=${PROJECT_DIR}\n_PLIST_BUDDY=/usr/libexec/PlistBuddy\n_TARGET_PLIST=\"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n_DSYM_PLIST=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n# plist arrays\n_PLIST_ENTRY_KEYS=()\n_PLIST_ENTRY_TYPES=()\n_PLIST_ENTRY_VALUES=()\n\nfunction setPlistValue {\n  echo \"info:      setting plist entry '$1' of type '$2' in file '$4'\"\n  ${_PLIST_BUDDY} -c \"Add :$1 $2 '$3'\" $4 || echo \"info:      '$1' already exists\"\n}\n\nfunction getFirebaseJsonKeyValue () {\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    ruby -e \"require 'rubygems';require 'json'; output=JSON.parse('$1'); puts output[$_JSON_ROOT]['$2']\"\n  else\n    echo \"\"\n  fi;\n}\n\nfunction jsonBoolToYesNo () {\n  if [[ $1 == \"false\" ]]; then\n    echo \"NO\"\n  elif [[ $1 == \"true\" ]]; then\n    echo \"YES\"\n  else echo \"NO\"\n  fi\n}\n\necho \"info: -> RNFB build script started\"\necho \"info: 1) Locating ${_JSON_FILE_NAME} file:\"\n\nif [[ -z ${_CURRENT_SEARCH_DIR} ]]; then\n  _CURRENT_SEARCH_DIR=$(pwd)\nfi;\n\nwhile true; do\n  _CURRENT_SEARCH_DIR=$(dirname \"$_CURRENT_SEARCH_DIR\")\n  if [[ \"$_CURRENT_SEARCH_DIR\" == \"/\" ]] || [[ ${_CURRENT_LOOKUPS} -gt ${_MAX_LOOKUPS} ]]; then break; fi;\n  echo \"info:      ($_CURRENT_LOOKUPS of $_MAX_LOOKUPS) Searching in '$_CURRENT_SEARCH_DIR' for a ${_JSON_FILE_NAME} file.\"\n  _SEARCH_RESULT=$(find \"$_CURRENT_SEARCH_DIR\" -maxdepth 2 -name ${_JSON_FILE_NAME} -print | /usr/bin/head -n 1)\n  if [[ ${_SEARCH_RESULT} ]]; then\n    echo \"info:      ${_JSON_FILE_NAME} found at $_SEARCH_RESULT\"\n    break;\n  fi;\n  _CURRENT_LOOKUPS=$((_CURRENT_LOOKUPS+1))\ndone\n\nif [[ ${_SEARCH_RESULT} ]]; then\n  _JSON_OUTPUT_RAW=$(cat \"${_SEARCH_RESULT}\")\n  _RN_ROOT_EXISTS=$(ruby -e \"require 'rubygems';require 'json'; output=JSON.parse('$_JSON_OUTPUT_RAW'); puts output[$_JSON_ROOT]\" || echo '')\n\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    _JSON_OUTPUT_BASE64=$(python -c 'import json,sys,base64;print(base64.b64encode(json.dumps(json.loads(open('\"'${_SEARCH_RESULT}'\"').read())['${_JSON_ROOT}'])))' || echo \"e30=\")\n  fi\n\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n\n  # config.app_data_collection_default_enabled\n  _APP_DATA_COLLECTION_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"app_data_collection_default_enabled\")\n  if [[ $_APP_DATA_COLLECTION_ENABLED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseDataCollectionDefaultEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_APP_DATA_COLLECTION_ENABLED\")\")\n  fi\n\n  # config.analytics_auto_collection_enabled\n  _ANALYTICS_AUTO_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_auto_collection_enabled\")\n  if [[ $_ANALYTICS_AUTO_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FIREBASE_ANALYTICS_COLLECTION_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AUTO_COLLECTION\")\")\n  fi\n\n  # config.analytics_collection_deactivated\n  _ANALYTICS_DEACTIVATED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_collection_deactivated\")\n  if [[ $_ANALYTICS_DEACTIVATED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_DEACTIVATED\")\")\n  fi\n\n  # config.analytics_idfv_collection_enabled\n  _ANALYTICS_IDFV_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_idfv_collection_enabled\")\n  if [[ $_ANALYTICS_IDFV_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_IDFV_COLLECTION_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_IDFV_COLLECTION\")\")\n  fi\n\n  # config.analytics_default_allow_ad_personalization_signals\n  _ANALYTICS_PERSONALIZATION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_ad_personalization_signals\")\n  if [[ $_ANALYTICS_PERSONALIZATION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_AD_PERSONALIZATION_SIGNALS\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_PERSONALIZATION\")\")\n  fi\n\n  # config.google_analytics_automatic_screen_reporting_enabled\n  _ANALYTICS_AUTO_SCREEN_REPORTING=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"google_analytics_automatic_screen_reporting_enabled\")\n  if [[ $_ANALYTICS_AUTO_SCREEN_REPORTING ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseAutomaticScreenReportingEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AUTO_SCREEN_REPORTING\")\")\n  fi\n\n  # config.perf_auto_collection_enabled\n  _PERF_AUTO_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"perf_auto_collection_enabled\")\n  if [[ $_PERF_AUTO_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"firebase_performance_collection_enabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_PERF_AUTO_COLLECTION\")\")\n  fi\n\n  # config.perf_collection_deactivated\n  _PERF_DEACTIVATED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"perf_collection_deactivated\")\n  if [[ $_PERF_DEACTIVATED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"firebase_performance_collection_deactivated\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_PERF_DEACTIVATED\")\")\n  fi\n\n  # config.messaging_auto_init_enabled\n  _MESSAGING_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"messaging_auto_init_enabled\")\n  if [[ $_MESSAGING_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseMessagingAutoInitEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_MESSAGING_AUTO_INIT\")\")\n  fi\n\n  # config.in_app_messaging_auto_colllection_enabled\n  _FIAM_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"in_app_messaging_auto_collection_enabled\")\n  if [[ $_FIAM_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseInAppMessagingAutomaticDataCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_FIAM_AUTO_INIT\")\")\n  fi\n\n  # config.app_check_token_auto_refresh\n  _APP_CHECK_TOKEN_AUTO_REFRESH=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"app_check_token_auto_refresh\")\n  if [[ $_APP_CHECK_TOKEN_AUTO_REFRESH ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseAppCheckTokenAutoRefreshEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_APP_CHECK_TOKEN_AUTO_REFRESH\")\")\n  fi\n\n  # config.crashlytics_disable_auto_disabler - undocumented for now - mainly for debugging, document if becomes useful\n  _CRASHLYTICS_AUTO_DISABLE_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"crashlytics_disable_auto_disabler\")\n  if [[ $_CRASHLYTICS_AUTO_DISABLE_ENABLED == \"true\" ]]; then\n    echo \"Disabled Crashlytics auto disabler.\" # do nothing\n  else\n    _PLIST_ENTRY_KEYS+=(\"FirebaseCrashlyticsCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"NO\")\n  fi\nelse\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n  echo \"warning:   A firebase.json file was not found, whilst this file is optional it is recommended to include it to configure firebase services in React Native Firebase.\"\nfi;\n\necho \"info: 2) Injecting Info.plist entries: \"\n\n# Log out the keys we're adding\nfor i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n  echo \"    ->  $i) ${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\"\ndone\n\nfor plist in \"${_TARGET_PLIST}\" \"${_DSYM_PLIST}\" ; do\n  if [[ -f \"${plist}\" ]]; then\n\n    # paths with spaces break the call to setPlistValue. temporarily modify\n    # the shell internal field separator variable (IFS), which normally\n    # includes spaces, to consist only of line breaks\n    oldifs=$IFS\n    IFS=\"\n\"\n\n    for i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n      setPlistValue \"${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\" \"${plist}\"\n    done\n\n    # restore the original internal field separator value\n    IFS=$oldifs\n  else\n    echo \"warning:   A Info.plist build output file was not found (${plist})\"\n  fi\ndone\n\necho \"info: <- RNFB build script finished\"\n";
 		};
 		A130D646172E58E1D159D8F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -6,8 +6,9 @@ interface AccountState {
   phoneNumber: string;
   email: string;
   dateOfBirth?: number;
-  password?: string;
+  password: string;
   profilePicture?: ImageOrVideo;
+  username: string;
 }
 
 const initialState: AccountState = {
@@ -17,13 +18,19 @@ const initialState: AccountState = {
   dateOfBirth: undefined,
   password: "",
   profilePicture: undefined,
+  username: "",
 };
 
 const accountSlice = createSlice({
   name: "account",
   initialState,
   reducers: {
-    saveUser: (state, action: PayloadAction<AccountState>) => {
+    saveUser: (
+      state,
+      action: PayloadAction<
+        Pick<AccountState, "name" | "email" | "dateOfBirth" | "phoneNumber">
+      >,
+    ) => {
       return { ...state, ...action.payload };
     },
     savePassword: (state, action: PayloadAction<string>) => {

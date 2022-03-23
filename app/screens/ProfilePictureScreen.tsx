@@ -5,6 +5,7 @@ import {
   Image,
   Pressable,
   SafeAreaView,
+  DevSettings,
 } from "react-native";
 import React, { useState } from "react";
 import { useAppDispatch } from "../types/redux";
@@ -38,7 +39,9 @@ const ProfilePictureScreen = ({}: Props) => {
       dispatch(saveProfilePicture(image));
     });
   }
-
+  DevSettings.addMenuItem("Luka", () => {
+    console.log("HELLOOOOOO");
+  });
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
