@@ -33,18 +33,16 @@ function addMenuOption(title: string, onPress: () => void) {
   subscriptions.set(title, subscription);
 }
 
-const ContextMenu = {
-  showMenu(buttons: Array<OptionType>, title: string | null = null) {
+export const ContextMenu = {
+  showMenu(buttons: Array<OptionType>, menuTitle: string | null = null) {
     buttons.forEach((button) => {
       addMenuOption(button.title, button.onPress);
     });
 
-    if (title) {
-      ContextMenuModule.setMenuTitle(title);
+    if (menuTitle) {
+      ContextMenuModule.setMenuTitle(menuTitle);
     }
 
     ContextMenuModule.show();
   },
 };
-
-export { ContextMenu };

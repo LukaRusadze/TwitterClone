@@ -5,23 +5,20 @@ import {
   Image,
   Pressable,
   SafeAreaView,
-  DevSettings,
 } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import { useAppDispatch } from "../types/redux";
 import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
 import RegisterNavigation from "../components/Organisms/RegisterNavigation";
-import ContextMenu from "../components/Atoms/ContextMenu";
 import { ImagePicker } from "../utils/ImageManipulator";
 import { saveProfilePicture } from "../store/features/account/accountSlice";
+import { ActionMenu } from "../utils/ActionMenu";
 
 interface Props {}
 
 const ProfilePictureScreen = ({}: Props) => {
-  const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
-
   const dispatch = useAppDispatch();
   const navigation =
     useNavigation<NavigationStackGenericProp<"ProfilePicture">>();
@@ -29,19 +26,19 @@ const ProfilePictureScreen = ({}: Props) => {
   useTwitterHeader(navigation, false, 30);
 
   function handleCamera() {
-    setIsMenuVisible(false);
     navigation.navigate("Camera");
   }
 
   function handleImagePicker() {
-    setIsMenuVisible(false);
-    ImagePicker().then((image) => {
-      dispatch(saveProfilePicture(image));
-    });
+    ImagePicker()
+      .then((image) => {
+        dispatch(saveProfilePicture(image));
+      })
+      .catch((error) => {
+        if (error.message === "User cancelled image selection") return;
+      });
   }
-  DevSettings.addMenuItem("Luka", () => {
-    console.log("HELLOOOOOO");
-  });
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
@@ -49,18 +46,17 @@ const ProfilePictureScreen = ({}: Props) => {
         <Text style={styles.prompt}>
           Have a favorite selfie? upload it now.
         </Text>
-        <ContextMenu
-          items={[
-            { title: "Take photo", onPress: () => handleCamera() },
-            {
-              title: "Choose existing photo",
-              onPress: () => handleImagePicker(),
-            },
-          ]}
-          setVisibility={setIsMenuVisible}
-          visible={isMenuVisible}
-        />
-        <Pressable onPressOut={() => setIsMenuVisible(true)}>
+        <Pressable
+          onPressOut={() => {
+            ActionMenu([
+              { title: "Take photo", onPress: () => handleCamera() },
+              {
+                title: "Choose existing photo",
+                onPress: () => handleImagePicker(),
+              },
+            ]);
+          }}
+        >
           <Image
             style={styles.uploadButton}
             source={require("../assets/images/upload_button.png")}
