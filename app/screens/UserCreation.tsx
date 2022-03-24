@@ -6,10 +6,10 @@ import {
   View,
   SafeAreaView,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
 import RegisterNavigation from "../components/Organisms/RegisterNavigation";
-import { Field, FieldProps, Formik } from "formik";
+import { Field, FieldProps, Formik, FormikProps } from "formik";
 import * as Yup from "yup";
 import { useNavigation } from "@react-navigation/native";
 import CharLimitedInput from "../components/Atoms/CharLimitedInput";
@@ -18,10 +18,10 @@ import ValidatedInput from "../components/Atoms/ValidatedInput";
 import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useAppDispatch } from "../types/redux";
 import { saveUser } from "../store/features/account/accountSlice";
+import firestore from "@react-native-firebase/firestore";
 
 const phoneNumberRegex = /^[+]?([0-9]*[.\s\-()]|[0-9]+){3,24}$/;
 const maxNameLength = 50;
-
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
     .max(maxNameLength, "Must be 50 characters or fewer")
@@ -34,6 +34,13 @@ const SignupSchema = Yup.object().shape({
   dateOfBirth: Yup.number(),
 });
 
+interface formikValues {
+  name: string;
+  phoneNumber: string;
+  email: string;
+  dateOfBirth: number;
+}
+
 const UserCreation = () => {
   const navigation =
     useNavigation<NavigationStackGenericProp<"UserCreation">>();
@@ -43,11 +50,42 @@ const UserCreation = () => {
 
   const [emailToggle, setEmailToggle] = useState(false);
   const [isEmailToggleVisible, setIsEmailToggleVisible] = useState(false);
+  const [formik, setFormik] = useState<formikValues | null>(null);
+  const formikRef = useRef<FormikProps<formikValues> | null>(null);
+  const [isEmailTaken, setIsEmailTaken] = useState<boolean>(false);
+
+  function handleFormikRef(node: FormikProps<formikValues> | null) {
+    if (node !== null) {
+      setFormik(node.values);
+      formikRef.current = node;
+    }
+  }
+
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      firestore()
+        .collection("users")
+        .where("email", "==", formik?.email)
+        .get()
+        .then((snapshot) => {
+          if (snapshot.docs.length) {
+            formikRef.current?.setErrors({
+              email: "This email is already in use",
+            });
+          } else {
+            setIsEmailTaken(true);
+          }
+        });
+    }, 2000);
+
+    return () => clearTimeout(delay);
+  }, [formik]);
 
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.headerText}>Create your account</Text>
       <Formik
+        innerRef={handleFormikRef}
         initialValues={{
           name: "",
           phoneNumber: "",
@@ -150,7 +188,9 @@ const UserCreation = () => {
                               setEmailToggle((state) => !state)
                             }
                             onPress={() => handleSubmit()}
-                            isNextActive={Object.keys(errors).length === 0}
+                            isNextActive={
+                              Object.keys(errors).length === 0 && isEmailTaken
+                            }
                           />
                         </KeyboardAvoidingView>
                       </DateInput>
