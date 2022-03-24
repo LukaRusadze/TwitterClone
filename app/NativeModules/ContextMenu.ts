@@ -1,33 +1,48 @@
-import { DeviceEventEmitter, NativeModules } from "react-native";
+import { NativeEventEmitter, NativeModules } from "react-native";
 
 const { ContextMenuModule } = NativeModules;
 
-type OptionsType = { title: string; handler: () => void };
+type OptionType = { title: string; onPress: () => void };
 
 const subscriptions = new Map();
 
-const ContextMenu = {
-  addMenuOption: (title: string, handler: () => void) => {
-    let subscription = subscriptions.get(title);
+const contextMenuEmitter = new NativeEventEmitter(ContextMenuModule);
 
-    if (subscription != null) {
-      subscription.remove();
-    } else {
-      ContextMenuModule.addMenuOption(title);
+contextMenuEmitter.addListener("RNFCM-onClose", () => {
+  subscriptions.forEach((subscription) => subscription.remove());
+  subscriptions.clear();
+});
+
+function addMenuOption(title: string, onPress: () => void) {
+  let subscription = subscriptions.get(title);
+
+  if (subscription != null) {
+    subscription.remove();
+  } else {
+    ContextMenuModule.addMenuOption(title);
+  }
+  subscription = contextMenuEmitter.addListener(
+    "RNFCM-didPressMenuOption",
+    (event) => {
+      if (event.title === title) {
+        onPress();
+      }
+    },
+  );
+
+  subscriptions.set(title, subscription);
+}
+
+const ContextMenu = {
+  showMenu(buttons: Array<OptionType>, title: string | null = null) {
+    buttons.forEach((button) => {
+      addMenuOption(button.title, button.onPress);
+    });
+
+    if (title) {
+      ContextMenuModule.setMenuTitle(title);
     }
 
-    DeviceEventEmitter.addListener("didPressMenuOption", (event) => {
-      if (event.title === title) {
-        handler();
-      }
-    });
-  },
-  addMenuOptions: (options: Array<OptionsType>) => {
-    options.forEach((option) => {
-      ContextMenu.addMenuOption(option.title, option.handler);
-    });
-  },
-  show: () => {
     ContextMenuModule.show();
   },
 };

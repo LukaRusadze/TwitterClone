@@ -1,19 +1,11 @@
 import React, { useLayoutEffect } from "react";
-import {
-  View,
-  Text,
-  SafeAreaView,
-  StyleSheet,
-  StatusBar,
-  Button,
-} from "react-native";
+import { View, Text, SafeAreaView, StyleSheet, StatusBar } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
 import { colors } from "../config/colors";
 import AccountCreationButtons from "../components/Molecules/AccountCreationButtons";
 import Terms from "../components/Atoms/Terms";
 import { useNavigation } from "@react-navigation/native";
-import { ContextMenu } from "../NativeModules/ContextMenu";
 
 const StartScreen = () => {
   const navigation = useNavigation<NavigationStackGenericProp<"Start">>();
@@ -27,18 +19,8 @@ const StartScreen = () => {
     });
   });
 
-  ContextMenu.addMenuOptions([
-    { title: "Hello0", handler: () => console.log("1") },
-    { title: "Hello1", handler: () => console.log("2") },
-    { title: "Hello2", handler: () => console.log("3") },
-    { title: "Hello3", handler: () => console.log("4") },
-    { title: "Hello4", handler: () => console.log("5") },
-    { title: "Hello5", handler: () => console.log("6") },
-  ]);
-
   return (
     <SafeAreaView>
-      <Button onPress={() => ContextMenu.show()} title="test" />
       <View style={styles.container}>
         <View style={styles.headerTextContainer}>
           <Text style={styles.headerText}>
