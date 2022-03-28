@@ -61,6 +61,7 @@ const screenOptions: NativeStackNavigationOptions = {
   title: "Aligned Center",
   headerTitleAlign: "center",
   headerShown: true,
+  statusBarStyle: "dark",
   contentStyle: {
     backgroundColor: "white",
   },

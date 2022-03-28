@@ -40,6 +40,7 @@ const CameraPhotoViewScreen = ({}: Props) => {
   function onContinue() {
     ImageCropper("file://" + photo.path).then((image) => {
       dispatch(saveProfilePicture(image));
+      navigation.pop(2);
     });
   }
 

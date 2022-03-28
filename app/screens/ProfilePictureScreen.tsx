@@ -7,19 +7,23 @@ import {
   SafeAreaView,
 } from "react-native";
 import React from "react";
-import { useAppDispatch } from "../types/redux";
+import { useAppDispatch, useAppSelector } from "../types/redux";
 import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationStackGenericProp } from "../types/stackNavigation";
-import RegisterNavigation from "../components/Organisms/RegisterNavigation";
 import { ImagePicker } from "../utils/ImageManipulator";
 import { saveProfilePicture } from "../store/features/account/accountSlice";
 import { ActionMenu } from "../utils/ActionMenu";
+import ProfilePictureNavigation from "../components/Organisms/ProfilePictureNavigation";
 
 interface Props {}
 
 const ProfilePictureScreen = ({}: Props) => {
   const dispatch = useAppDispatch();
+  const profilePicture = useAppSelector(
+    (state) => state.account.profilePicture,
+  );
+
   const navigation =
     useNavigation<NavigationStackGenericProp<"ProfilePicture">>();
 
@@ -57,14 +61,21 @@ const ProfilePictureScreen = ({}: Props) => {
             ]);
           }}
         >
-          <Image
-            style={styles.uploadButton}
-            source={require("../assets/images/upload_button.png")}
-          />
+          {profilePicture ? (
+            <Image
+              style={styles.uploadButtonImage}
+              source={{ uri: "file://" + profilePicture.path }}
+            />
+          ) : (
+            <Image
+              style={styles.uploadButton}
+              source={{ uri: "../assets/images/upload_button.png" }}
+            />
+          )}
         </Pressable>
       </View>
 
-      <RegisterNavigation isNextActive={false} isEmailInput={false} />
+      <ProfilePictureNavigation isNextActive={false} />
     </SafeAreaView>
   );
 };
@@ -94,6 +105,13 @@ const styles = StyleSheet.create({
   uploadButton: {
     height: 168,
     width: 168,
+    marginTop: 47,
+    alignSelf: "center",
+  },
+  uploadButtonImage: {
+    width: 168,
+    height: 168,
+    borderRadius: 100,
     marginTop: 47,
     alignSelf: "center",
   },
