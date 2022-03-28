@@ -52,7 +52,7 @@ const UserCreation = () => {
   const [isEmailToggleVisible, setIsEmailToggleVisible] = useState(false);
   const [formik, setFormik] = useState<formikValues | null>(null);
   const formikRef = useRef<FormikProps<formikValues> | null>(null);
-  const [isEmailTaken, setIsEmailTaken] = useState<boolean>(false);
+  const [isEmailTaken, setIsEmailTaken] = useState<boolean>(true);
 
   function handleFormikRef(node: FormikProps<formikValues> | null) {
     if (node !== null) {
@@ -62,6 +62,7 @@ const UserCreation = () => {
   }
 
   useEffect(() => {
+    setIsEmailTaken(true);
     const delay = setTimeout(() => {
       firestore()
         .collection("users")
@@ -72,8 +73,9 @@ const UserCreation = () => {
             formikRef.current?.setErrors({
               email: "This email is already in use",
             });
-          } else {
             setIsEmailTaken(true);
+          } else {
+            setIsEmailTaken(false);
           }
         });
     }, 2000);
@@ -189,7 +191,7 @@ const UserCreation = () => {
                             }
                             onPress={() => handleSubmit()}
                             isNextActive={
-                              Object.keys(errors).length === 0 && isEmailTaken
+                              Object.keys(errors).length === 0 && !isEmailTaken
                             }
                           />
                         </KeyboardAvoidingView>
