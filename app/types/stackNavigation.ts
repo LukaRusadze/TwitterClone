@@ -16,6 +16,7 @@ export type RootStackParamList = {
   ProfilePicture: undefined;
   Camera: undefined;
   CameraPhotoView: PhotoFile;
+  MainTab: undefined;
 };
 
 export type NavigationStackGenericProp<

@@ -75,7 +75,7 @@ const ProfilePictureScreen = ({}: Props) => {
         </Pressable>
       </View>
 
-      <ProfilePictureNavigation isNextActive={false} />
+      <ProfilePictureNavigation isNextActive={!!profilePicture} />
     </SafeAreaView>
   );
 };

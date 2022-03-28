@@ -10,10 +10,13 @@ import LoginNavigation from "../components/Organisms/LoginNavigation";
 import InputField from "../components/Atoms/InputField";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import PasswordField from "../components/Molecules/PasswordField";
+import { firebase } from "@react-native-firebase/auth";
+import { useDispatch } from "react-redux";
 
 const PasswordScreen = () => {
   const navigation = useNavigation<NavigationStackGenericProp<"Password">>();
   const route = useRoute<RouteGenericProp<"Password">>();
+  const dispatch = useDispatch();
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -48,10 +51,17 @@ const PasswordScreen = () => {
   }, [passwordField]);
 
   useEffect(() => {
-    if (submit) {
-      setSubmit(false);
+    if (submit && username) {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(username, passwordField)
+        .then(() => {
+          navigation.navigate("MainTab");
+        })
+        .catch(console.log);
     }
-  }, [passwordField, submit, username]);
+    setSubmit(false);
+  }, [dispatch, navigation, passwordField, submit, username]);
 
   return (
     <SafeAreaView style={styles.container}>

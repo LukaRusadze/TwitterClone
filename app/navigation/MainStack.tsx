@@ -15,12 +15,18 @@ import RegistrationPasswordScreen from "../screens/RegistrationPasswordScreen";
 import ProfilePictureScreen from "../screens/ProfilePictureScreen";
 import CameraScreen from "../screens/CameraScreen";
 import CameraPhotoViewScreen from "../screens/CameraPhotoViewScreen";
+import MainTab from "./MainTab";
+import { firebase } from "@react-native-firebase/auth";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
+const user = firebase.auth().currentUser;
 
 const MainStack = () => {
   return (
-    <Stack.Navigator screenOptions={screenOptions}>
+    <Stack.Navigator
+      screenOptions={screenOptions}
+      initialRouteName={user ? "MainTab" : "Start"}
+    >
       <Stack.Screen name="Start" component={StartScreen} />
       <Stack.Screen name="UserCreation" component={UserCreation} />
       <Stack.Screen name="Username" component={UsernameScreen} />
@@ -52,6 +58,11 @@ const MainStack = () => {
           statusBarHidden: true,
           animation: "none",
         }}
+      />
+      <Stack.Screen
+        name="MainTab"
+        component={MainTab}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );

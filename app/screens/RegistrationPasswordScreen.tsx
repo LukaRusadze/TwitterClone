@@ -41,8 +41,9 @@ const RegistrationPasswordScreen = ({}: Props) => {
         }}
         onSubmit={async (values) => {
           dispatch(savePassword(values.password));
-          await RegisterUser();
-          navigation.navigate("ProfilePicture");
+          RegisterUser().then(() => {
+            navigation.navigate("ProfilePicture");
+          });
         }}
         validationSchema={PasswordSchema}
       >
