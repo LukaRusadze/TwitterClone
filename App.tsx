@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import {
+  DefaultTheme,
+  NavigationContainer,
+  Theme,
+} from "@react-navigation/native";
 import { LogBox, StatusBar } from "react-native";
 import MainStack from "./app/navigation/MainStack";
 import { Provider } from "react-redux";
@@ -20,10 +24,19 @@ export default function App() {
     <>
       <StatusBar barStyle={"dark-content"} backgroundColor="white" />
       <Provider store={store}>
-        <NavigationContainer>
+        <NavigationContainer theme={theme}>
           <MainStack />
         </NavigationContainer>
       </Provider>
     </>
   );
 }
+
+const theme: Theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: "white",
+    text: "black",
+  },
+};
