@@ -3,6 +3,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { PhotoFile } from "react-native-vision-camera";
 
 export type RootStackParamList = {
+  Loading: undefined;
   Start: undefined;
   UserCreation: undefined;
   Username: undefined;
@@ -16,7 +17,7 @@ export type RootStackParamList = {
   ProfilePicture: undefined;
   Camera: undefined;
   CameraPhotoView: PhotoFile;
-  MainTab: undefined;
+  MainDrawer: undefined;
 };
 
 export type NavigationStackGenericProp<

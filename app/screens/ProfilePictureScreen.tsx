@@ -6,7 +6,7 @@ import {
   Pressable,
   SafeAreaView,
 } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../types/redux";
 import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useNavigation } from "@react-navigation/native";
@@ -15,6 +15,10 @@ import { ImagePicker } from "../utils/ImageManipulator";
 import { saveProfilePicture } from "../store/features/account/accountSlice";
 import { ActionMenu } from "../utils/ActionMenu";
 import ProfilePictureNavigation from "../components/Organisms/ProfilePictureNavigation";
+import storage from "@react-native-firebase/storage";
+import { firebase } from "@react-native-firebase/auth";
+import changeNavigationBarColor from "react-native-navigation-bar-color";
+import firestore from "@react-native-firebase/firestore";
 
 interface Props {}
 
@@ -36,12 +40,32 @@ const ProfilePictureScreen = ({}: Props) => {
   function handleImagePicker() {
     ImagePicker()
       .then((image) => {
-        dispatch(saveProfilePicture(image));
+        dispatch(saveProfilePicture(image.path));
       })
       .catch((error) => {
         if (error.message === "User cancelled image selection") return;
       });
   }
+
+  useEffect(() => {
+    changeNavigationBarColor("white", true, false);
+  }, []);
+
+  useEffect(() => {
+    if (profilePicture) {
+      const reference = storage().ref(
+        "profilePictures/" + firebase.auth().currentUser?.uid,
+      );
+      reference.putFile(profilePicture).then(async (data) => {
+        await firestore()
+          .collection("users")
+          .doc(firebase.auth().currentUser?.uid)
+          .update({
+            profilePicture: await reference.getDownloadURL(),
+          });
+      });
+    }
+  }, [dispatch, profilePicture]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -64,12 +88,12 @@ const ProfilePictureScreen = ({}: Props) => {
           {profilePicture ? (
             <Image
               style={styles.uploadButtonImage}
-              source={{ uri: "file://" + profilePicture.path }}
+              source={{ uri: "file://" + profilePicture }}
             />
           ) : (
             <Image
               style={styles.uploadButton}
-              source={{ uri: "../assets/images/upload_button.png" }}
+              source={require("../assets/images/upload_button.png")}
             />
           )}
         </Pressable>

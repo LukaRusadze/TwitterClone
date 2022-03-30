@@ -56,9 +56,8 @@ const PasswordScreen = () => {
         .auth()
         .signInWithEmailAndPassword(username, passwordField)
         .then(() => {
-          navigation.navigate("MainTab");
-        })
-        .catch(console.log);
+          navigation.navigate("MainDrawer");
+        });
     }
     setSubmit(false);
   }, [dispatch, navigation, passwordField, submit, username]);

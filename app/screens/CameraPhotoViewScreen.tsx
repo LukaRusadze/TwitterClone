@@ -39,8 +39,9 @@ const CameraPhotoViewScreen = ({}: Props) => {
 
   function onContinue() {
     ImageCropper("file://" + photo.path).then((image) => {
-      dispatch(saveProfilePicture(image));
+      dispatch(saveProfilePicture(image.path));
       navigation.pop(2);
+      changeNavigationBarColor("white", true, true);
     });
   }
 

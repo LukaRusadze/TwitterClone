@@ -13,7 +13,7 @@ const ProfilePictureNavigation = ({ isNextActive }: Props) => {
     useNavigation<NavigationStackGenericProp<"ProfilePicture">>();
 
   function handleNextScreen() {
-    navigation.navigate("MainTab");
+    navigation.navigate("MainDrawer");
   }
 
   return (

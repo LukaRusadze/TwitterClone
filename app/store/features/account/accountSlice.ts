@@ -7,7 +7,7 @@ interface AccountState {
   email: string;
   dateOfBirth?: number;
   password: string;
-  profilePicture?: ImageOrVideo;
+  profilePicture?: string;
   username: string;
 }
 
@@ -36,8 +36,8 @@ const accountSlice = createSlice({
     savePassword: (state, action: PayloadAction<string>) => {
       state.password = action.payload;
     },
-    saveProfilePicture: (state, action: PayloadAction<ImageOrVideo>) => {
-      return { ...state, profilePicture: action.payload };
+    saveProfilePicture: (state, action: PayloadAction<string>) => {
+      state.profilePicture = action.payload;
     },
   },
 });

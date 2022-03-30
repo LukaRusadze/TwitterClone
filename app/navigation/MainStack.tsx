@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   createNativeStackNavigator,
   NativeStackNavigationOptions,
@@ -15,55 +15,100 @@ import RegistrationPasswordScreen from "../screens/RegistrationPasswordScreen";
 import ProfilePictureScreen from "../screens/ProfilePictureScreen";
 import CameraScreen from "../screens/CameraScreen";
 import CameraPhotoViewScreen from "../screens/CameraPhotoViewScreen";
-import MainTab from "./MainTab";
 import { firebase } from "@react-native-firebase/auth";
+import MainDrawer from "./MainDrawer";
+import firestore from "@react-native-firebase/firestore";
+import { saveProfilePicture } from "../store/features/account/accountSlice";
+import LoadingScreen from "../screens/LoadingScreen";
+import { useAppDispatch } from "../types/redux";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const user = firebase.auth().currentUser;
 
 const MainStack = () => {
+  const [loading, setLoading] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (user) {
+      setLoading(true);
+      firestore()
+        .collection("users")
+        .doc(firebase.auth().currentUser!.uid)
+        .get()
+        .then((snapshot) => {
+          if (snapshot.data()?.profilePicture) {
+            dispatch(saveProfilePicture(snapshot.data()!.profilePicture));
+          }
+          setLoading(false);
+        });
+    }
+  }, [dispatch]);
+
+  let initialRouteName: keyof RootStackParamList;
+
+  if (loading) {
+    console.log("asdasdasdasd");
+    initialRouteName = "Loading";
+  } else {
+    if (user) {
+      initialRouteName = "MainDrawer";
+    } else {
+      initialRouteName = "Start";
+    }
+  }
+
   return (
     <Stack.Navigator
       screenOptions={screenOptions}
-      initialRouteName={user ? "MainTab" : "Start"}
+      initialRouteName={initialRouteName}
     >
-      <Stack.Screen name="Start" component={StartScreen} />
-      <Stack.Screen name="UserCreation" component={UserCreation} />
-      <Stack.Screen name="Username" component={UsernameScreen} />
-      <Stack.Screen name="Password" component={PasswordScreen} />
-      <Stack.Screen
-        name="CustomizeExperience"
-        component={CustomizeExperienceScreen}
-      />
-      <Stack.Screen name="ConfirmSignUp" component={ConfirmSignUpScreen} />
-      <Stack.Screen
-        name="EmailVerification"
-        component={EmailVerificationScreen}
-      />
-      <Stack.Screen
-        name="RegistrationPassword"
-        component={RegistrationPasswordScreen}
-      />
-      <Stack.Screen name="ProfilePicture" component={ProfilePictureScreen} />
-      <Stack.Screen
-        name="Camera"
-        component={CameraScreen}
-        options={{ headerShown: false, statusBarHidden: true }}
-      />
-      <Stack.Screen
-        name="CameraPhotoView"
-        component={CameraPhotoViewScreen}
-        options={{
-          headerShown: false,
-          statusBarHidden: true,
-          animation: "none",
-        }}
-      />
-      <Stack.Screen
-        name="MainTab"
-        component={MainTab}
-        options={{ headerShown: false }}
-      />
+      {loading ? (
+        <Stack.Screen name="Loading" component={LoadingScreen} />
+      ) : (
+        <>
+          <Stack.Screen name="Start" component={StartScreen} />
+          <Stack.Screen name="UserCreation" component={UserCreation} />
+          <Stack.Screen name="Username" component={UsernameScreen} />
+          <Stack.Screen name="Password" component={PasswordScreen} />
+          <Stack.Screen
+            name="CustomizeExperience"
+            component={CustomizeExperienceScreen}
+          />
+          <Stack.Screen name="ConfirmSignUp" component={ConfirmSignUpScreen} />
+          <Stack.Screen
+            name="EmailVerification"
+            component={EmailVerificationScreen}
+          />
+          <Stack.Screen
+            name="RegistrationPassword"
+            component={RegistrationPasswordScreen}
+          />
+          <Stack.Screen
+            name="ProfilePicture"
+            component={ProfilePictureScreen}
+          />
+          <Stack.Screen
+            name="Camera"
+            component={CameraScreen}
+            options={{ headerShown: false, statusBarHidden: true }}
+          />
+          <Stack.Screen
+            name="CameraPhotoView"
+            component={CameraPhotoViewScreen}
+            options={{
+              headerShown: false,
+              statusBarHidden: true,
+              animation: "none",
+            }}
+          />
+          <Stack.Screen
+            name="MainDrawer"
+            component={MainDrawer}
+            options={{ headerShown: false }}
+          />
+        </>
+      )}
     </Stack.Navigator>
   );
 };

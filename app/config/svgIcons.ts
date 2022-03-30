@@ -6,6 +6,8 @@ import ic_notifications from "../assets/icons/BottomTabNavigation/ic_notificatio
 import ic_notifications_selected from "../assets/icons/BottomTabNavigation/ic_notifications_selected.svg";
 import ic_messages from "../assets/icons/BottomTabNavigation/ic_messages.svg";
 import ic_messages_selected from "../assets/icons/BottomTabNavigation/ic_messages_selected.svg";
+import ic_spaces from "../assets/icons/BottomTabNavigation/ic_spaces.svg";
+import ic_spaces_selected from "../assets/icons/BottomTabNavigation/ic_spaces_selected.svg";
 
 export default {
   ic_home,
@@ -16,4 +18,6 @@ export default {
   ic_notifications_selected,
   ic_messages,
   ic_messages_selected,
+  ic_spaces,
+  ic_spaces_selected,
 };

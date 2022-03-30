@@ -9,34 +9,77 @@ import SearchScreen from "../screens/SearchScreen";
 import NotificationScreen from "../screens/NotificationsScreen";
 import { ParamListBase, RouteProp } from "@react-navigation/native";
 import MessagesScreen from "../screens/MessagesScreen";
+import SpacesScreen from "../screens/SpacesScreen";
+import { Image, Pressable } from "react-native";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import { colors } from "../config/colors";
+import { store } from "../store/store";
+import { NavigationDrawerGenericProp } from "../types/drawerNavigation";
+import firestore from "@react-native-firebase/firestore";
+import { firebase } from "@react-native-firebase/auth";
 
 const Tab = createBottomTabNavigator();
 
 interface ScreenOptions {
   route: RouteProp<ParamListBase, string>;
+  navigation: NavigationDrawerGenericProp<"MainTab">;
 }
 
 const MainTab = () => {
   return (
     <Tab.Navigator screenOptions={screenOptions}>
-      <Tab.Screen name="Feed" component={FeedScreen} />
+      <Tab.Screen
+        name="Feed"
+        component={FeedScreen}
+        options={{
+          headerTitleAlign: "center",
+          headerTitle: () => (
+            <Ionicons name="logo-twitter" size={25} color={colors.primary} />
+          ),
+        }}
+      />
       <Tab.Screen name="Search" component={SearchScreen} />
+      <Tab.Screen name="Spaces" component={SpacesScreen} />
       <Tab.Screen name="Notifications" component={NotificationScreen} />
       <Tab.Screen name="Messages" component={MessagesScreen} />
     </Tab.Navigator>
   );
 };
 
-function screenOptions({ route }: ScreenOptions): BottomTabNavigationOptions {
+function screenOptions({
+  route,
+  navigation,
+}: ScreenOptions): BottomTabNavigationOptions {
   return {
-    headerTitleAlign: "center",
-    headerShown: true,
     tabBarShowLabel: false,
     tabBarStyle: {
-      height: 62,
-      borderTopWidth: 1,
-      borderTopColor: "#cccccc",
+      height: 56.5,
+      borderTopWidth: 0.7,
+      borderTopColor: "#fefefe",
     },
+    headerLeft: () => {
+      console.log(store.getState().account.profilePicture);
+      return (
+        <Pressable
+          onPress={() => {
+            navigation.toggleDrawer();
+          }}
+        >
+          <Image
+            style={{ width: 27.5, height: 27.5, borderRadius: 100 }}
+            source={{
+              uri: store.getState().account.profilePicture,
+            }}
+          />
+        </Pressable>
+      );
+    },
+    tabBarButton: (props) => (
+      <Pressable
+        android_ripple={{ color: "#dedede", borderless: true }}
+        {...props}
+      />
+    ),
     tabBarIcon: ({ focused }) => {
       let iconName: keyof typeof svgIcons;
 
@@ -46,6 +89,9 @@ function screenOptions({ route }: ScreenOptions): BottomTabNavigationOptions {
           break;
         case "Search":
           iconName = !focused ? "ic_search" : "ic_search_selected";
+          break;
+        case "Spaces":
+          iconName = !focused ? "ic_spaces" : "ic_spaces_selected";
           break;
         case "Notifications":
           iconName = !focused
@@ -61,7 +107,7 @@ function screenOptions({ route }: ScreenOptions): BottomTabNavigationOptions {
 
       const Icon = svgIcons[iconName];
 
-      return <Icon width="41%" height="41%" />;
+      return <Icon width="46%" height="46%" />;
     },
   };
 }
