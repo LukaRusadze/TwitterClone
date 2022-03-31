@@ -20,6 +20,7 @@ import { useAppDispatch } from "../types/redux";
 import { saveUser } from "../store/features/account/accountSlice";
 import firestore from "@react-native-firebase/firestore";
 import { getUserByEmail } from "../utils/firebase/getData";
+import { useDebounce } from "../hooks/useDebounce";
 
 const phoneNumberRegex = /^[+]?([0-9]*[.\s\-()]|[0-9]+){3,24}$/;
 const maxNameLength = 50;
@@ -62,23 +63,19 @@ const UserCreation = () => {
     }
   }
 
-  useEffect(() => {
-    setIsEmailTaken(true);
-    const delay = setTimeout(async () => {
-      if (formik) {
-        const snapshop = await getUserByEmail(formik.email);
-        if (snapshop.docs.length) {
-          formikRef.current?.setErrors({
-            email: "This email is already in use",
-          });
-          return setIsEmailTaken(true);
-        }
-        setIsEmailTaken(false);
-      }
-    }, 2000);
+  const debouncedEmail = useDebounce(formik?.email, 2000);
 
-    return () => clearTimeout(delay);
-  }, [formik]);
+  useEffect(() => {
+    if (debouncedEmail) {
+      getUserByEmail(debouncedEmail).then((snapshot) => {
+        if (!snapshot.docs.length) return setIsEmailTaken(false);
+
+        formikRef.current?.setErrors({
+          email: "This email is already in use",
+        });
+      });
+    }
+  }, [debouncedEmail]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -147,7 +144,10 @@ const UserCreation = () => {
                       {({ field }: FieldProps) => {
                         return (
                           <ValidatedInput
-                            onChangeText={handleChange(field.name)}
+                            onChangeText={(value) => {
+                              setFieldValue(field.name, value);
+                              setIsEmailTaken(true);
+                            }}
                             value={field.value}
                             keyboardType="email-address"
                             autoComplete="off"
