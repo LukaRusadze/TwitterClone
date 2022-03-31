@@ -3,10 +3,10 @@ import React from "react";
 
 interface Props {}
 
-const LoadingScreen = (props: Props) => {
+const LoadingScreen = ({}: Props) => {
   console.log("test");
   return (
-    <View>
+    <View style={styles.container}>
       <Text>LoadingScreen</Text>
     </View>
   );
@@ -14,4 +14,6 @@ const LoadingScreen = (props: Props) => {
 
 export default LoadingScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {},
+});

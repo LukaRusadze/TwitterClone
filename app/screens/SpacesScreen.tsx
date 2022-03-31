@@ -5,7 +5,7 @@ interface Props {}
 
 const SpacesScreen = ({}: Props) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>SpacesScreen</Text>
     </View>
   );
@@ -13,4 +13,6 @@ const SpacesScreen = ({}: Props) => {
 
 export default SpacesScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {},
+});

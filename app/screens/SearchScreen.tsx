@@ -5,7 +5,7 @@ interface Props {}
 
 const SearchScreen = ({}: Props) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>SearchScreen</Text>
     </View>
   );
@@ -13,4 +13,6 @@ const SearchScreen = ({}: Props) => {
 
 export default SearchScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {},
+});

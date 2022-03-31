@@ -5,7 +5,7 @@ interface Props {}
 
 const NotificationsScreen = ({}: Props) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>NotificationsScreen</Text>
     </View>
   );
@@ -13,4 +13,6 @@ const NotificationsScreen = ({}: Props) => {
 
 export default NotificationsScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {},
+});

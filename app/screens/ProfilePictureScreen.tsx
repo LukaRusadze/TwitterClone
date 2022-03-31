@@ -56,7 +56,7 @@ const ProfilePictureScreen = ({}: Props) => {
       const reference = storage().ref(
         "profilePictures/" + firebase.auth().currentUser?.uid,
       );
-      reference.putFile(profilePicture).then(async (data) => {
+      reference.putFile(profilePicture).then(async () => {
         await firestore()
           .collection("users")
           .doc(firebase.auth().currentUser?.uid)

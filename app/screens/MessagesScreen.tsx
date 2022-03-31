@@ -5,7 +5,7 @@ interface Props {}
 
 const MessagesScreen = ({}: Props) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>MessagesScreen</Text>
     </View>
   );
@@ -13,4 +13,6 @@ const MessagesScreen = ({}: Props) => {
 
 export default MessagesScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {},
+});

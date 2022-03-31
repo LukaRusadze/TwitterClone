@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { ImageOrVideo } from "react-native-image-crop-picker";
 
 interface AccountState {
   name: string;

@@ -10,13 +10,11 @@ import NotificationScreen from "../screens/NotificationsScreen";
 import { ParamListBase, RouteProp } from "@react-navigation/native";
 import MessagesScreen from "../screens/MessagesScreen";
 import SpacesScreen from "../screens/SpacesScreen";
-import { Image, Pressable } from "react-native";
+import { Image, Pressable, StyleSheet } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { colors } from "../config/colors";
 import { store } from "../store/store";
 import { NavigationDrawerGenericProp } from "../types/drawerNavigation";
-import firestore from "@react-native-firebase/firestore";
-import { firebase } from "@react-native-firebase/auth";
 
 const Tab = createBottomTabNavigator();
 
@@ -58,7 +56,6 @@ function screenOptions({
       borderTopColor: "#fefefe",
     },
     headerLeft: () => {
-      console.log(store.getState().account.profilePicture);
       return (
         <Pressable
           onPress={() => {
@@ -66,7 +63,7 @@ function screenOptions({
           }}
         >
           <Image
-            style={{ width: 27.5, height: 27.5, borderRadius: 100 }}
+            style={styles.image}
             source={{
               uri: store.getState().account.profilePicture,
             }}
@@ -113,3 +110,12 @@ function screenOptions({
 }
 
 export default MainTab;
+
+const styles = StyleSheet.create({
+  image: {
+    width: 27.5,
+    height: 27.5,
+    borderRadius: 100,
+    marginLeft: 15,
+  },
+});
