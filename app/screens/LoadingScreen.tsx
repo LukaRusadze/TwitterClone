@@ -1,13 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, StyleSheet, View } from "react-native";
 import React from "react";
+import { colors } from "../config/colors";
 
 interface Props {}
 
 const LoadingScreen = ({}: Props) => {
-  console.log("test");
   return (
     <View style={styles.container}>
-      <Text>LoadingScreen</Text>
+      <ActivityIndicator size={200} color={colors.primary} />
     </View>
   );
 };
@@ -15,5 +15,10 @@ const LoadingScreen = ({}: Props) => {
 export default LoadingScreen;
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    backgroundColor: "white",
+    flex: 1,
+    alignContent: "center",
+    justifyContent: "center",
+  },
 });

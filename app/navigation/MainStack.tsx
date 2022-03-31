@@ -48,8 +48,7 @@ const MainStack = () => {
   let initialRouteName: keyof RootStackParamList;
 
   if (loading) {
-    console.log("asdasdasdasd");
-    initialRouteName = "Loading";
+    return <LoadingScreen />;
   } else {
     if (user) {
       initialRouteName = "MainDrawer";
@@ -63,52 +62,43 @@ const MainStack = () => {
       screenOptions={screenOptions}
       initialRouteName={initialRouteName}
     >
-      {loading ? (
-        <Stack.Screen name="Loading" component={LoadingScreen} />
-      ) : (
-        <>
-          <Stack.Screen name="Start" component={StartScreen} />
-          <Stack.Screen name="UserCreation" component={UserCreation} />
-          <Stack.Screen name="Username" component={UsernameScreen} />
-          <Stack.Screen name="Password" component={PasswordScreen} />
-          <Stack.Screen
-            name="CustomizeExperience"
-            component={CustomizeExperienceScreen}
-          />
-          <Stack.Screen name="ConfirmSignUp" component={ConfirmSignUpScreen} />
-          <Stack.Screen
-            name="EmailVerification"
-            component={EmailVerificationScreen}
-          />
-          <Stack.Screen
-            name="RegistrationPassword"
-            component={RegistrationPasswordScreen}
-          />
-          <Stack.Screen
-            name="ProfilePicture"
-            component={ProfilePictureScreen}
-          />
-          <Stack.Screen
-            name="Camera"
-            component={CameraScreen}
-            options={{ headerShown: false, statusBarHidden: true }}
-          />
-          <Stack.Screen
-            name="CameraPhotoView"
-            component={CameraPhotoViewScreen}
-            options={{
-              headerShown: false,
-              statusBarHidden: true,
-              animation: "none",
-            }}
-          />
-          <Stack.Screen
-            name="MainDrawer"
-            component={MainDrawer}
-            options={{ headerShown: false }}
-          />
-        </>
-      )}
+      <Stack.Screen name="Start" component={StartScreen} />
+      <Stack.Screen name="UserCreation" component={UserCreation} />
+      <Stack.Screen name="Username" component={UsernameScreen} />
+      <Stack.Screen name="Password" component={PasswordScreen} />
+      <Stack.Screen
+        name="CustomizeExperience"
+        component={CustomizeExperienceScreen}
+      />
+      <Stack.Screen name="ConfirmSignUp" component={ConfirmSignUpScreen} />
+      <Stack.Screen
+        name="EmailVerification"
+        component={EmailVerificationScreen}
+      />
+      <Stack.Screen
+        name="RegistrationPassword"
+        component={RegistrationPasswordScreen}
+      />
+      <Stack.Screen name="ProfilePicture" component={ProfilePictureScreen} />
+      <Stack.Screen
+        name="Camera"
+        component={CameraScreen}
+        options={{ headerShown: false, statusBarHidden: true }}
+      />
+      <Stack.Screen
+        name="CameraPhotoView"
+        component={CameraPhotoViewScreen}
+        options={{
+          headerShown: false,
+          statusBarHidden: true,
+          animation: "none",
+        }}
+      />
+      <Stack.Screen
+        name="MainDrawer"
+        component={MainDrawer}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 };
