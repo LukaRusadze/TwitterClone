@@ -26,15 +26,11 @@ const CameraPhotoViewScreen = ({}: Props) => {
 
   useEffect(() => {
     Platform.OS === "android" && changeNavigationBarColor("black", false, true);
-
-    return () => {
-      Platform.OS === "android" &&
-        changeNavigationBarColor("black", true, true);
-    };
   }, []);
 
   function onClose() {
     navigation.goBack();
+    changeNavigationBarColor("black", true, true);
   }
 
   function onContinue() {
