@@ -1,5 +1,6 @@
 import { StatusBar, StyleSheet, Text, View } from "react-native";
 import React, { useLayoutEffect } from "react";
+import { firebase } from "@react-native-firebase/auth";
 
 const FeedScreen = () => {
   useLayoutEffect(() => {

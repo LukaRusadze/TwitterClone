@@ -19,6 +19,7 @@ import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useAppDispatch } from "../types/redux";
 import { saveUser } from "../store/features/account/accountSlice";
 import firestore from "@react-native-firebase/firestore";
+import { getUserByEmail } from "../utils/firebase/getData";
 
 const phoneNumberRegex = /^[+]?([0-9]*[.\s\-()]|[0-9]+){3,24}$/;
 const maxNameLength = 50;
@@ -63,21 +64,17 @@ const UserCreation = () => {
 
   useEffect(() => {
     setIsEmailTaken(true);
-    const delay = setTimeout(() => {
-      firestore()
-        .collection("users")
-        .where("email", "==", formik?.email)
-        .get()
-        .then((snapshot) => {
-          if (snapshot.docs.length) {
-            formikRef.current?.setErrors({
-              email: "This email is already in use",
-            });
-            setIsEmailTaken(true);
-          } else {
-            setIsEmailTaken(false);
-          }
-        });
+    const delay = setTimeout(async () => {
+      if (formik) {
+        const snapshop = await getUserByEmail(formik.email);
+        if (snapshop.docs.length) {
+          formikRef.current?.setErrors({
+            email: "This email is already in use",
+          });
+          return setIsEmailTaken(true);
+        }
+        setIsEmailTaken(false);
+      }
     }, 2000);
 
     return () => clearTimeout(delay);
