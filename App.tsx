@@ -3,12 +3,15 @@ import {
   DefaultTheme,
   NavigationContainer,
   Theme,
+  useNavigationContainerRef,
+  StackActions,
 } from "@react-navigation/native";
 import { LogBox, StatusBar } from "react-native";
 import MainStack from "./app/navigation/MainStack";
 import { Provider } from "react-redux";
 import { store } from "./app/store/store";
 import changeNavigationBarColor from "react-native-navigation-bar-color";
+import { firebase } from "@react-native-firebase/auth";
 
 LogBox.ignoreLogs([
   "AsyncStorage has been extracted from react-native core and will be removed in a future release. It can now be installed and imported from '@react-native-async-storage/async-storage' instead of 'react-native'. See https://github.com/react-native-async-storage/async-storage",
@@ -22,11 +25,22 @@ export default function App() {
     changeNavigationBarColor("white", true, false);
   }, []);
 
+  const navigationRef = useNavigationContainerRef();
+
+  firebase.auth().onAuthStateChanged((userState) => {
+    if (
+      !userState &&
+      navigationRef.current?.getCurrentRoute()?.name !== "Start"
+    ) {
+      navigationRef.dispatch(StackActions.popToTop());
+    }
+  });
+
   return (
     <>
       <StatusBar barStyle={"dark-content"} backgroundColor="white" />
       <Provider store={store}>
-        <NavigationContainer theme={theme}>
+        <NavigationContainer ref={navigationRef} theme={theme}>
           <MainStack />
         </NavigationContainer>
       </Provider>
