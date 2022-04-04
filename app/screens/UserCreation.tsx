@@ -18,7 +18,6 @@ import ValidatedInput from "../components/Atoms/ValidatedInput";
 import useTwitterHeader from "../hooks/useTwitterHeader";
 import { useAppDispatch } from "../types/redux";
 import { saveUser } from "../store/features/account/accountSlice";
-import firestore from "@react-native-firebase/firestore";
 import { getUserByEmail } from "../utils/firebase/getData";
 import { useDebounce } from "../hooks/useDebounce";
 

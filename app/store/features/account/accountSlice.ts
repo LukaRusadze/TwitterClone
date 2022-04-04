@@ -1,3 +1,4 @@
+import { FirebaseFirestoreTypes } from "@react-native-firebase/firestore";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface AccountState {
@@ -38,10 +39,20 @@ const accountSlice = createSlice({
     saveProfilePicture: (state, action: PayloadAction<string>) => {
       state.profilePicture = action.payload;
     },
+    initializeFromFirebase: (
+      state,
+      action: PayloadAction<FirebaseFirestoreTypes.DocumentData>,
+    ) => {
+      return { ...state, ...action.payload };
+    },
   },
 });
 
-export const { saveUser, savePassword, saveProfilePicture } =
-  accountSlice.actions;
+export const {
+  saveUser,
+  savePassword,
+  saveProfilePicture,
+  initializeFromFirebase,
+} = accountSlice.actions;
 
 export default accountSlice.reducer;

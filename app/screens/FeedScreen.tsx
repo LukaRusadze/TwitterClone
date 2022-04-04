@@ -1,14 +1,13 @@
-import { StatusBar, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { firebase } from "@react-native-firebase/auth";
 
 const FeedScreen = () => {
   useLayoutEffect(() => {
-    firebase.auth().signOut();
+    // firebase.auth().signOut();
   }, []);
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor={"white"} barStyle={"dark-content"} />
       <Text>Feed</Text>
     </View>
   );

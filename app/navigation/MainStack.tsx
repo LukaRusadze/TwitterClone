@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   createNativeStackNavigator,
   NativeStackNavigationOptions,
@@ -17,44 +17,17 @@ import CameraScreen from "../screens/CameraScreen";
 import CameraPhotoViewScreen from "../screens/CameraPhotoViewScreen";
 import { firebase } from "@react-native-firebase/auth";
 import MainDrawer from "./MainDrawer";
-import firestore from "@react-native-firebase/firestore";
-import { saveProfilePicture } from "../store/features/account/accountSlice";
-import LoadingScreen from "../screens/LoadingScreen";
-import { useAppDispatch } from "../types/redux";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const user = firebase.auth().currentUser;
 
 const MainStack = () => {
-  const [loading, setLoading] = useState<boolean>(false);
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    if (user) {
-      setLoading(true);
-      firestore()
-        .collection("users")
-        .doc(firebase.auth().currentUser!.uid)
-        .get()
-        .then((snapshot) => {
-          if (snapshot.data()?.profilePicture) {
-            dispatch(saveProfilePicture(snapshot.data()!.profilePicture));
-          }
-          setLoading(false);
-        });
-    }
-  }, [dispatch]);
-
   let initialRouteName: keyof RootStackParamList;
 
-  if (loading) {
-    return <LoadingScreen />;
+  if (user) {
+    initialRouteName = "MainDrawer";
   } else {
-    if (user) {
-      initialRouteName = "MainDrawer";
-    } else {
-      initialRouteName = "Start";
-    }
+    initialRouteName = "Start";
   }
 
   return (
