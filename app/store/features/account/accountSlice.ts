@@ -45,6 +45,9 @@ const accountSlice = createSlice({
     ) => {
       return { ...state, ...action.payload };
     },
+    clearUserState: () => {
+      return initialState;
+    },
   },
 });
 
@@ -53,6 +56,7 @@ export const {
   savePassword,
   saveProfilePicture,
   initializeFromFirebase,
+  clearUserState,
 } = accountSlice.actions;
 
 export default accountSlice.reducer;

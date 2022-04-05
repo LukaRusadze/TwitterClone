@@ -15,25 +15,17 @@ import RegistrationPasswordScreen from "../screens/RegistrationPasswordScreen";
 import ProfilePictureScreen from "../screens/ProfilePictureScreen";
 import CameraScreen from "../screens/CameraScreen";
 import CameraPhotoViewScreen from "../screens/CameraPhotoViewScreen";
-import { firebase } from "@react-native-firebase/auth";
 import MainDrawer from "./MainDrawer";
+import { firebase } from "@react-native-firebase/auth";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const user = firebase.auth().currentUser;
 
 const MainStack = () => {
-  let initialRouteName: keyof RootStackParamList;
-
-  if (user) {
-    initialRouteName = "MainDrawer";
-  } else {
-    initialRouteName = "Start";
-  }
-
   return (
     <Stack.Navigator
       screenOptions={screenOptions}
-      initialRouteName={initialRouteName}
+      initialRouteName={user ? "MainDrawer" : "Start"}
     >
       <Stack.Screen name="Start" component={StartScreen} />
       <Stack.Screen name="UserCreation" component={UserCreation} />
