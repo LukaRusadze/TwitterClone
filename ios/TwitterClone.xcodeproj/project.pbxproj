@@ -31,7 +31,6 @@
 		7690823627484FE69DF61E53 /* HelveticaNeueIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2683DD86617D4D86AA610C94 /* HelveticaNeueIt.ttf */; };
 		7EF68E3733C33B6898317E18 /* libPods-TwitterClone-TwitterCloneTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-TwitterClone-TwitterCloneTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8BA89982EB4A4C98B8E464D5 /* HelveticaNeue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB502061CB344C7E965776B5 /* HelveticaNeue.ttf */; };
 		944ED6E3825B441BBEA1169F /* HelveticaNeueLt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8D2C7340DA44D48A39415C /* HelveticaNeueLt.ttf */; };
 		A1C3025927EC951E001F59EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1C3025827EC951E001F59EA /* GoogleService-Info.plist */; };
 		B71F9F6BCA104B429DEC3FAA /* Chirp-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51A18B1FBF7B4A45BA356013 /* Chirp-Bold.otf */; };
@@ -61,6 +60,7 @@
 		0038F505082F48619AA23E66 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97396B846AC644F2B4714D2A /* Octicons.ttf */; };
 		ACC04DCA630F4A29A04F1CA4 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 127222DA76E7439FB218C656 /* SimpleLineIcons.ttf */; };
 		F0A4105219DA4DB687472CDA /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE47E064D4F545F5B451FA9E /* Zocial.ttf */; };
+		8B50AFBA4E0845C8A4C4A13D /* HelveticaNeue-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBB178118EBD41B3B0AC73F7 /* HelveticaNeue-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +109,6 @@
 		ABFE59519B596E51CEFDCCC0 /* libPods-TwitterClone-TwitterCloneTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TwitterClone-TwitterCloneTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1163DFEBD14557A94FAD35 /* Chirp-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Medium.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Medium.otf"; sourceTree = "<group>"; };
 		B0739C6F44C54F4CA9EC6DBF /* HelveticaNeue-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue-Medium.ttf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Medium.ttf"; sourceTree = "<group>"; };
-		BB502061CB344C7E965776B5 /* HelveticaNeue.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeue.ttf; path = ../app/assets/fonts/HelveticaNeue/HelveticaNeue.ttf; sourceTree = "<group>"; };
 		C0A881CF5CF3F2B244570E2A /* Pods-TwitterClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.debug.xcconfig"; path = "Target Support Files/Pods-TwitterClone/Pods-TwitterClone.debug.xcconfig"; sourceTree = "<group>"; };
 		C13E5F447E9B4F3DBFBFD5F5 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-TwitterClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.release.xcconfig"; path = "Target Support Files/Pods-TwitterClone/Pods-TwitterClone.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		F751DE5FB39A439A934563B0 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		FBEFEA7F6847400B9273F8F3 /* Chirp-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Chirp-Regular.otf"; path = "../app/assets/fonts/TwitterChirp/Chirp-Regular.otf"; sourceTree = "<group>"; };
 		FE117D1104BA4FBDB2E60D2B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../app/assets/fonts/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		FBB178118EBD41B3B0AC73F7 /* HelveticaNeue-Regular.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Regular.otf"; path = "../app/assets/fonts/HelveticaNeue/HelveticaNeue-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +192,6 @@
 				8DF5A496CC074A29B5F8C670 /* HelveticaNeue-Light.ttf */,
 				B0739C6F44C54F4CA9EC6DBF /* HelveticaNeue-Medium.ttf */,
 				D72F712C2D4C4AC4B0C7E286 /* HelveticaNeue-Thin.ttf */,
-				BB502061CB344C7E965776B5 /* HelveticaNeue.ttf */,
 				38F97FC69A1D4F3ABEF79867 /* HelveticaNeueBd.ttf */,
 				74673EAF26B94BF380E2DD41 /* HelveticaNeueHv.ttf */,
 				2683DD86617D4D86AA610C94 /* HelveticaNeueIt.ttf */,
@@ -233,6 +232,23 @@
 				97396B846AC644F2B4714D2A /* Octicons.ttf */,
 				127222DA76E7439FB218C656 /* SimpleLineIcons.ttf */,
 				DE47E064D4F545F5B451FA9E /* Zocial.ttf */,
+				FBB178118EBD41B3B0AC73F7 /* HelveticaNeue-Regular.otf */,
+				E08BEE0F95F74A81AD046966 /* AntDesign.ttf */,
+				D90413E763674820A6FDF45F /* Entypo.ttf */,
+				688FA0BB89CF43748E9768F1 /* EvilIcons.ttf */,
+				F30A88BE36AF421A9A13BF69 /* Feather.ttf */,
+				E396EFCD3B6E4D2E883CE945 /* FontAwesome.ttf */,
+				26EDB4843AAF41D485F93FB4 /* FontAwesome5_Brands.ttf */,
+				7AD83E2FFAB54113A7F6C2F1 /* FontAwesome5_Regular.ttf */,
+				42FB48D8D0A247729FE752E5 /* FontAwesome5_Solid.ttf */,
+				4432020B619145DD9765613D /* Fontisto.ttf */,
+				9420FA69F4F343799836FB1C /* Foundation.ttf */,
+				82ED1BF9E06544BC8ED1DCC9 /* Ionicons.ttf */,
+				7A92ABCB48E34DCA98E915EC /* MaterialCommunityIcons.ttf */,
+				B0185435464140F2B12EA971 /* MaterialIcons.ttf */,
+				32A8E2DF9B7148C5B3297FFB /* Octicons.ttf */,
+				18EF4CED5735464EA00DCA9B /* SimpleLineIcons.ttf */,
+				76CDF84192964D72B68FC659 /* Zocial.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -383,7 +399,6 @@
 				3326DF23D53A4A8881D09718 /* HelveticaNeue-Light.ttf in Resources */,
 				09E3B8B3696C421C8659C7C8 /* HelveticaNeue-Medium.ttf in Resources */,
 				2A9D4B5AA2B5440EAA5DA57E /* HelveticaNeue-Thin.ttf in Resources */,
-				8BA89982EB4A4C98B8E464D5 /* HelveticaNeue.ttf in Resources */,
 				A1C3025927EC951E001F59EA /* GoogleService-Info.plist in Resources */,
 				CE85CD6251C74D0B885623D9 /* HelveticaNeueBd.ttf in Resources */,
 				F42B09E6FD6E4FF7A2CD0CEF /* HelveticaNeueHv.ttf in Resources */,
@@ -425,6 +440,23 @@
 				0038F505082F48619AA23E66 /* Octicons.ttf in Resources */,
 				ACC04DCA630F4A29A04F1CA4 /* SimpleLineIcons.ttf in Resources */,
 				F0A4105219DA4DB687472CDA /* Zocial.ttf in Resources */,
+				8B50AFBA4E0845C8A4C4A13D /* HelveticaNeue-Regular.otf in Resources */,
+				68E6780F97F040DBBDF22F73 /* AntDesign.ttf in Resources */,
+				5DB7B5CF84774BECAD6C1716 /* Entypo.ttf in Resources */,
+				CB2C4B6C2A08474E8F8B133A /* EvilIcons.ttf in Resources */,
+				EA06C1A72C8C475B8020EC02 /* Feather.ttf in Resources */,
+				201430F6E0AE46CD98BA6296 /* FontAwesome.ttf in Resources */,
+				63F4F5D1E6674B46A0052341 /* FontAwesome5_Brands.ttf in Resources */,
+				1E5974E1D5A14A889BE6DEA2 /* FontAwesome5_Regular.ttf in Resources */,
+				77CB9B087E124D589BB2D045 /* FontAwesome5_Solid.ttf in Resources */,
+				481FD4CC436E453E8D9249DD /* Fontisto.ttf in Resources */,
+				E5DB202D116F40778B9BBB09 /* Foundation.ttf in Resources */,
+				43BC448C8A6D4191B799FED1 /* Ionicons.ttf in Resources */,
+				ECDB0478B7154E5BA48ADA70 /* MaterialCommunityIcons.ttf in Resources */,
+				51D9A4A99C884A95BB26A839 /* MaterialIcons.ttf in Resources */,
+				E97885022A5D438FA8B1D759 /* Octicons.ttf in Resources */,
+				48769A9189DB49D9BE628D2D /* SimpleLineIcons.ttf in Resources */,
+				8AA066A92165451EBE83CAE6 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,7 @@
 import { Platform, Pressable, StyleSheet, Text } from "react-native";
 import React from "react";
 import svgIcons from "../../config/svgIcons";
+import { SvgProps } from "react-native-svg";
 
 interface Props {
   icon?: keyof typeof svgIcons;
@@ -11,7 +12,7 @@ interface Props {
 const DrawerListItem = ({ icon, text, onPress }: Props) => {
   let Icon: any;
   if (icon) {
-    Icon = svgIcons[icon];
+    Icon = svgIcons[icon] as React.FC<SvgProps>;
   }
   return (
     <Pressable
@@ -23,7 +24,14 @@ const DrawerListItem = ({ icon, text, onPress }: Props) => {
       android_ripple={{ color: "#dedede" }}
       onPress={onPress}
     >
-      {icon && <Icon style={styles.drawerItemIcon} width={24} height={24} />}
+      {icon && (
+        <Icon
+          style={styles.drawerItemIcon}
+          fill={"black"}
+          width={24}
+          height={24}
+        />
+      )}
       <Text style={styles.drawerItemText}>{text}</Text>
     </Pressable>
   );

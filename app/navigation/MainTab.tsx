@@ -15,6 +15,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import { colors } from "../config/colors";
 import { store } from "../store/store";
 import { NavigationDrawerGenericProp } from "../types/drawerNavigation";
+import { SvgProps } from "react-native-svg";
 
 const Tab = createBottomTabNavigator();
 
@@ -102,9 +103,9 @@ function screenOptions({
           iconName = "ic_home";
       }
 
-      const Icon = svgIcons[iconName];
+      const Icon = svgIcons[iconName] as React.FC<SvgProps>;
 
-      return <Icon width="46%" height="46%" />;
+      return <Icon width="46%" height="46%" fill="black" />;
     },
   };
 }
