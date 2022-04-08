@@ -16,6 +16,7 @@ import { colors } from "../config/colors";
 import { store } from "../store/store";
 import { NavigationDrawerGenericProp } from "../types/drawerNavigation";
 import { SvgProps } from "react-native-svg";
+import OptionsMenu from "../components/Organisms/OptionsMenu";
 
 const Tab = createBottomTabNavigator();
 
@@ -26,22 +27,25 @@ interface ScreenOptions {
 
 const MainTab = () => {
   return (
-    <Tab.Navigator screenOptions={screenOptions}>
-      <Tab.Screen
-        name="Feed"
-        component={FeedScreen}
-        options={{
-          headerTitleAlign: "center",
-          headerTitle: () => (
-            <Ionicons name="logo-twitter" size={25} color={colors.primary} />
-          ),
-        }}
-      />
-      <Tab.Screen name="Search" component={SearchScreen} />
-      <Tab.Screen name="Spaces" component={SpacesScreen} />
-      <Tab.Screen name="Notifications" component={NotificationScreen} />
-      <Tab.Screen name="Messages" component={MessagesScreen} />
-    </Tab.Navigator>
+    <>
+      <OptionsMenu />
+      <Tab.Navigator screenOptions={screenOptions}>
+        <Tab.Screen
+          name="Feed"
+          component={FeedScreen}
+          options={{
+            headerTitleAlign: "center",
+            headerTitle: () => (
+              <Ionicons name="logo-twitter" size={25} color={colors.primary} />
+            ),
+          }}
+        />
+        <Tab.Screen name="Search" component={SearchScreen} />
+        <Tab.Screen name="Spaces" component={SpacesScreen} />
+        <Tab.Screen name="Notifications" component={NotificationScreen} />
+        <Tab.Screen name="Messages" component={MessagesScreen} />
+      </Tab.Navigator>
+    </>
   );
 };
 
